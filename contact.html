@@ -48,7 +48,7 @@ permalink: /contact/
                                 <i class="section-icon fas fa-map-marker-alt me-3"></i>
                                 <h4 class="contact-section-header h6 mb-0">Office</h4>
                             </div>
-                            <p class="mb-0" style="color: var(--gray-700);">
+                            <p class="mb-0 contact-info-text">
                                 {{ site.author.office }}<br>
                                 {{ site.author.affiliation }}
                             </p>
@@ -56,11 +56,11 @@ permalink: /contact/
 
                         <div class="mb-4">
                             <div class="d-flex align-items-center mb-2">
-                                <i class="fas fa-clock me-3" style="color: var(--gray-600);"></i>
-                                <h4 class="h6 mb-0" style="color: var(--gray-800); font-weight: 600;">Office Hours</h4>
+                                <i class="section-icon fas fa-clock me-3"></i>
+                                <h4 class="contact-section-header h6 mb-0">Office Hours</h4>
                             </div>
-                            <p class="mb-1" style="color: var(--gray-700);">{{ site.data.contact.office_hours.semester }}:</p>
-                            <p class="mb-0 small" style="color: var(--gray-600);">
+                            <p class="mb-1 contact-info-text">{{ site.data.contact.office_hours.semester }}:</p>
+                            <p class="mb-0 small text-gray-600">
                                 {% for schedule in site.data.contact.office_hours.schedule %}{{ schedule.day }}: {{ schedule.time }}<br>{% endfor %}
                                 {{ site.data.contact.office_hours.note }}
                             </p>

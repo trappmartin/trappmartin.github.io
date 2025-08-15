@@ -1,7 +1,7 @@
 ---
 ---
 
-<div class="publication-item mb-3 p-3 border rounded-2 {% if entry.presentation == 'oral' %}bg-warning bg-opacity-10 border-warning{% elsif entry.presentation == 'spotlight' %}bg-info bg-opacity-10 border-info{% else %}bg-white{% endif %}" data-type="{{ entry.type | downcase }}" style="{% unless entry.presentation == 'oral' or entry.presentation == 'spotlight' %}border-color: var(--gray-200) !important;{% endunless %}">
+<div class="publication-item mb-3 p-3 border rounded-2 {% if entry.presentation == 'oral' %}bg-warning bg-opacity-10 border-warning{% elsif entry.presentation == 'spotlight' %}bg-info bg-opacity-10 border-info{% else %}bg-white border-gray-200{% endif %}" data-type="{{ entry.type | downcase }}">
     <div class="row align-items-start">
         <div class="col-md-9">
             <!-- Title -->

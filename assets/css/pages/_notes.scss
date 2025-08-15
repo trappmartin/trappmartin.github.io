@@ -1,0 +1,64 @@
+/**
+ * Technical Notes Page Styles
+ * Note listing and navigation styling
+ */
+
+.note-item-container {
+    /* Border removed for cleaner look */
+}
+
+.note-title-link {
+    color: var(--gray-800);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.note-date-badge {
+    background-color: var(--gray-200);
+    color: var(--gray-700);
+}
+
+.note-category-badge {
+    background-color: var(--gray-300);
+    color: var(--gray-700);
+    text-transform: capitalize;
+}
+
+.note-tag-badge {
+    background-color: var(--gray-100);
+    color: var(--gray-600);
+}
+
+.note-summary-text {
+    color: var(--gray-600);
+    font-size: 0.95rem;
+}
+
+.note-read-more {
+    color: var(--gray-700);
+    text-decoration: none;
+    border-bottom: 1px solid var(--gray-400);
+}
+
+.notes-count-text {
+    color: var(--gray-600);
+}
+
+.note-navigation {
+    background: linear-gradient(45deg, var(--gray-50), var(--gray-100));
+    border: 1px solid var(--gray-200);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.note-content {
+    color: var(--gray-800);
+}
+
+.note-metadata {
+    background-color: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-radius: 10px;
+    padding: 2rem;
+}
