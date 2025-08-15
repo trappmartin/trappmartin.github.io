@@ -1,58 +1,32 @@
 {
-  "introduction": {
-    "description": "I am committed to serving the academic community through various roles in editorial boards, conference committees, and professional organizations.",
-    "years_of_service": "8+",
-    "years_label": "Years of Service"
-  },
   "editorial_service": [
     {
-      "role": "Associate Editor",
-      "organization": "Journal of Machine Learning Research",
-      "period": "2022 - Present",
-      "description": "Responsible for handling submissions in machine learning and AI",
-      "current": true
-    },
-    {
-      "role": "Editorial Board Member",
-      "organization": "IEEE Transactions on Neural Networks and Learning Systems",
-      "period": "2021 - Present",
-      "description": "Contributing to editorial decisions and peer review process",
-      "current": true
+      "role": "Area Chair",
+      "organization": "AISTATS",
+      "period": "2024",
+      "description": "Area chair for the Bayesian Deep Learning session",
+      "current": false
     },
     {
       "role": "Guest Editor",
-      "organization": "Special Issue on \"AI for Healthcare\" - Nature Machine Intelligence",
-      "period": "2023",
-      "description": "Led special issue on applications of AI in healthcare",
+      "organization": "Special Issue on Advances in Probabilistic Machine Learning",
+      "period": "2024 - 2025",
+      "description": "Entropy Journal",
       "current": false
     },
     {
       "role": "Reviewer",
       "organization": "Multiple Top-Tier Journals and Conferences",
       "period": "2018 - Present",
-      "description": "Regular reviewer for NeurIPS, ICML, ICLR, AAAI, IJCAI, and others",
+      "description": "Regular reviewer for NeurIPS, ICML, ICLR, UAI, AISTATS, and others",
       "current": true
     }
   ],
   "conference_organization": [
     {
-      "role": "Program Committee Co-Chair",
-      "organization": "International Conference on Machine Learning (ICML) 2024",
-      "period": "2024",
-      "description": "Leading the program committee for one of the premier ML conferences",
-      "current": false
-    },
-    {
-      "role": "Area Chair",
-      "organization": "Conference on Neural Information Processing Systems (NeurIPS)",
-      "period": "2022 - 2023",
-      "description": "Overseeing the review process for machine learning applications",
-      "current": false
-    },
-    {
-      "role": "Workshop Co-Organizer",
-      "organization": "\"AI for Social Good\" Workshop at AAAI",
-      "period": "2023",
+      "role": "Organizer",
+      "organization": "CVPR Workshop on Uncertainty Quantification for Computer Vision (UNCV)",
+      "period": "2025",
       "description": "Organized workshop on applications of AI for societal benefit",
       "current": false
     },

@@ -13,10 +13,6 @@ permalink: /notes/
                 <h1 class="h2 mb-4" style="color: var(--gray-800);">Technical Notes</h1>
                 <div style="line-height: 1.8;">
                     <p class="lead mb-4" style="color: var(--gray-700);">A collection of in-depth technical notes covering machine learning, deep learning, optimization, and probabilistic methods. These notes serve as both personal reference materials and educational resources.</p>
-                    <div class="d-inline-block px-4 py-2 rounded" style="background-color: var(--gray-100);">
-                        <span class="h5 mb-0" style="color: var(--gray-700); font-weight: 600;">{{ site.technical_notes | size }}</span>
-                        <span class="small ms-2" style="color: var(--gray-600);">Technical Notes</span>
-                    </div>
                 </div>
             </div>
         </div>
@@ -29,7 +25,7 @@ permalink: /notes/
         <div class="row justify-content-center">
             <div class="col-10">
                 <h2 class="h3 mb-5" style="color: var(--gray-800);">
-                    <i class="fas fa-sticky-note me-3" style="color: var(--gray-600);"></i>Recent Notes
+                    Recent Notes
                 </h2>
                 
                 {% assign sorted_notes = site.technical_notes | sort: 'date' | reverse %}
@@ -84,20 +80,20 @@ permalink: /notes/
         <div class="row justify-content-center">
             <div class="col-10">
                 <h2 class="h3 mb-5" style="color: var(--gray-800);">
-                    <i class="fas fa-tags me-3" style="color: var(--gray-600);"></i>Topics Covered
+                    Topics
                 </h2>
                 
                 {% assign categories = site.technical_notes | map: 'category' | uniq | sort %}
                 <div class="row">
                     {% for category in categories %}
                     {% assign category_notes = site.technical_notes | where: 'category', category %}
-                    <div class="col-md-6 mb-3">
+                    <div class="col-md-6 mb-2">
                         <div class="d-flex align-items-center">
-                            <span class="px-3 py-2 rounded me-3" style="background-color: var(--gray-200); color: var(--gray-700); font-weight: 500; text-transform: capitalize;">
-                                {{ category }}
+                            <span class="small px-1 py-2" style="color: var(--gray-700); font-weight: 500; text-transform: capitalize;">
+                                {{ category }}:
                             </span>
                             <span class="small" style="color: var(--gray-600);">
-                                {{ category_notes.size }} note{% if category_notes.size != 1 %}s{% endif %}
+                                {{ category_notes.size }} {% if category_notes.size != 1 %}s{% endif %}
                             </span>
                         </div>
                     </div>

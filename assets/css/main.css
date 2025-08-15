@@ -38,7 +38,7 @@ main {
 
 /* Hero section */
 .hero-section {
-    background: linear-gradient(135deg, var(--gray-800) 0%, var(--gray-700) 100%);
+    background: linear-gradient(135deg, var(--gray-500) 0%, var(--gray-600) 100%);
     color: white;
     padding: 4rem 0;
 }
@@ -318,7 +318,6 @@ html {
 
 /* Hero section layout */
 .hero-section {
-    background-color: var(--gray-800);
     padding: 3rem 0;
 }
 
@@ -337,7 +336,7 @@ html {
     color: rgba(255, 255, 255, 0.9);
     font-style: italic;
     font-weight: 300;
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
 }
 
 .hero-title {
@@ -346,8 +345,8 @@ html {
 }
 
 .hero-affiliation {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    /* font-size: 1.1rem; */
 }
 
 .hero-social-icons a {
@@ -370,10 +369,6 @@ html {
 
 .content-section-gray {
     background-color: var(--gray-50);
-}
-
-.content-width {
-    /* 75% width for main content */
 }
 
 /* Section headers */
@@ -655,4 +650,31 @@ html {
 
 .category-count {
     color: var(--gray-600);
+}
+
+/* LaTeX/MathJax styling */
+.has-jax { 
+    color: var(--gray-800); 
+}
+
+mjx-container[jax="CHTML"] { 
+    color: var(--gray-800); 
+}
+
+mjx-container[jax="CHTML"][display="true"] { 
+    margin: 1em 0; 
+    text-align: center; 
+}
+
+mjx-container[jax="CHTML"] mjx-math { 
+    color: inherit; 
+}
+
+.MathJax { 
+    color: var(--gray-800); 
+}
+
+.MathJax_Display { 
+    margin: 1em 0; 
+    text-align: center; 
 }

@@ -50,14 +50,12 @@ defaults:
 author:
   name: Martin Trapp
   title: Assistant Professor in Machine Learning
-  affiliation: Aalto University
+  affiliation: KTH Royal Institute of Technology
   email: martin.trapp@aalto.fi
-  phone: "+358 50 330 3001"
   office: "Room 301, Computer Science Building"
   bio: >-
-    Martin Trapp is an Assistant Professor in Machine Learning at Aalto University,
-    where she leads research in machine learning and artificial intelligence. She has
-    published over 50 papers in top-tier conferences and journals.
+    Martin is an Assistant Professor in Machine Learning at KTH Royal Institute of Technology,
+    where he works on probabilistic machine learning for reliable and trustworthy AI.
 
 # Social links
 social:

@@ -42,19 +42,19 @@ title: Home
                         </div>
                         
                         <!-- Name and titles moved under social icons -->
-                        <h1 class="hero-name h2 mb-2">{{ site.author.name }}</h1>
-                        <p class="hero-tagline h5 mb-3">Almost surely</p>
-                        <p class="hero-title h6 mb-1">{{ site.author.title }}</p>
+                        <h1 class="hero-name h3 mb-2">{{ site.author.name }}</h1>
+                        <p class="hero-tagline h4 mb-3">Almost surely</p>
+                        <p class="hero-title mb-0">{{ site.author.title }}</p>
                         <p class="hero-affiliation mb-0">{{ site.author.affiliation }}</p>
                     </div>
                     <div class="col-md-7">
                         <!-- Biography content moved to right column -->
                         <div class="biography-text">
-                            <p class="biography-lead lead mb-4">{{ site.author.bio }}</p>
+                            <p class="biography-lead mb-4">{{ site.author.bio }}</p>
                             
                             <!-- Research Interests Subsection -->
                             <h3 class="research-interests-subsection h5 mb-3 mt-4">
-                                <i class="research-interests-icon fas fa-lightbulb me-2"></i>Research Interests
+                                Research Interests
                             </h3>
                             <ul class="research-interests-list mb-0">
                                 {% for interest in site.data.research_interests %}
@@ -75,7 +75,7 @@ title: Home
         <div class="row justify-content-center">
             <div class="col-10">
                 <h2 class="section-header h3 mb-5">
-                    <i class="section-icon fas fa-newspaper me-3"></i>News & Updates
+                    News & Updates
                 </h2>
                 
                 {% assign sorted_news = site.news | sort: 'date' | reverse %}
@@ -125,7 +125,7 @@ title: Home
         <div class="row justify-content-center">
             <div class="col-10">
                 <h2 class="section-header h3 mb-5">
-                    <i class="section-icon fas fa-file-alt me-3"></i>Selected Publications
+                    Selected Publications
                 </h2>
                 
                 {% comment %}
