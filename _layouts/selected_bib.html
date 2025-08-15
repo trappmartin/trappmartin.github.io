@@ -2,15 +2,15 @@
 ---
 
 {% if entry.selected %}
-<div class="selected-publication-item mb-4 pb-4">
-    <h4 class="selected-publication-title h6 mb-2">{{ entry.title }}</h4>
+<div class="selected-publication-item mb-3 pb-3">
+    <h5 class="selected-publication-title h6 mb-1" style="line-height: 1.3;">{{ entry.title }}</h5>
     <p class="selected-publication-authors mb-1 small">{{ entry.author }}</p>
-    <p class="selected-publication-venue mb-2 small">
+    <p class="selected-publication-venue mb-1 small">
         {% if entry.journal %}{{ entry.journal }}{% elsif entry.booktitle %}{{ entry.booktitle }}{% endif %}
         {% if entry.year %}, {{ entry.year }}{% endif %}
     </p>
     {% if entry.abstract %}
-    <p class="selected-publication-abstract mb-0 small">{{ entry.abstract | truncate: 120 }}</p>
+    <p class="selected-publication-abstract mb-0 small" style="font-size: 0.85rem; line-height: 1.4;">{{ entry.abstract | truncate: 100 }}</p>
     {% endif %}
 </div>
 {% endif %}
