@@ -313,3 +313,318 @@ main {
 html {
     scroll-behavior: smooth;
 }
+
+/* Layout-specific styles */
+
+/* Hero section layout */
+.hero-section {
+    background-color: var(--gray-800);
+    padding: 3rem 0;
+}
+
+.hero-profile-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.hero-name {
+    color: white;
+    font-weight: 600;
+}
+
+.hero-tagline {
+    color: rgba(255, 255, 255, 0.9);
+    font-style: italic;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.hero-title {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+
+.hero-affiliation {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+}
+
+.hero-social-icons a {
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 0.2s;
+}
+
+.hero-social-icons a:hover {
+    color: white;
+}
+
+/* Main content sections */
+.content-section {
+    padding: 4rem 0;
+}
+
+.content-section-white {
+    background-color: white;
+}
+
+.content-section-gray {
+    background-color: var(--gray-50);
+}
+
+.content-width {
+    /* 75% width for main content */
+}
+
+/* Section headers */
+.section-header {
+    color: var(--gray-800);
+}
+
+.section-icon {
+    color: var(--gray-600);
+}
+
+/* Biography section */
+.biography-text {
+    line-height: 1.8;
+    text-align: left;
+}
+
+.biography-lead {
+    color: var(--gray-700);
+}
+
+.research-interests-subsection {
+    color: var(--gray-800);
+    font-weight: 600;
+}
+
+.research-interests-icon {
+    color: var(--gray-600);
+    font-size: 0.9rem;
+}
+
+.research-interests-list {
+    color: var(--gray-600);
+    line-height: 1.7;
+}
+
+.research-interest-topic {
+    color: var(--gray-700);
+}
+
+/* News section */
+.news-item-container {
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.news-title {
+    color: var(--gray-800);
+    font-weight: 600;
+}
+
+.news-date {
+    color: var(--gray-500);
+}
+
+.news-description {
+    color: var(--gray-600);
+    font-size: 0.95rem;
+}
+
+.news-toggle-btn {
+    background-color: var(--gray-200);
+    color: var(--gray-700);
+    border: none;
+    font-size: 0.9rem;
+    padding: 0.5rem 1.5rem;
+}
+
+/* Selected publications section */
+.selected-publication-item {
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.selected-publication-title {
+    color: var(--gray-800);
+    font-weight: 600;
+}
+
+.selected-publication-authors {
+    color: var(--gray-600);
+}
+
+.selected-publication-venue {
+    color: var(--gray-700);
+    font-weight: 500;
+}
+
+.selected-publication-abstract {
+    color: var(--gray-600);
+    line-height: 1.5;
+}
+
+/* Buttons */
+.btn-gray {
+    background-color: var(--gray-200);
+    color: var(--gray-700);
+    border: none;
+    font-size: 0.9rem;
+    padding: 0.5rem 1.5rem;
+}
+
+.btn-gray:hover {
+    background-color: var(--gray-300);
+    color: var(--gray-800);
+}
+
+/* Contact page specific */
+.contact-header {
+    color: var(--gray-800);
+}
+
+.contact-section-header {
+    color: var(--gray-800);
+    font-weight: 600;
+}
+
+.contact-info-text {
+    color: var(--gray-700);
+}
+
+.contact-link {
+    color: var(--gray-700);
+    text-decoration: none;
+    border-bottom: 1px solid var(--gray-400);
+}
+
+.contact-link:hover {
+    color: var(--gray-800);
+}
+
+.contact-response-badge {
+    color: var(--gray-600);
+    font-size: 0.9rem;
+}
+
+.contact-response-badge-email {
+    background-color: var(--gray-200);
+    color: var(--gray-700);
+    font-size: 0.8rem;
+}
+
+.contact-response-badge-academic {
+    background-color: var(--gray-300);
+    color: var(--gray-700);
+    font-size: 0.8rem;
+}
+
+.contact-response-badge-students {
+    background-color: var(--gray-400);
+    color: white;
+    font-size: 0.8rem;
+}
+
+.contact-response-note {
+    color: var(--gray-500);
+}
+
+/* Service page specific */
+.service-item-container {
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.service-role {
+    color: var(--gray-800);
+    font-weight: 600;
+}
+
+.service-organization {
+    color: var(--gray-700);
+    font-weight: 500;
+}
+
+.service-description {
+    color: var(--gray-600);
+}
+
+.service-date-badge {
+    background-color: var(--gray-200);
+    color: var(--gray-700);
+}
+
+.service-date-badge-completed {
+    background-color: var(--gray-300);
+    color: var(--gray-700);
+}
+
+/* Notes page specific */
+.notes-count-badge {
+    background-color: var(--gray-100);
+}
+
+.notes-count-number {
+    color: var(--gray-700);
+    font-weight: 600;
+}
+
+.notes-count-text {
+    color: var(--gray-600);
+}
+
+.note-item-container {
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.note-title {
+    color: var(--gray-800);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.note-title:hover {
+    color: var(--gray-600);
+}
+
+.note-date-badge {
+    background-color: var(--gray-200);
+    color: var(--gray-700);
+}
+
+.note-category-badge {
+    background-color: var(--gray-300);
+    color: var(--gray-700);
+    text-transform: capitalize;
+}
+
+.note-tag-badge {
+    background-color: var(--gray-100);
+    color: var(--gray-600);
+}
+
+.note-summary {
+    color: var(--gray-600);
+    font-size: 0.95rem;
+}
+
+.note-read-more {
+    color: var(--gray-700);
+    text-decoration: none;
+    border-bottom: 1px solid var(--gray-400);
+}
+
+.note-read-more:hover {
+    color: var(--gray-800);
+}
+
+.category-item-badge {
+    background-color: var(--gray-200);
+    color: var(--gray-700);
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.category-count {
+    color: var(--gray-600);
+}
