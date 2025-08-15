@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Machine Learning for Healthcare",
+    "description": "Developing AI systems to improve medical diagnosis and treatment planning using deep learning and computer vision techniques.",
+    "icon": "fas fa-heartbeat"
+  },
+  {
+    "title": "Natural Language Processing",
+    "description": "Advancing NLP models for better understanding of human language and developing more robust conversational AI systems.",
+    "icon": "fas fa-comments"
+  },
+  {
+    "title": "AI Ethics & Fairness",
+    "description": "Research on responsible AI development and algorithmic fairness to ensure equitable and transparent machine learning systems.",
+    "icon": "fas fa-shield-alt"
+  }
+]

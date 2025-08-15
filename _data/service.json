@@ -1,0 +1,113 @@
+{
+  "introduction": {
+    "description": "I am committed to serving the academic community through various roles in editorial boards, conference committees, and professional organizations.",
+    "years_of_service": "8+",
+    "years_label": "Years of Service"
+  },
+  "editorial_service": [
+    {
+      "role": "Associate Editor",
+      "organization": "Journal of Machine Learning Research",
+      "period": "2022 - Present",
+      "description": "Responsible for handling submissions in machine learning and AI",
+      "current": true
+    },
+    {
+      "role": "Editorial Board Member",
+      "organization": "IEEE Transactions on Neural Networks and Learning Systems",
+      "period": "2021 - Present",
+      "description": "Contributing to editorial decisions and peer review process",
+      "current": true
+    },
+    {
+      "role": "Guest Editor",
+      "organization": "Special Issue on \"AI for Healthcare\" - Nature Machine Intelligence",
+      "period": "2023",
+      "description": "Led special issue on applications of AI in healthcare",
+      "current": false
+    },
+    {
+      "role": "Reviewer",
+      "organization": "Multiple Top-Tier Journals and Conferences",
+      "period": "2018 - Present",
+      "description": "Regular reviewer for NeurIPS, ICML, ICLR, AAAI, IJCAI, and others",
+      "current": true
+    }
+  ],
+  "conference_organization": [
+    {
+      "role": "Program Committee Co-Chair",
+      "organization": "International Conference on Machine Learning (ICML) 2024",
+      "period": "2024",
+      "description": "Leading the program committee for one of the premier ML conferences",
+      "current": false
+    },
+    {
+      "role": "Area Chair",
+      "organization": "Conference on Neural Information Processing Systems (NeurIPS)",
+      "period": "2022 - 2023",
+      "description": "Overseeing the review process for machine learning applications",
+      "current": false
+    },
+    {
+      "role": "Workshop Co-Organizer",
+      "organization": "\"AI for Social Good\" Workshop at AAAI",
+      "period": "2023",
+      "description": "Organized workshop on applications of AI for societal benefit",
+      "current": false
+    },
+    {
+      "role": "Program Committee Member",
+      "organization": "Multiple Conferences (ICLR, AAAI, IJCAI, AISTATS)",
+      "period": "2019 - Present",
+      "description": "Regular PC member for top-tier AI and ML conferences",
+      "current": true
+    }
+  ],
+  "professional_organizations": [
+    {
+      "role": "Board Member",
+      "organization": "Association for the Advancement of Artificial Intelligence (AAAI)",
+      "period": "2023 - Present",
+      "description": "Contributing to strategic decisions and policy development",
+      "current": true
+    },
+    {
+      "role": "Committee Member",
+      "organization": "IEEE Computer Society - AI Standards Committee",
+      "period": "2022 - Present",
+      "description": "Working on developing standards for AI systems and applications",
+      "current": true
+    },
+    {
+      "role": "Senior Member",
+      "organization": "IEEE Computer Society",
+      "period": "2020 - Present",
+      "description": "Active member contributing to professional development activities",
+      "current": true
+    }
+  ],
+  "university_service": [
+    {
+      "role": "Chair",
+      "organization": "Faculty Search Committee - Computer Science Department",
+      "period": "2023 - 2024",
+      "description": "Leading faculty recruitment in machine learning and AI",
+      "current": false
+    },
+    {
+      "role": "Member",
+      "organization": "Graduate Admissions Committee",
+      "period": "2021 - Present",
+      "description": "Evaluating graduate student applications and admissions",
+      "current": true
+    },
+    {
+      "role": "Faculty Advisor",
+      "organization": "AI Student Society",
+      "period": "2019 - Present",
+      "description": "Mentoring student organization focused on artificial intelligence",
+      "current": true
+    }
+  ]
+}

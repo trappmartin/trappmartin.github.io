@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Bayesian Machine Learning",
+    "description": "Developing probabilistic models and uncertainty quantification methods for robust AI systems."
+  },
+  {
+    "title": "Deep Learning Theory",
+    "description": "Understanding the theoretical foundations of neural networks and optimization landscapes."
+  },
+  {
+    "title": "AI Safety & Robustness",
+    "description": "Research on reliable and safe artificial intelligence systems for real-world applications."
+  }
+]

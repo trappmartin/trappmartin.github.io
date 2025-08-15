@@ -12,7 +12,7 @@ permalink: /contact/
             <div class="col-10">
                 <h1 class="h2 mb-4" style="color: var(--gray-800);">Contact</h1>
                 <div style="line-height: 1.8;">
-                    <p class="lead mb-4" style="color: var(--gray-700);">I welcome inquiries about research collaborations, speaking opportunities, and academic partnerships. Please feel free to reach out using the contact information below.</p>
+                    <p class="lead mb-4" style="color: var(--gray-700);">{{ site.data.contact.introduction.description }}</p>
                 </div>
             </div>
         </div>
@@ -66,11 +66,10 @@ permalink: /contact/
                                 <i class="fas fa-clock me-3" style="color: var(--gray-600);"></i>
                                 <h4 class="h6 mb-0" style="color: var(--gray-800); font-weight: 600;">Office Hours</h4>
                             </div>
-                            <p class="mb-1" style="color: var(--gray-700);">Fall 2024:</p>
+                            <p class="mb-1" style="color: var(--gray-700);">{{ site.data.contact.office_hours.semester }}:</p>
                             <p class="mb-0 small" style="color: var(--gray-600);">
-                                Tuesdays: 2:00 PM - 4:00 PM<br>
-                                Thursdays: 10:00 AM - 12:00 PM<br>
-                                Or by appointment
+                                {% for schedule in site.data.contact.office_hours.schedule %}{{ schedule.day }}: {{ schedule.time }}<br>{% endfor %}
+                                {{ site.data.contact.office_hours.note }}
                             </p>
                         </div>
                     </div>
@@ -134,27 +133,17 @@ permalink: /contact/
                 </h2>
                 
                 <div class="row">
+                    {% for response in site.data.contact.response_times %}
                     <div class="col-md-4 mb-3">
                         <div class="d-flex align-items-center">
-                            <span class="px-2 py-1 rounded me-3" style="background-color: var(--gray-200); color: var(--gray-700); font-size: 0.8rem;">Email</span>
-                            <span style="color: var(--gray-600); font-size: 0.9rem;">24-48 hours</span>
+                            <span class="px-2 py-1 rounded me-3 {{ response.badge_class }}" style="font-size: 0.8rem;">{{ response.type }}</span>
+                            <span style="color: var(--gray-600); font-size: 0.9rem;">{{ response.time }}</span>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-3">
-                        <div class="d-flex align-items-center">
-                            <span class="px-2 py-1 rounded me-3" style="background-color: var(--gray-300); color: var(--gray-700); font-size: 0.8rem;">Academic</span>
-                            <span style="color: var(--gray-600); font-size: 0.9rem;">2-3 days</span>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <div class="d-flex align-items-center">
-                            <span class="px-2 py-1 rounded me-3" style="background-color: var(--gray-400); color: white; font-size: 0.8rem;">Students</span>
-                            <span style="color: var(--gray-600); font-size: 0.9rem;">Same day</span>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
                 
-                <p class="mt-4 small" style="color: var(--gray-500);">Response times may be longer during conferences, travel, or sabbatical periods.</p>
+                <p class="mt-4 small" style="color: var(--gray-500);">{{ site.data.contact.response_note }}</p>
             </div>
         </div>
     </div>

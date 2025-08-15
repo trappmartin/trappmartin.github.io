@@ -12,11 +12,11 @@ permalink: /service/
             <div class="col-10">
                 <h1 class="h2 mb-4" style="color: var(--gray-800);">Academic Service</h1>
                 <div style="line-height: 1.8;">
-                    <p class="lead mb-4" style="color: var(--gray-700);">I am committed to serving the academic community through various roles in editorial boards, conference committees, and professional organizations.</p>
-                    <div class="d-inline-block px-4 py-2 rounded" style="background-color: var(--gray-100);">
-                        <span class="h5 mb-0" style="color: var(--gray-700); font-weight: 600;">8+</span>
-                        <span class="small ms-2" style="color: var(--gray-600);">Years of Service</span>
-                    </div>
+                                    <p class="lead mb-4" style="color: var(--gray-700);">{{ site.data.service.introduction.description }}</p>
+                <div class="d-inline-block px-4 py-2 rounded" style="background-color: var(--gray-100);">
+                    <span class="h5 mb-0" style="color: var(--gray-700); font-weight: 600;">{{ site.data.service.introduction.years_of_service }}</span>
+                    <span class="small ms-2" style="color: var(--gray-600);">{{ site.data.service.introduction.years_label }}</span>
+                </div>
                 </div>
             </div>
         </div>
@@ -32,41 +32,16 @@ permalink: /service/
                     <i class="fas fa-edit me-3" style="color: var(--gray-600);"></i>Editorial Service
                 </h2>
                 
-                <div class="mb-4 pb-4" style="border-bottom: 1px solid var(--gray-200);">
+                {% for item in site.data.service.editorial_service %}
+                <div class="{% if forloop.last %}mb-0{% else %}mb-4 pb-4{% endif %}" {% unless forloop.last %}style="border-bottom: 1px solid var(--gray-200);"{% endunless %}>
                     <div class="d-flex justify-content-between align-items-start mb-2">
-                        <h4 class="h6 mb-0" style="color: var(--gray-800); font-weight: 600;">Associate Editor</h4>
-                        <span class="small px-2 py-1 rounded" style="background-color: var(--gray-200); color: var(--gray-700);">2022 - Present</span>
+                        <h4 class="h6 mb-0" style="color: var(--gray-800); font-weight: 600;">{{ item.role }}</h4>
+                        <span class="small px-2 py-1 rounded" style="background-color: {% if item.current %}var(--gray-200){% else %}var(--gray-300){% endif %}; color: var(--gray-700);">{{ item.period }}</span>
                     </div>
-                    <p class="mb-1" style="color: var(--gray-700); font-weight: 500;">Journal of Machine Learning Research</p>
-                    <p class="mb-0 small" style="color: var(--gray-600);">Responsible for handling submissions in machine learning and AI</p>
+                    <p class="mb-1" style="color: var(--gray-700); font-weight: 500;">{{ item.organization }}</p>
+                    <p class="mb-0 small" style="color: var(--gray-600);">{{ item.description }}</p>
                 </div>
-
-                <div class="mb-4 pb-4" style="border-bottom: 1px solid var(--gray-200);">
-                    <div class="d-flex justify-content-between align-items-start mb-2">
-                        <h4 class="h6 mb-0" style="color: var(--gray-800); font-weight: 600;">Editorial Board Member</h4>
-                        <span class="small px-2 py-1 rounded" style="background-color: var(--gray-200); color: var(--gray-700);">2021 - Present</span>
-                    </div>
-                    <p class="mb-1" style="color: var(--gray-700); font-weight: 500;">IEEE Transactions on Neural Networks and Learning Systems</p>
-                    <p class="mb-0 small" style="color: var(--gray-600);">Contributing to editorial decisions and peer review process</p>
-                </div>
-
-                <div class="mb-4 pb-4" style="border-bottom: 1px solid var(--gray-200);">
-                    <div class="d-flex justify-content-between align-items-start mb-2">
-                        <h4 class="h6 mb-0" style="color: var(--gray-800); font-weight: 600;">Guest Editor</h4>
-                        <span class="small px-2 py-1 rounded" style="background-color: var(--gray-300); color: var(--gray-700);">2023</span>
-                    </div>
-                    <p class="mb-1" style="color: var(--gray-700); font-weight: 500;">Special Issue on "AI for Healthcare" - Nature Machine Intelligence</p>
-                    <p class="mb-0 small" style="color: var(--gray-600);">Led special issue on applications of AI in healthcare</p>
-                </div>
-
-                <div class="mb-0">
-                    <div class="d-flex justify-content-between align-items-start mb-2">
-                        <h4 class="h6 mb-0" style="color: var(--gray-800); font-weight: 600;">Reviewer</h4>
-                        <span class="small px-2 py-1 rounded" style="background-color: var(--gray-200); color: var(--gray-700);">2018 - Present</span>
-                    </div>
-                    <p class="mb-1" style="color: var(--gray-700); font-weight: 500;">Multiple Top-Tier Journals and Conferences</p>
-                    <p class="mb-0 small" style="color: var(--gray-600);">Regular reviewer for NeurIPS, ICML, ICLR, AAAI, IJCAI, and others</p>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
@@ -81,41 +56,16 @@ permalink: /service/
                     <i class="fas fa-users me-3" style="color: var(--gray-600);"></i>Conference Organization
                 </h2>
                 
-                <div class="mb-4 pb-4" style="border-bottom: 1px solid var(--gray-200);">
+                {% for item in site.data.service.conference_organization %}
+                <div class="{% if forloop.last %}mb-0{% else %}mb-4 pb-4{% endif %}" {% unless forloop.last %}style="border-bottom: 1px solid var(--gray-200);"{% endunless %}>
                     <div class="d-flex justify-content-between align-items-start mb-2">
-                        <h4 class="h6 mb-0" style="color: var(--gray-800); font-weight: 600;">Program Committee Co-Chair</h4>
-                        <span class="small px-2 py-1 rounded" style="background-color: var(--gray-200); color: var(--gray-700);">2024</span>
+                        <h4 class="h6 mb-0" style="color: var(--gray-800); font-weight: 600;">{{ item.role }}</h4>
+                        <span class="small px-2 py-1 rounded" style="background-color: {% if item.current %}var(--gray-200){% else %}var(--gray-300){% endif %}; color: var(--gray-700);">{{ item.period }}</span>
                     </div>
-                    <p class="mb-1" style="color: var(--gray-700); font-weight: 500;">International Conference on Machine Learning (ICML) 2024</p>
-                    <p class="mb-0 small" style="color: var(--gray-600);">Leading the program committee for one of the premier ML conferences</p>
+                    <p class="mb-1" style="color: var(--gray-700); font-weight: 500;">{{ item.organization }}</p>
+                    <p class="mb-0 small" style="color: var(--gray-600);">{{ item.description }}</p>
                 </div>
-
-                <div class="mb-4 pb-4" style="border-bottom: 1px solid var(--gray-200);">
-                    <div class="d-flex justify-content-between align-items-start mb-2">
-                        <h4 class="h6 mb-0" style="color: var(--gray-800); font-weight: 600;">Area Chair</h4>
-                        <span class="small px-2 py-1 rounded" style="background-color: var(--gray-200); color: var(--gray-700);">2022 - 2023</span>
-                    </div>
-                    <p class="mb-1" style="color: var(--gray-700); font-weight: 500;">Conference on Neural Information Processing Systems (NeurIPS)</p>
-                    <p class="mb-0 small" style="color: var(--gray-600);">Overseeing the review process for machine learning applications</p>
-                </div>
-
-                <div class="mb-4 pb-4" style="border-bottom: 1px solid var(--gray-200);">
-                    <div class="d-flex justify-content-between align-items-start mb-2">
-                        <h4 class="h6 mb-0" style="color: var(--gray-800); font-weight: 600;">Workshop Co-Organizer</h4>
-                        <span class="small px-2 py-1 rounded" style="background-color: var(--gray-300); color: var(--gray-700);">2023</span>
-                    </div>
-                    <p class="mb-1" style="color: var(--gray-700); font-weight: 500;">"AI for Social Good" Workshop at AAAI</p>
-                    <p class="mb-0 small" style="color: var(--gray-600);">Organized workshop on applications of AI for societal benefit</p>
-                </div>
-
-                <div class="mb-0">
-                    <div class="d-flex justify-content-between align-items-start mb-2">
-                        <h4 class="h6 mb-0" style="color: var(--gray-800); font-weight: 600;">Program Committee Member</h4>
-                        <span class="small px-2 py-1 rounded" style="background-color: var(--gray-200); color: var(--gray-700);">2019 - Present</span>
-                    </div>
-                    <p class="mb-1" style="color: var(--gray-700); font-weight: 500;">Multiple Conferences (ICLR, AAAI, IJCAI, AISTATS)</p>
-                    <p class="mb-0 small" style="color: var(--gray-600);">Regular PC member for top-tier AI and ML conferences</p>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
@@ -130,32 +80,16 @@ permalink: /service/
                     <i class="fas fa-building me-3" style="color: var(--gray-600);"></i>Professional Organizations
                 </h2>
                 
-                <div class="mb-4 pb-4" style="border-bottom: 1px solid var(--gray-200);">
+                {% for item in site.data.service.professional_organizations %}
+                <div class="{% if forloop.last %}mb-0{% else %}mb-4 pb-4{% endif %}" {% unless forloop.last %}style="border-bottom: 1px solid var(--gray-200);"{% endunless %}>
                     <div class="d-flex justify-content-between align-items-start mb-2">
-                        <h4 class="h6 mb-0" style="color: var(--gray-800); font-weight: 600;">Board Member</h4>
-                        <span class="small px-2 py-1 rounded" style="background-color: var(--gray-200); color: var(--gray-700);">2023 - Present</span>
+                        <h4 class="h6 mb-0" style="color: var(--gray-800); font-weight: 600;">{{ item.role }}</h4>
+                        <span class="small px-2 py-1 rounded" style="background-color: {% if item.current %}var(--gray-200){% else %}var(--gray-300){% endif %}; color: var(--gray-700);">{{ item.period }}</span>
                     </div>
-                    <p class="mb-1" style="color: var(--gray-700); font-weight: 500;">Association for the Advancement of Artificial Intelligence (AAAI)</p>
-                    <p class="mb-0 small" style="color: var(--gray-600);">Contributing to strategic decisions and policy development</p>
+                    <p class="mb-1" style="color: var(--gray-700); font-weight: 500;">{{ item.organization }}</p>
+                    <p class="mb-0 small" style="color: var(--gray-600);">{{ item.description }}</p>
                 </div>
-
-                <div class="mb-4 pb-4" style="border-bottom: 1px solid var(--gray-200);">
-                    <div class="d-flex justify-content-between align-items-start mb-2">
-                        <h4 class="h6 mb-0" style="color: var(--gray-800); font-weight: 600;">Committee Member</h4>
-                        <span class="small px-2 py-1 rounded" style="background-color: var(--gray-200); color: var(--gray-700);">2022 - Present</span>
-                    </div>
-                    <p class="mb-1" style="color: var(--gray-700); font-weight: 500;">IEEE Computer Society - AI Standards Committee</p>
-                    <p class="mb-0 small" style="color: var(--gray-600);">Working on developing standards for AI systems and applications</p>
-                </div>
-
-                <div class="mb-0">
-                    <div class="d-flex justify-content-between align-items-start mb-2">
-                        <h4 class="h6 mb-0" style="color: var(--gray-800); font-weight: 600;">Senior Member</h4>
-                        <span class="small px-2 py-1 rounded" style="background-color: var(--gray-200); color: var(--gray-700);">2020 - Present</span>
-                    </div>
-                    <p class="mb-1" style="color: var(--gray-700); font-weight: 500;">IEEE Computer Society</p>
-                    <p class="mb-0 small" style="color: var(--gray-600);">Active member contributing to professional development activities</p>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
@@ -170,32 +104,16 @@ permalink: /service/
                     <i class="fas fa-university me-3" style="color: var(--gray-600);"></i>University Service
                 </h2>
                 
-                <div class="mb-4 pb-4" style="border-bottom: 1px solid var(--gray-200);">
+                {% for item in site.data.service.university_service %}
+                <div class="{% if forloop.last %}mb-0{% else %}mb-4 pb-4{% endif %}" {% unless forloop.last %}style="border-bottom: 1px solid var(--gray-200);"{% endunless %}>
                     <div class="d-flex justify-content-between align-items-start mb-2">
-                        <h4 class="h6 mb-0" style="color: var(--gray-800); font-weight: 600;">Chair</h4>
-                        <span class="small px-2 py-1 rounded" style="background-color: var(--gray-200); color: var(--gray-700);">2023 - 2024</span>
+                        <h4 class="h6 mb-0" style="color: var(--gray-800); font-weight: 600;">{{ item.role }}</h4>
+                        <span class="small px-2 py-1 rounded" style="background-color: {% if item.current %}var(--gray-200){% else %}var(--gray-300){% endif %}; color: var(--gray-700);">{{ item.period }}</span>
                     </div>
-                    <p class="mb-1" style="color: var(--gray-700); font-weight: 500;">Faculty Search Committee - Computer Science Department</p>
-                    <p class="mb-0 small" style="color: var(--gray-600);">Leading faculty recruitment in machine learning and AI</p>
+                    <p class="mb-1" style="color: var(--gray-700); font-weight: 500;">{{ item.organization }}</p>
+                    <p class="mb-0 small" style="color: var(--gray-600);">{{ item.description }}</p>
                 </div>
-
-                <div class="mb-4 pb-4" style="border-bottom: 1px solid var(--gray-200);">
-                    <div class="d-flex justify-content-between align-items-start mb-2">
-                        <h4 class="h6 mb-0" style="color: var(--gray-800); font-weight: 600;">Member</h4>
-                        <span class="small px-2 py-1 rounded" style="background-color: var(--gray-200); color: var(--gray-700);">2021 - Present</span>
-                    </div>
-                    <p class="mb-1" style="color: var(--gray-700); font-weight: 500;">Graduate Admissions Committee</p>
-                    <p class="mb-0 small" style="color: var(--gray-600);">Evaluating graduate student applications and admissions</p>
-                </div>
-
-                <div class="mb-0">
-                    <div class="d-flex justify-content-between align-items-start mb-2">
-                        <h4 class="h6 mb-0" style="color: var(--gray-800); font-weight: 600;">Faculty Advisor</h4>
-                        <span class="small px-2 py-1 rounded" style="background-color: var(--gray-200); color: var(--gray-700);">2019 - Present</span>
-                    </div>
-                    <p class="mb-1" style="color: var(--gray-700); font-weight: 500;">AI Student Society</p>
-                    <p class="mb-0 small" style="color: var(--gray-600);">Mentoring student organization focused on artificial intelligence</p>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>

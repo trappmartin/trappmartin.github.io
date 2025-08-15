@@ -57,9 +57,9 @@ title: Home
                                 <i class="research-interests-icon fas fa-lightbulb me-2"></i>Research Interests
                             </h3>
                             <ul class="research-interests-list mb-0">
-                                <li class="mb-2"><strong class="research-interest-topic">Bayesian Machine Learning:</strong> Developing probabilistic models and uncertainty quantification methods for robust AI systems.</li>
-                                <li class="mb-2"><strong class="research-interest-topic">Deep Learning Theory:</strong> Understanding the theoretical foundations of neural networks and optimization landscapes.</li>
-                                <li class="mb-0"><strong class="research-interest-topic">AI Safety & Robustness:</strong> Research on reliable and safe artificial intelligence systems for real-world applications.</li>
+                                {% for interest in site.data.research_interests %}
+                                <li class="{% if forloop.last %}mb-0{% else %}mb-2{% endif %}"><strong class="research-interest-topic">{{ interest.title }}:</strong> {{ interest.description }}</li>
+                                {% endfor %}
                             </ul>
                         </div>
                     </div>
