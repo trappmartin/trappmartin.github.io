@@ -1,37 +1,3 @@
 {
-  "introduction": {
-    "description": "I welcome inquiries about research collaborations, speaking opportunities, and academic partnerships. Please feel free to reach out using the contact information below."
-  },
-  "office_hours": {
-    "semester": "Fall 2024",
-    "schedule": [
-      {
-        "day": "Tuesdays",
-        "time": "2:00 PM - 4:00 PM"
-      },
-      {
-        "day": "Thursdays", 
-        "time": "10:00 AM - 12:00 PM"
-      }
-    ],
-    "note": "Or by appointment"
-  },
-  "response_times": [
-    {
-      "type": "Email",
-      "time": "24-48 hours",
-      "badge_class": "contact-response-badge-email"
-    },
-    {
-      "type": "Academic",
-      "time": "2-3 days",
-      "badge_class": "contact-response-badge-academic"
-    },
-    {
-      "type": "Students",
-      "time": "Same day",
-      "badge_class": "contact-response-badge-students"
-    }
-  ],
-  "response_note": "Response times may be longer during conferences, travel, or sabbatical periods."
+
 }

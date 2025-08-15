@@ -29,9 +29,9 @@ title: Home
                                 <i class="fab fa-linkedin fa-xl"></i>
                             </a>
                             {% endif %}
-                            {% if site.social.twitter %}
-                            <a href="{{ site.social.twitter }}" title="Twitter" target="_blank">
-                                <i class="fab fa-twitter fa-xl"></i>
+                            {% if site.social.bluesky %}
+                            <a href="{{ site.social.bluesky }}" title="Bluesky" target="_blank">
+                                <i class="fas fa-cloud fa-xl"></i>
                             </a>
                             {% endif %}
                             {% if site.social.github %}
@@ -78,17 +78,17 @@ title: Home
                     News & Updates
                 </h2>
                 
-                {% assign sorted_news = site.news | sort: 'date' | reverse %}
+                {% assign sorted_news = site.data.news | sort: 'date' | reverse %}
                 
                 <!-- Initial 3 news items -->
                 <div id="initial-news">
                     {% for item in sorted_news limit: 3 %}
-                    <div class="news-item-container mb-4 pb-4">
+                    <div class="news-item-container mb-4">
                         <div class="d-flex align-items-center mb-2">
-                            <h4 class="news-title h6 mb-0 me-3">{{ item.content | markdownify | strip_html | truncate: 60 | split: '.' | first }}.</h4>
+                            <h4 class="news-title h6 mb-0 me-3">{{ item.title }}</h4>
                             <span class="news-date small">{{ item.date | date: "%B %Y" }}</span>
                         </div>
-                        <p class="news-description mb-0">{{ item.content | markdownify | strip_html | truncate: 150 }}</p>
+                        <div class="news-description mb-0">{{ item.content | markdownify }}</div>
                     </div>
                     {% endfor %}
                 </div>
@@ -97,12 +97,12 @@ title: Home
                 {% if sorted_news.size > 3 %}
                 <div id="additional-news" style="display: none;">
                     {% for item in sorted_news offset: 3 %}
-                    <div class="news-item-container mb-4 pb-4">
+                    <div class="news-item-container mb-4">
                         <div class="d-flex align-items-center mb-2">
-                            <h4 class="news-title h6 mb-0 me-3">{{ item.content | markdownify | strip_html | truncate: 60 | split: '.' | first }}.</h4>
+                            <h4 class="news-title h6 mb-0 me-3">{{ item.title }}</h4>
                             <span class="news-date small">{{ item.date | date: "%B %Y" }}</span>
                         </div>
-                        <p class="news-description mb-0">{{ item.content | markdownify | strip_html | truncate: 150 }}</p>
+                        <div class="news-description mb-0">{{ item.content | markdownify }}</div>
                     </div>
                     {% endfor %}
                 </div>

@@ -15,18 +15,10 @@
             <i class="fas fa-microphone me-1"></i>Oral
         </span>
         {% elsif entry.presentation == 'spotlight' %}
-        <span class="badge bg-info text-white" style="font-size: 0.6rem; font-weight: 600;">
+        <span class="badge bg-info text-dark" style="font-size: 0.6rem; font-weight: 600;">
             <i class="fas fa-star me-1"></i>Spotlight
         </span>
         {% endif %}
     </div>
-    {% if entry.abstract %}
-    <div class="d-flex align-items-start">
-        <p class="selected-publication-abstract mb-0 small flex-grow-1" style="font-size: 0.85rem; line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" data-full-abstract="{{ entry.abstract | escape }}">{{ entry.abstract }}</p>
-        <button class="btn btn-link btn-sm p-0 ms-2 toggle-abstract" onclick="toggleAbstract(this)" style="color: var(--gray-500); font-size: 0.7rem; white-space: nowrap; text-decoration: none;">
-            <small>more</small>
-        </button>
-    </div>
-    {% endif %}
 </div>
 {% endif %}

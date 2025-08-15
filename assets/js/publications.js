@@ -19,7 +19,13 @@
                 trimmedLine.includes('selected =') ||
                 trimmedLine.includes('type =') ||
                 trimmedLine.includes('presentation =') ||
-                trimmedLine.includes('acceptance_rate =')
+                trimmedLine.includes('acceptance_rate =') ||
+                trimmedLine.includes('keywords =') || 
+                trimmedLine.includes('code =') ||
+                trimmedLine.includes('abstract =') ||
+                trimmedLine.includes('url =') ||
+                trimmedLine.includes('pdf =') ||
+                trimmedLine.includes('venue =')
             );
         });
         return filteredLines.join('\n');

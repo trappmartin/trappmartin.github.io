@@ -1,8 +1,64 @@
 {
   "sections": [
     {
+      "id": "conference_organization",
+      "title": "Workshop Organization",
+      "description": "Organizing of academic workshops in machine learning.",
+      "items": [
+        {
+          "role": "Co-Organizer",
+          "organization": "Workshop on Uncertainty Quantification for Computer Vision (UNCV)",
+          "period": "2025",
+          "description": "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+          "current": false
+        },
+        {
+          "role": "Co-Organizer",
+          "organization": "Workshop on Uncertainty Quantification for Computer Vision (UNCV)",
+          "period": "2024",
+          "description": "European Conference on Computer Vision (ECCV).",
+          "current": false
+        },
+        {
+          "role": "Co-Organizer",
+          "organization": "Workshop on Tractable Probabilistic Modeling (TPM)",
+          "period": "2024",
+          "description": "Conference on Uncertainty in Artificial Intelligence (UAI)",
+          "current": false
+        },
+        {
+          "role": "Co-Organizer",
+          "organization": "Workshop on Uncertainty Quantification for Computer Vision (UNCV)",
+          "period": "2023",
+          "description": "International Conference on Computer Vision (ICCV).",
+          "current": false
+        },
+        {
+          "role": "Co-Organizer",
+          "organization": "Workshop on Tractable Probabilistic Modeling (TPM)",
+          "period": "2023",
+          "description": "Conference on Uncertainty in Artificial Intelligence (UAI)",
+          "current": false
+        },
+        {
+          "role": "Co-Organizer",
+          "organization": "Workshop on Uncertainty Quantification for Computer Vision (UNCV)",
+          "period": "2022",
+          "description": "European Conference on Computer Vision (ECCV).",
+          "current": false
+        },
+        {
+          "role": "Co-Organizer",
+          "organization": "Workshop on Tractable Probabilistic Modeling (TPM)",
+          "period": "2022",
+          "description": "Conference on Uncertainty in Artificial Intelligence (UAI)",
+          "current": false
+        }
+      ]
+    },
+    {
       "id": "editorial_service",
-      "title": "Editorial Service",
+      "title": "Academic Service",
       "description": "Contributing to the academic community through editorial responsibilities and peer review.",
       "items": [
         {
@@ -10,13 +66,6 @@
           "organization": "AISTATS",
           "period": "2024",
           "description": "Area chair for the Bayesian Deep Learning session",
-          "current": false
-        },
-        {
-          "role": "Guest Editor",
-          "organization": "Special Issue on Advances in Probabilistic Machine Learning",
-          "period": "2024 - 2025",
-          "description": "Entropy Journal",
           "current": false
         },
         {
@@ -29,79 +78,16 @@
       ]
     },
     {
-      "id": "conference_organization",
-      "title": "Conference Organization",
-      "description": "Organizing and supporting academic conferences and workshops in AI and machine learning.",
+      "id": "editorial_service",
+      "title": "Editorial Service",
+      "description": "Contributing to the academic community through editorial responsibilities and peer review.",
       "items": [
         {
-          "role": "Organizer",
-          "organization": "CVPR Workshop on Uncertainty Quantification for Computer Vision (UNCV)",
-          "period": "2025",
-          "description": "Organized workshop on applications of AI for societal benefit",
+          "role": "Guest Editor",
+          "organization": "Special Issue on Advances in Probabilistic Machine Learning",
+          "period": "2024 - 2025",
+          "description": "Entropy Journal",
           "current": false
-        },
-        {
-          "role": "Program Committee Member",
-          "organization": "Multiple Conferences (ICLR, AAAI, IJCAI, AISTATS)",
-          "period": "2019 - Present",
-          "description": "Regular PC member for top-tier AI and ML conferences",
-          "current": true
-        }
-      ]
-    },
-    {
-      "id": "professional_organizations",
-      "title": "Professional Organizations",
-      "description": "Active participation in professional societies and standards development.",
-      "items": [
-        {
-          "role": "Board Member",
-          "organization": "Association for the Advancement of Artificial Intelligence (AAAI)",
-          "period": "2023 - Present",
-          "description": "Contributing to strategic decisions and policy development",
-          "current": true
-        },
-        {
-          "role": "Committee Member",
-          "organization": "IEEE Computer Society - AI Standards Committee",
-          "period": "2022 - Present",
-          "description": "Working on developing standards for AI systems and applications",
-          "current": true
-        },
-        {
-          "role": "Senior Member",
-          "organization": "IEEE Computer Society",
-          "period": "2020 - Present",
-          "description": "Active member contributing to professional development activities",
-          "current": true
-        }
-      ]
-    },
-    {
-      "id": "university_service",
-      "title": "University Service",
-      "description": "Contributing to institutional governance and student development.",
-      "items": [
-        {
-          "role": "Chair",
-          "organization": "Faculty Search Committee - Computer Science Department",
-          "period": "2023 - 2024",
-          "description": "Leading faculty recruitment in machine learning and AI",
-          "current": false
-        },
-        {
-          "role": "Member",
-          "organization": "Graduate Admissions Committee",
-          "period": "2021 - Present",
-          "description": "Evaluating graduate student applications and admissions",
-          "current": true
-        },
-        {
-          "role": "Faculty Advisor",
-          "organization": "AI Student Society",
-          "period": "2019 - Present",
-          "description": "Mentoring student organization focused on artificial intelligence",
-          "current": true
         }
       ]
     }

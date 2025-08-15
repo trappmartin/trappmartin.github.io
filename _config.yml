@@ -2,8 +2,7 @@
 title: Martin Trapp
 email: martin.trapp@aalto.fi
 description: >- # this means to ignore newlines until "baseurl:"
-  Academic website for Dr. Jane Smith, Professor of Computer Science
-  specializing in Machine Learning and Artificial Intelligence.
+  Academic website for Martin Trapp.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -49,20 +48,21 @@ defaults:
 # Academic info
 author:
   name: Martin Trapp
-  title: Assistant Professor in Machine Learning
-  affiliation: KTH Royal Institute of Technology
-  email: martin.trapp@aalto.fi
-  office: "Room 301, Computer Science Building"
+  title: AoF Postdoctoral Researcher
+  affiliation: Aalto University, Finland
+  email: firstname.lastname@aalto.fi
+  office: "Computer Science Building"
   bio: >-
-    Martin is an Assistant Professor in Machine Learning at KTH Royal Institute of Technology,
-    where he works on probabilistic machine learning for reliable and trustworthy AI.
+    Martin is an Academy of Finland postdoctoral researcher at Aalto University and a member of the ELLIS society. 
+    My research is centred around representing, quantifying, and reducing uncertainties to make machine learning more reliable. 
+    I am particularly interested in efficient and principled approaches for large-scale systems with applications in language and vision.
 
 # Social links
 social:
-  google_scholar: "https://scholar.google.com/citations?user=example"
+  google_scholar: "https://scholar.google.com/citations?user=GwCrZP4AAAAJ"
   orcid: "https://orcid.org/0000-0000-0000-0000"
-  linkedin: "https://linkedin.com/in/janesmith"
-  twitter: "https://twitter.com/drjanesmith"
+  linkedin: "https://linkedin.com/in/martintrapp"
+  bluesky: "https://bsky.app/profile/martintrapp.bsky.social"
   github: "https://github.com/janesmith"
 
 # Jekyll Scholar configuration

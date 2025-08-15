@@ -11,9 +11,6 @@ permalink: /contact/
         <div class="row justify-content-center">
             <div class="col-10">
                 <h1 class="section-header h2 mb-4">Contact</h1>
-                <div class="section-intro">
-                    <p class="biography-lead lead mb-4">{{ site.data.contact.introduction.description }}</p>
-                </div>
             </div>
         </div>
     </div>
@@ -24,10 +21,6 @@ permalink: /contact/
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-10">
-                <h2 class="section-header h3 mb-5">
-                    <i class="section-icon fas fa-user-circle me-3"></i>Contact Information
-                </h2>
-                
                 <div class="row">
                     <div class="col-md-6">
                         <div class="mb-4">
@@ -39,6 +32,21 @@ permalink: /contact/
                                 <a href="mailto:{{ site.author.email }}" class="contact-link">{{ site.author.email }}</a>
                             </p>
                         </div>
+
+                        {% if site.social.linkedin %}
+                        <div class="mb-4">
+                            <a href="{{ site.social.linkedin }}" target="_blank" style="color: var(--gray-700); text-decoration: none; border-bottom: 1px solid var(--gray-400);">
+                                <i class="fab fa-linkedin me-2" style="color: var(--gray-600);"></i>LinkedIn
+                            </a>
+                        </div>
+                        {% endif %}
+                        {% if site.social.github %}
+                        <div class="mb-4">
+                            <a href="{{ site.social.github }}" target="_blank" style="color: var(--gray-700); text-decoration: none; border-bottom: 1px solid var(--gray-400);">
+                                <i class="fab fa-github me-2" style="color: var(--gray-600);"></i>GitHub
+                            </a>
+                        </div>
+                        {% endif %}
 
                     </div>
 
@@ -54,17 +62,7 @@ permalink: /contact/
                             </p>
                         </div>
 
-                        <div class="mb-4">
-                            <div class="d-flex align-items-center mb-2">
-                                <i class="section-icon fas fa-clock me-3"></i>
-                                <h4 class="contact-section-header h6 mb-0">Office Hours</h4>
-                            </div>
-                            <p class="mb-1 contact-info-text">{{ site.data.contact.office_hours.semester }}:</p>
-                            <p class="mb-0 small text-gray-600">
-                                {% for schedule in site.data.contact.office_hours.schedule %}{{ schedule.day }}: {{ schedule.time }}<br>{% endfor %}
-                                {{ site.data.contact.office_hours.note }}
-                            </p>
-                        </div>
+                       
                     </div>
                 </div>
             </div>
@@ -72,74 +70,5 @@ permalink: /contact/
     </div>
 </section>
 
-<!-- Online Presence Section - White Background -->
-<section style="background-color: white; padding: 4rem 0;">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-10">
-                <h2 class="h3 mb-5" style="color: var(--gray-800);">
-                    <i class="fas fa-share-alt me-3" style="color: var(--gray-600);"></i>Connect Online
-                </h2>
-                
-                <div class="row">
-                    {% if site.social.google_scholar %}
-                    <div class="col-md-6 mb-3">
-                        <a href="{{ site.social.google_scholar }}" target="_blank" style="color: var(--gray-700); text-decoration: none; border-bottom: 1px solid var(--gray-400);">
-                            <i class="fas fa-graduation-cap me-2" style="color: var(--gray-600);"></i>Google Scholar Profile
-                        </a>
-                    </div>
-                    {% endif %}
-                    {% if site.social.orcid %}
-                    <div class="col-md-6 mb-3">
-                        <a href="{{ site.social.orcid }}" target="_blank" style="color: var(--gray-700); text-decoration: none; border-bottom: 1px solid var(--gray-400);">
-                            <i class="fab fa-orcid me-2" style="color: var(--gray-600);"></i>ORCID Profile
-                        </a>
-                    </div>
-                    {% endif %}
-                    {% if site.social.linkedin %}
-                    <div class="col-md-6 mb-3">
-                        <a href="{{ site.social.linkedin }}" target="_blank" style="color: var(--gray-700); text-decoration: none; border-bottom: 1px solid var(--gray-400);">
-                            <i class="fab fa-linkedin me-2" style="color: var(--gray-600);"></i>LinkedIn
-                        </a>
-                    </div>
-                    {% endif %}
-                    {% if site.social.github %}
-                    <div class="col-md-6 mb-3">
-                        <a href="{{ site.social.github }}" target="_blank" style="color: var(--gray-700); text-decoration: none; border-bottom: 1px solid var(--gray-400);">
-                            <i class="fab fa-github me-2" style="color: var(--gray-600);"></i>GitHub
-                        </a>
-                    </div>
-                    {% endif %}
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Response Times Section - Gray Background -->
-<section style="background-color: var(--gray-50); padding: 4rem 0;">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-10">
-                <h2 class="h3 mb-5" style="color: var(--gray-800);">
-                    <i class="fas fa-stopwatch me-3" style="color: var(--gray-600);"></i>Response Times
-                </h2>
-                
-                <div class="row">
-                    {% for response in site.data.contact.response_times %}
-                    <div class="col-md-4 mb-3">
-                        <div class="d-flex align-items-center">
-                            <span class="px-2 py-1 rounded me-3 {{ response.badge_class }}" style="font-size: 0.8rem;">{{ response.type }}</span>
-                            <span style="color: var(--gray-600); font-size: 0.9rem;">{{ response.time }}</span>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-                
-                <p class="mt-4 small" style="color: var(--gray-500);">{{ site.data.contact.response_note }}</p>
-            </div>
-        </div>
-    </div>
-</section>
 
 

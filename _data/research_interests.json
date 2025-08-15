@@ -1,14 +1,14 @@
 [
   {
-    "title": "Bayesian Machine Learning",
-    "description": "Developing probabilistic models and uncertainty quantification methods for robust AI systems."
+    "title": "Tracable Models",
+    "description": "Probabilistic circuits, limits of tractability, and exact & approximate Bayesian inference."
   },
   {
-    "title": "Deep Learning Theory",
-    "description": "Understanding the theoretical foundations of neural networks and optimization landscapes."
+    "title": "Bayesian Learning",
+    "description": "Uncertainty quantification & reduction in deep learning, inductive biases, and non-parametric & function-space methods."
   },
   {
-    "title": "AI Safety & Robustness",
-    "description": "Research on reliable and safe artificial intelligence systems for real-world applications."
+    "title": "Probabilistic Numerics",
+    "description": "Probabilistic programming, uncertainty quantification, and uncertainty reduction."
   }
 ]

@@ -1,164 +1,290 @@
-@inproceedings{smith2024neurips,
-  title={Test paper 1},
-  author={Smith, Jane and Doe, John and Johnson, Alice},
-  booktitle={Advances in Neural Information Processing Systems},
-  pages={1--12},
+% ---- 
+% UAI Publications
+% ---- 
+
+@inproceedings{sladek2025bitvi,
+    title={Approximate Bayesian Inference via Bitstring Representations},
+    author = {Sladek, Aleksanteri and Trapp, Martin and Solin, Arno},
+    booktitle = {Proceedings of the 41st Conference on Uncertainty in Artificial Intelligence (UAI)},
+    pages = {3939--3957},
+    year = {2025},
+    editor = {Chiappa, Silvia and Magliacane, Sara},
+    volume = {286},
+    series = {Proceedings of Machine Learning Research},
+    publisher = {PMLR},
+    pdf = {https://raw.githubusercontent.com/mlresearch/v286/main/assets/sladek25a/sladek25a.pdf},
+    abstract = {The machine learning community has recently put effort into quantized or low-precision arithmetics to scale large models. This paper proposes performing probabilistic inference in the quantized, discrete parameter space created by these representations, effectively enabling us to learn a continuous distribution using discrete parameters. We consider both 2D densities and quantized neural networks, where we introduce a tractable learning approach using probabilistic circuits. This method offers a scalable solution to manage complex distributions and provides clear insights into model behavior. We validate our approach with various models, demonstrating inference efficiency without sacrificing accuracy. This work advances scalable, interpretable machine learning by utilizing discrete approximations for probabilistic computations.},
+    keywords = {probabilistic circuits, quantization, bitblasting, approximate Bayesian inference},
+    venue = {41st Conference on Uncertainty in Artificial Intelligence},
+    type = {UAI},
+    selected = {true}
+}
+
+@inproceedings{yao2024hardware,
+    title = {On Hardware-efficient Inference in Probabilistic Circuits},
+    author = {Yao, Lingyun and Trapp, Martin and Leslin, Jelin and Singh, Gaurav and Zhang, Peng and Periasamy, Karthekeyan and Andraud, Martin},
+    booktitle = {Proceedings of the 40th Conference on Uncertainty in Artificial Intelligence (UAI)},
+    pages = {3979--3996},
+    year = {2024},
+    editor = {Kiyavash, Negar and Mooij, Joris M.},
+    volume = {244},
+    series = {Proceedings of Machine Learning Research},
+    publisher = {PMLR},
+    pdf = {https://raw.githubusercontent.com/mlresearch/v244/main/assets/yao24a/yao24a.pdf},
+    code = {https://github.com/lingyunyao/AAI_Probabilistic_Circuits},
+    abstract = {Probabilistic circuits (PCs) offer a promising avenue to perform embedded reasoning under uncertainty. They support efficient and exact computation of various probabilistic inference tasks by design. Hence, hardware-efficient computation of PCs is highly interesting for edge computing applications. As computations in PCs are based on arithmetic with probability values, they are typically performed in the log domain to avoid underflow. Unfortunately, performing the log operation on hardware is costly. Hence, prior work has focused on computations in the linear domain, resulting in high resolution and energy requirements. This work proposes the first dedicated approximate computing framework for PCs that allows for low-resolution logarithm computations. We leverage Addition As Int, resulting in linear PC computation with simple hardware elements. Further, we provide a theoretical approximation error analysis and present an error compensation mechanism. Empirically, our method obtains up to 357{\texttimes} and 649{\texttimes} energy reduction on custom hardware for evidence and MAP queries respectively with little or no computational error.},
+    keywords = {probabilistic circuits, hardware-efficient inference, approximate computing},
+    venue = {40th Conference on Uncertainty in Artificial Intelligence},
+    type = {UAI}
+}
+
+@inproceedings{peharz2020random,
+    title={Random Sum-Product Networks: A Simple and Effective Approach to Probabilistic Deep Learning},
+    author = {Peharz, Robert and Vergari, Antonio and Stelzner, Karl and Molina, Alejandro and Shao, Xiaoting and Trapp, Martin and Kersting, Kristian and Ghahramani, Zoubin},
+    booktitle = {Proceedings of The 35th Uncertainty in Artificial Intelligence Conference (UAI)},
+    pages = {334--344},
+    year = {2020},
+    editor = {Adams, Ryan P. and Gogate, Vibhav},
+    volume = {115},
+    series = {Proceedings of Machine Learning Research},
+    publisher = {PMLR},
+    pdf = {http://proceedings.mlr.press/v115/peharz20a/peharz20a.pdf},
+    code = {https://github.com/cambridge-mlg/RAT-SPN},
+    abstract = {Sum-product networks (SPNs) are expressive probabilistic models with a rich set of exact and efficient inference routines. However, in order to guarantee exact inference, they require specific structural constraints, which complicate learning SPNs from data. Thereby, most SPN structure learners proposed so far are tedious to tune, do not scale easily, and are not easily integrated with deep learning frameworks. In this paper, we follow a simple “deep learning” approach, by generating unspecialized random structures, scalable to millions of parameters, and subsequently applying GPU-based optimization. Somewhat surprisingly, our models often perform on par with state-of-the-art SPN structure learners and deep neural networks on a diverse range of generative and discriminative scenarios. At the same time, our models yield well-calibrated uncertainties, and stand out among most deep generative and discriminative models in being robust to missing features and being able to detect anomalies.},
+    keywords = {probabilistic circuits, sum-product networks, probabilistic deep learning, deep generative models},
+    venue = {35th Conference on Uncertainty in Artificial Intelligence},
+    type = {UAI}
+}
+
+@inproceedings{yu2021multioutput,
+  title = {Leveraging probabilistic circuits for nonparametric multi-output regression},
+  author = {Yu, Zhongjie and Zhu, Mingye and Trapp, Martin and Skryagin, Arseny and Kersting, Kristian},
+  booktitle = {Proceedings of the 37th Conference on Uncertainty in Artificial Intelligence (UAI)},
+  pages = {2008--2018},
+  year = {2021},
+  editor = {de Campos, Cassio and Maathuis, Marloes H.},
+  volume = {161},
+  series = {Proceedings of Machine Learning Research},
+  month = {27--30 Jul},
+  publisher = {PMLR},
+  pdf = {https://proceedings.mlr.press/v161/yu21a/yu21a.pdf},
+  code = {https://github.com/ml-research/MOMoGP},
+  abstract = {Inspired by recent advances in the field of expert-based approximations of Gaussian processes (GPs), we present an expert-based approach to large-scale multi-output regression using single-output GP experts. Employing a deeply structured mixture of single-output GPs encoded via a probabilistic circuit allows us to capture correlations between multiple output dimensions accurately. By recursively partitioning the covariate space and the output space, posterior inference in our model reduces to inference on single-output GP experts, which only need to be conditioned on a small subset of the observations. We show that inference can be performed exactly and efficiently in our model, that it can capture correlations between output dimensions and, hence, often outperforms approaches that do not incorporate inter-output correlations, as demonstrated on several data sets in terms of the negative log predictive density.},
+  keywords = {probabilistic circuits, multi-output regression, Gaussian processes},
+  venue = {37th Conference on Uncertainty in Artificial Intelligence},
+  type = {UAI}
+}
+
+@inproceedings{trapp2017safesspn,
+    title={Safe Semi-Supervised Learning of Sum-Product Networks},
+    author = {Trapp, Martin and Madl, Tamas and Peharz, Robert and Pernkopf, Franz and Trappl, Robert},
+    booktitle = {Proceedings of The 33rd Conference on Uncertainty in Artificial Intelligence (UAI)},
+    pages = {289--298},
+    year = {2017},
+    editor = {Gal Elidan and Kristian Kersting},
+    volume = {115},
+    series = {Association For Uncertainty in Artificial Intelligence (AUAI)},
+    publisher = {Curran Associates, Inc.},
+    pdf = {https://arxiv.org/abs/1710.03444},
+    code = {https://github.com/trappmartin/SSLSPN_UAI2017},
+    abstract = {In several domains obtaining class annotations is expensive while at the same time unlabelled data are abundant. While most semi-supervised approaches enforce restrictive assumptions on the data distribution, recent work has managed to learn semi-supervised models in a non-restrictive regime. However, so far such approaches have only been proposed for linear models. In this work, we introduce semi-supervised parameter learning for Sum-Product Networks (SPNs). SPNs are deep probabilistic models admitting inference in linear time in number of network edges. Our approach has several advantages, as it (1) allows generative and discriminative semi-supervised learning, (2) guarantees that adding unlabelled data can increase, but not degrade, the performance (safe), and (3) is computationally efficient and does not enforce restrictive assumptions on the data distribution. We show on a variety of data sets that safe semi-supervised learning with SPNs is competitive compared to state-of-the-art and can lead to a better generative and discriminative objective value than a purely supervised approach.},
+    keywords = {probabilistic circuits, sum-product networks, semi-supervised learning},
+    venue = {33rd Conference on Uncertainty in Artificial Intelligence},
+    type = {UAI}
+} 
+
+% ---- 
+% ICML Publications
+% ---- 
+
+@InProceedings{peharz2020einsum,
+    title = {Einsum Networks: Fast and Scalable Learning of Tractable Probabilistic Circuits},
+    author = {Peharz, Robert and Lang, Steven and Vergari, Antonio and Stelzner, Karl and Molina, Alejandro and Trapp, Martin and Van Den Broeck, Guy and Kersting, Kristian and Ghahramani, Zoubin},
+    booktitle = {Proceedings of the 37th International Conference on Machine Learning (ICML)},
+    pages = {7563--7574},
+    year = {2020},
+    editor = {III, Hal Daumé and Singh, Aarti},
+    volume = {119},
+    series = {Proceedings of Machine Learning Research},
+    publisher = {PMLR},
+    pdf = {http://proceedings.mlr.press/v119/peharz20a/peharz20a.pdf},
+    code = {https://github.com/cambridge-mlg/EinsumNetworks},
+    abstract = {Probabilistic circuits (PCs) are a promising avenue for probabilistic modeling, as they permit a wide range of exact and efficient inference routines. Recent “deep-learning-style” implementations of PCs strive for a better scalability, but are still difficult to train on real-world data, due to their sparsely connected computational graphs. In this paper, we propose Einsum Networks (EiNets), a novel implementation design for PCs, improving prior art in several regards. At their core, EiNets combine a large number of arithmetic operations in a single monolithic einsum-operation, leading to speedups and memory savings of up to two orders of magnitude, in comparison to previous implementations. As an algorithmic contribution, we show that the implementation of Expectation-Maximization (EM) can be simplified for PCs, by leveraging automatic differentiation. Furthermore, we demonstrate that EiNets scale well to datasets which were previously out of reach, such as SVHN and CelebA, and that they can be used as faithful generative image models.},
+    keywords = {probabilistic circuits, scalable probabilistic inference, probabilistic deep learning},
+    venue = {37th International Conference on Machine Learning},
+    type = {ICML}
+}
+
+% ---- 
+% AISTATS Publications
+% ---- 
+
+@InProceedings{trapp2020deep,
+  title = 	 {Deep Structured Mixtures of Gaussian Processes},
+  author =       {Trapp, Martin and Peharz, Robert and Pernkopf, Franz and Rasmussen, Carl Edward},
+  booktitle = {Proceedings of the 23rd International Conference on Artificial Intelligence and Statistics (AISTATS)},
+  pages = {2251--2261},
+  year = {2020},
+  editor = 	 {Chiappa, Silvia and Calandra, Roberto},
+  volume = 	 {108},
+  series = 	 {Proceedings of Machine Learning Research},
+  publisher =    {PMLR},
+  pdf = 	 {http://proceedings.mlr.press/v108/trapp20a/trapp20a.pdf},
+  code = {https://github.com/trappmartin/DeepStructuredMixtures},   
+  abstract = {Gaussian Processes (GPs) are powerful non-parametric Bayesian regression models that allow exact posterior inference, but exhibit high computational and memory costs. In order to improve scalability of GPs, approximate posterior inference is frequently employed, where a prominent class of approximation techniques is based on local GP experts. However, local-expert techniques proposed so far are either not well-principled, come with limited approximation guarantees, or lead to intractable models. In this paper, we introduce deep structured mixtures of GP experts, a stochastic process model which i) allows exact posterior inference, ii) has attractive computational and memory costs, and iii) when used as GP approximation, captures predictive uncertainties consistently better than previous expert-based approximations. In a variety of experiments, we show that deep structured mixtures have a low approximation error and often perform competitive or outperform prior work.},
+  keywords = {probabilistic circuits, Gaussian processes, scalable probabilistic inference},
+  venue = {23rd International Conference on Artificial Intelligence and Statistics},
+  type = {AISTATS}
+}
+
+% ---- 
+% NeurIPS Publications
+% ---- 
+
+@inproceedings{trapp2019bayesian,
+ author = {Trapp, Martin and Peharz, Robert and Ge, Hong and Pernkopf, Franz and Ghahramani, Zoubin},
+ booktitle = {Advances in Neural Information Processing Systems 32 (NeurIPS 2019)},
+ editor = {H. Wallach and H. Larochelle and A. Beygelzimer and F. d\textquotesingle Alch\'{e}-Buc and E. Fox and R. Garnett},
+ pages = {1--12},
+ publisher = {Curran Associates, Inc.},
+ title = {Bayesian Learning of Sum-Product Networks},
+ pdf = {https://proceedings.neurips.cc/paper_files/paper/2019/file/5421e013565f7f1afa0cfe8ad87a99ab-Paper.pdf},
+ code = {https://github.com/trappmartin/BayesianSumProductNetworks},
+ abstract = {Sum-product networks (SPNs) are flexible density estimators and have received significant attention due to their attractive inference properties. While parameter learning in SPNs is well developed, structure learning leaves something to be desired: Even though there is a plethora of SPN structure learners, most of them are somewhat ad-hoc and based on intuition rather than a clear learning principle. In this paper, we introduce a well-principled Bayesian framework for SPN structure learning. First, we decompose the problem into i) laying out a computational graph, and ii) learning the so-called scope function over the graph. The first is rather unproblematic and akin to neural network architecture validation. The second represents the effective structure of the SPN and needs to respect the usual structural constraints in SPN, i.e. completeness and decomposability. While representing and learning the scope function is somewhat involved in general, in this paper, we propose a natural parametrisation for an important and widely used special case of SPNs. These structural parameters are incorporated into a Bayesian model, such that simultaneous structure and parameter learning is cast into monolithic Bayesian posterior inference. In various experiments, our Bayesian SPNs often improve test likelihoods over greedy SPN learners. Further, since the Bayesian framework protects against overfitting, we can evaluate hyper-parameters directly on the Bayesian model score, waiving the need for a separate validation set, which is especially beneficial in low data regimes. Bayesian SPNs can be applied to heterogeneous domains and can easily be extended to nonparametric formulations. Moreover, our Bayesian approach is the first, which consistently and robustly learns SPN structures under missing data.},
+ volume = {32},
+ year = {2019},
+ keywords = {probabilistic circuits, sum-product networks, Bayesian learning},
+ venue = {32nd Conference on Neural Information Processing Systems},
+ type = {NeurIPS}
+}
+
+@inproceedings{meronen2021periodic,
+ author = {Meronen, Lassi and Trapp, Martin and Solin, Arno},
+ booktitle = {Advances in Neural Information Processing Systems 34 (NeurIPS 2021)},
+ editor = {M. Ranzato and A. Beygelzimer and Y. Dauphin and P.S. Liang and J. Wortman Vaughan},
+ pages = {1673--1685},
+ publisher = {Curran Associates, Inc.},
+ title = {Periodic Activation Functions Induce Stationarity},
+ pdf = {https://proceedings.neurips.cc/paper_files/paper/2021/file/0d5a4a5a748611231b945d28436b8ece-Paper.pdf},
+ code = {https://github.com/AaltoML/PeriodicBNN},
+ abstract = {Neural network models are known to reinforce hidden data biases, making them unreliable and difficult to interpret. We seek to build models that `know what they do not know' by introducing inductive biases in the function space. We show that periodic activation functions in Bayesian neural networks establish a connection between the prior on the network weights and translation-invariant, stationary Gaussian process priors. Furthermore, we show that this link goes beyond sinusoidal (Fourier) activations by also covering triangular wave and periodic ReLU activation functions. In a series of experiments, we show that periodic activation functions obtain comparable performance for in-domain data and capture sensitivity to perturbed inputs in deep neural networks for out-of-domain detection.},
+ volume = {34},
+ year = {2021},
+ keywords = {Bayesian deep learning, activation functions, function space, Gaussian processes},
+ venue = {34th Conference on Neural Information Processing Systems},
+ type = {NeurIPS}
+}
+
+@inproceedings{yu2023characteristic,
+ author = {Yu, Zhongjie and Trapp, Martin and Kersting, Kristian},
+ booktitle = {Advances in Neural Information Processing Systems 36 (NeurIPS 2023)},
+ editor = {A. Oh and T. Naumann and A. Globerson and K. Saenko and M. Hardt and S. Levine},
+ pages = {34074--34086},
+ publisher = {Curran Associates, Inc.},
+ title = {Characteristic Circuits},
+ pdf = {https://proceedings.neurips.cc/paper_files/paper/2023/file/6b61c278e483954fee502b49fe71cd14-Paper-Conference.pdf},
+ code = {https://github.com/ml-research/CharacteristicCircuits},
+ abstract = {In many real-world scenarios it is crucial to be able to reliably and efficiently reason under uncertainty while capturing complex relationships in data. Probabilistic circuits (PCs), a prominent family of tractable probabilistic models, offer a remedy to this challenge by composing simple, tractable distributions into a high-dimensional probability distribution. However, learning PCs on heterogeneous data is challenging and densities of some parametric distributions are not available in closed form, limiting their potential use. We introduce characteristic circuits (CCs), a family of tractable probabilistic models providing a unified formalization of distributions over heterogeneous data in the spectral domain. The one-to-one relationship between characteristic functions and probability measures enables us to learn high-dimensional distributions on heterogeneous data domains and facilitates efficient probabilistic inference even when no closed-form density function is available. We show that the structure and parameters of CCs can be learned efficiently from the data and find that CCs outperform state-of-the-art density estimators for heterogeneous data domains on common benchmark data sets.},
+ volume = {36},
+ year = {2023},
+ keywords = {probabilistic circuits, characteristic functions, probabilistic deep learning},
+ venue = {36th Conference on Neural Information Processing Systems},
+ type = {NeurIPS},
+ presentation = {oral},
+ acceptance_rate = {0.6}
+}
+
+% ---- 
+% ICLR Publications
+% ---- 
+
+@inproceedings{loconte2024subtractive,
+  author = {Loconte, Lorenzo and Sladek, Aleksanteri M. and Mengel, Stefan and Trapp, Martin and Solin, Arno and Gillis, Nicolas and Vergari, Antonio},
+  title = {Subtractive Mixture Models via Squaring: Representation and Learning},
+  booktitle = {The 12th International Conference on Learning Representations (ICLR)},
+  publisher = {OpenReview.net},
+  year = {2024},
+  pdf = {https://arxiv.org/abs/2310.00724},
+  abstract = {Mixture models are traditionally represented and learned by adding several distributions as components. Allowing mixtures to subtract probability mass or density can drastically reduce the number of components needed to model complex distributions. However, learning such subtractive mixtures while ensuring they still encode a non-negative function is challenging. We investigate how to learn and perform inference on deep subtractive mixtures by squaring them. We do this in the framework of probabilistic circuits, which enable us to represent tensorized mixtures and generalize several other subtractive models. We theoretically prove that the class of squared circuits allowing subtractions can be exponentially more expressive than traditional additive mixtures; and, we empirically show this increased expressiveness on a series of real-world distribution estimation tasks.},
+  code = {https://github.com/april-tools/squared-npcs},
+  keywords = {probabilistic circuits, subtractive mixtures, representation learning},
+  venue = {12th International Conference on Learning Representations},
+  type = {ICLR},
+  presentation = {spotlight},
+  acceptance_rate = {5},
+  selected = {true}
+}
+
+@inproceedings{li2025streamlining,
+  author       = {Rui Li and
+                  Marcus Klasson and
+                  Arno Solin and
+                  Martin Trapp},
+  title        = {Streamlining Prediction in Bayesian Deep Learning},
+  booktitle    = {The 13th International Conference on Learning Representations (ICLR)},
+  publisher    = {OpenReview.net},
+  year         = {2025},
+  pdf          = {https://arxiv.org/abs/2411.18425},
+  abstract = {The rising interest in Bayesian deep learning (BDL) has led to a plethora of methods for estimating the posterior distribution. However, efficient computation of inferences, such as predictions, has been largely overlooked with Monte Carlo integration remaining the standard. In this work we examine streamlining prediction in BDL through a single forward pass without sampling. For this we use local linearisation on activation functions and local Gaussian approximations at linear layers. Thus allowing us to analytically compute an approximation to the posterior predictive distribution. We showcase our approach for both MLP and transformers, such as ViT and GPT-2, and assess its performance on regression and classification tasks.},
+  code = {https://github.com/AaltoML/SUQ},
+  keywords = {Bayesian deep learning, approximate inference, uncertainty quantification},
+  venue = {13th International Conference on Learning Representations},
+  type = {ICLR},
+  selected = {true}
+}
+
+% ---- 
+% ECCV Publications
+% ---- 
+
+@inproceedings{roy2022uncertainty,
+  author = {Roy, Subhankar and Trapp, Martin and Pilzer, Andrea and Kannala, Juho and Sebe, Nicu and Ricci, Elisa and Solin, Arno},
+  title = {Uncertainty-Guided Source-Free Domain Adaptation},
+  booktitle = {17th European Conference on Computer Vision (ECCV)},
+  series       = {Lecture Notes in Computer Science},
+  volume       = {13685},
+  pages        = {537--555},
+  publisher    = {Springer},
+  year         = {2022},
+  pdf          = {https://arxiv.org/abs/2208.07591},
+  doi          = {10.1007/978-3-031-19806-9\_31},
+  abstract = {Source-free domain adaptation (SFDA) aims to adapt a classifier to an unlabelled target data set by only using a pre-trained source model. However, the absence of the source data and the domain shift makes the predictions on the target data unreliable. We propose quantifying the uncertainty in the source model predictions and utilizing it to guide the target adaptation. For this, we construct a probabilistic source model by incorporating priors on the network parameters inducing a distribution over the model predictions. Uncertainties are estimated by employing a Laplace approximation and incorporated to identify target data points that do not lie in the source manifold and to down-weight them when maximizing the mutual information on the target data. Unlike recent works, our probabilistic treatment is computationally lightweight, decouples source training and target adaptation, and requires no specialized source training or changes of the model architecture. We show the advantages of uncertainty-guided SFDA over traditional SFDA in the closed-set and open-set settings and provide empirical evidence that our approach is more robust to strong domain shifts even without tuning.},
+  keywords = {domain adaptation, Bayesian deep learning, uncertainty quantification},
+  venue = {17th European Conference on Computer Vision},
+  type = {ECCV}
+}
+
+% ---- 
+% WACV Publications
+% ---- 
+
+@inproceedings{li2025flatness,
+  author={Li, Rui and Trapp, Martin and Klasson, Marcus and Solin, Arno},
+  booktitle={IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)}, 
+  title={Flatness Improves Backbone Generalisation in Few-Shot Classification}, 
+  year={2025},
+  pages={1072-1089},
+  doi={10.1109/WACV61041.2025.00113},
+  code = {https://github.com/AaltoML/Flatness},
+  pdf = {https://arxiv.org/abs/2409.13000},
+  abstract = {Deployment of deep neural networks in real-world settings typically requires adaptation to new tasks with few examples. Few-shot classification (FSC) provides a solution to this problem by leveraging pre-trained backbones for fast adaptation to new classes. However, approaches for multi-domain FSC typically result in complex pipelines aimed at information fusion and task-specific adaptation without consideration of the importance of backbone training. In this work, we introduce an effective strategy for backbone training and selection in multi-domain FSC by utilizing flatness-aware training and fine-tuning. Our work is theoretically grounded and empirically performs on par or better than state-of-the-art methods despite being simpler. Further, our results indicate that backbone training is crucial for good generalisation in FSC across different adaptation methods.},
+  keywords = {few-shot classification, flatness, deep neural networks},
+  venue = {IEEE/CVF Winter Conference on Applications of Computer Vision},
+  type = {WACV}
+}
+
+@inproceedings{meronen2024fixing,
+  author={Meronen, Lassi and Trapp, Martin and Pilzer, Andrea and Yang, Le and Solin, Arno},
+  booktitle={IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)}, 
+  title={Fixing Overconfidence in Dynamic Neural Networks}, 
   year={2024},
-  publisher={NeurIPS},
-  venue={Neural Information Processing Systems (NeurIPS)},
-  type={Conference},
-  presentation={oral},
-  acceptance_rate={0.8},
-  doi={10.1234/neurips2024.example},
-  url={https://doi.org/10.1234/neurips2024.example},
-  pdf={/assets/papers/smith2024neurips.pdf},
-  code={https://github.com/janesmith/advanced-nlp-networks},
-  abstract={This paper presents novel approaches to improving neural network architectures for natural language processing tasks, achieving state-of-the-art results on multiple benchmarks including GLUE and SuperGLUE. We introduce a new attention mechanism that significantly reduces computational complexity while maintaining or improving performance.},
-  keywords={natural language processing, neural networks, attention mechanisms, deep learning},
-  selected={true}
+  pages={2668-2678},
+  doi={10.1109/WACV57701.2024.00266},
+  code = {https://github.com/AaltoML/FlatFSL},
+  pdf = {https://arxiv.org/abs/2404.07696},
+  abstract = {Dynamic neural networks are a recent technique that promises a remedy for the increasing size of modern deep learning models by dynamically adapting their computational cost to the difficulty of the inputs. In this way, the model can adjust to a limited computational budget. However, the poor quality of uncertainty estimates in deep learning models makes it difficult to distinguish between hard and easy samples. To address this challenge, we present a computationally efficient approach for post-hoc uncertainty quantification in dynamic neural networks. We show that adequately quantifying and accounting for both aleatoric and epistemic uncertainty through a probabilistic treatment of the last layers improves the predictive performance and aids decision-making when determining the computational budget. In the experiments, we show improvements on CIFAR100, ImageNet, and Caltech-256 in terms of accuracy, capturing uncertainty, and calibration error.},
+  keywords = {Bayesian deep learning, uncertainty quantification, dynamic neural networks},
+  venue = {IEEE/CVF Winter Conference on Applications of Computer Vision},
+  type = {WACV}
 }
 
-@article{smith2024jmlr,
-  title={Machine Learning Approaches for Medical Image Analysis},
-  author={Smith, Jane and Brown, Robert and Garcia, Maria},
-  journal={Journal of Machine Learning Research},
-  volume={25},
-  number={1},
-  pages={1--28},
-  year={2024},
-  publisher={JMLR},
-  venue={Journal of Machine Learning Research},
-  type={Journal},
-  doi={10.1234/jmlr2024.example},
-  url={https://doi.org/10.1234/jmlr2024.example},
-  pdf={/assets/papers/smith2024jmlr.pdf},
-  abstract={A comprehensive study on applying machine learning techniques to medical image analysis, with applications in radiology and pathology. We present novel deep learning architectures specifically designed for medical imaging tasks, demonstrating significant improvements in diagnostic accuracy.},
-  keywords={medical imaging, machine learning, computer vision, healthcare AI},
-  selected={true}
-}
-
-@inproceedings{smith2023icml,
-  title={Ethical Considerations in AI System Development},
-  author={Smith, Jane and Wilson, David and Lee, Sarah},
-  booktitle={International Conference on Machine Learning},
-  pages={2150--2165},
-  year={2023},
-  organization={PMLR},
-  venue={International Conference on Machine Learning (ICML)},
-  type={Conference},
-  presentation={spotlight},
-  acceptance_rate={3.5},
-  doi={10.1234/icml2023.example},
-  url={https://doi.org/10.1234/icml2023.example},
-  pdf={/assets/papers/smith2023icml.pdf},
-  slides={/assets/slides/smith2023icml_slides.pdf},
-  abstract={This work explores the ethical implications of AI system development and proposes frameworks for responsible AI implementation. We address key challenges in fairness, transparency, and accountability in machine learning systems.},
-  keywords={AI ethics, fairness, transparency, responsible AI},
-  selected={true}
-}
-
-@inproceedings{smith2023workshop,
-  title={Deep Learning for Computer Vision: A Survey},
-  author={Smith, Jane and Chen, Michael},
-  booktitle={Workshop on Computer Vision and Machine Learning},
-  year={2023},
-  venue={Workshop on Computer Vision and Machine Learning},
-  type={Workshop},
-  pdf={/assets/papers/smith2023workshop.pdf},
-  abstract={A comprehensive survey of recent advances in deep learning techniques applied to computer vision problems, covering convolutional neural networks, attention mechanisms, and transformer architectures.},
-  keywords={computer vision, deep learning, survey, convolutional neural networks}
-}
-
-@article{smith2022tpami,
-  title={Robust Feature Learning for Adversarial Environments},
-  author={Smith, Jane and Kumar, Raj and Thompson, Lisa},
-  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  volume={44},
-  number={8},
-  pages={4123--4138},
-  year={2022},
-  publisher={IEEE},
-  venue={IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  type={Journal},
-  doi={10.1109/TPAMI.2022.example},
-  url={https://doi.org/10.1109/TPAMI.2022.example},
-  pdf={/assets/papers/smith2022tpami.pdf},
-  abstract={We present novel approaches to learning robust features that maintain performance under adversarial attacks. Our method combines adversarial training with feature regularization to improve model robustness.},
-  keywords={adversarial robustness, feature learning, deep learning security}
-}
-
-@inproceedings{smith2022aaai,
-  title={Interpretable Machine Learning for Healthcare Applications},
-  author={Smith, Jane and Patel, Amit and Rodriguez, Carlos},
-  booktitle={AAAI Conference on Artificial Intelligence},
-  volume={36},
-  number={5},
-  pages={5234--5242},
-  year={2022},
-  venue={AAAI Conference on Artificial Intelligence},
-  type={Conference},
-  doi={10.1609/aaai.v36i5.example},
-  url={https://doi.org/10.1609/aaai.v36i5.example},
-  pdf={/assets/papers/smith2022aaai.pdf},
-  code={https://github.com/janesmith/interpretable-healthcare-ml},
-  abstract={This paper addresses the critical need for interpretable machine learning models in healthcare applications. We propose novel techniques for generating explanations that are both accurate and understandable to medical professionals.},
-  keywords={interpretable AI, healthcare, explainable AI, medical applications}
-}
-
-@article{smith2021nature,
-  title={AI-Driven Drug Discovery: Opportunities and Challenges},
-  author={Smith, Jane and Williams, Emma and Zhang, Wei},
-  journal={Nature Machine Intelligence},
-  volume={3},
-  number={4},
-  pages={298--312},
-  year={2021},
-  publisher={Nature Publishing Group},
-  venue={Nature Machine Intelligence},
-  type={Journal},
-  doi={10.1038/s42256-021-example},
-  url={https://doi.org/10.1038/s42256-021-example},
-  pdf={/assets/papers/smith2021nature.pdf},
-  abstract={We review the current state of AI applications in drug discovery, highlighting both the tremendous opportunities and the significant challenges that remain. Our analysis covers molecular design, target identification, and clinical trial optimization.},
-  keywords={drug discovery, pharmaceutical AI, molecular design, computational biology}
-}
-
-@inproceedings{smith2021iclr,
-  title={Self-Supervised Learning for Few-Shot Classification},
-  author={Smith, Jane and Martinez, Sofia and Kim, Jae-Ho},
-  booktitle={International Conference on Learning Representations},
-  year={2021},
-  venue={International Conference on Learning Representations (ICLR)},
-  type={Conference},
-  url={https://openreview.net/forum?id=example2021},
-  pdf={/assets/papers/smith2021iclr.pdf},
-  code={https://github.com/janesmith/self-supervised-few-shot},
-  abstract={We propose a novel self-supervised learning framework for few-shot classification tasks. Our approach leverages contrastive learning and data augmentation to learn robust representations with limited labeled data.},
-  keywords={self-supervised learning, few-shot learning, contrastive learning, representation learning}
-}
-
-@book{smith2020handbook,
-  title={Handbook of Machine Learning in Healthcare},
-  author={Smith, Jane and Davis, Robert},
-  editor={Smith, Jane and Davis, Robert},
-  publisher={Academic Press},
-  year={2020},
-  isbn={978-0123456789},
-  venue={Academic Press},
-  type={Book},
-  abstract={A comprehensive handbook covering the application of machine learning techniques in healthcare, from diagnostic imaging to personalized medicine. This book serves as both a reference for researchers and a practical guide for practitioners.},
-  keywords={healthcare AI, medical machine learning, handbook, clinical applications}
-}
-
-@inproceedings{smith2019nips,
-  title={Federated Learning for Privacy-Preserving Healthcare Analytics},
-  author={Smith, Jane and Anderson, Mark and Liu, Xiaoming},
-  booktitle={Advances in Neural Information Processing Systems},
-  pages={8945--8956},
-  year={2019},
-  venue={Conference on Neural Information Processing Systems (NeurIPS)},
-  type={Conference},
-  pdf={/assets/papers/smith2019nips.pdf},
-  abstract={We present a federated learning framework specifically designed for healthcare analytics that preserves patient privacy while enabling collaborative model training across multiple institutions.},
-  keywords={federated learning, privacy preservation, healthcare analytics, distributed learning}
-}

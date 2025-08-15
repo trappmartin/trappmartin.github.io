@@ -1,0 +1,18 @@
+[
+
+    {
+        "date": "2025-06-11",
+        "title": "CVPR Workshop on Uncertainty Quantification for Computer Vision.",
+        "content": "Together with collegues we organised the [4th Workshop on Uncertainty Quantification for Computer Vision at CVPR 2025](https://uncertainty-cv.github.io/2025/)."
+    },
+    {
+        "date": "2025-05-05",
+        "title": "UAI Paper accepted!",
+        "content": "Our BitVI paper has been accepted to UAI 2025. Check out the [paper](https://openreview.net/pdf?id=nbsaJUjHQl), the code will be released soon."
+    },
+    {
+        "date": "2025-02-11",
+        "title": "ICLR Paper accepted!",
+        "content": "Our paper on Streamlining paper has been accepted to ICLR 2025. Check out the [paper](https://arxiv.org/abs/2411.18425) and the library [here](https://github.com/AaltoML/SUQ)."
+    }
+]
