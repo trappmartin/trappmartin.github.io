@@ -26,13 +26,13 @@ permalink: /service/
                 </h2>
                 
                 {% for item in site.data.service.editorial_service %}
-                <div class="{% if forloop.last %}mb-0{% else %}mb-4 pb-4{% endif %}" {% unless forloop.last %}style="border-bottom: 1px solid var(--gray-200);"{% endunless %}>
+                <div class="service-item-container {% if forloop.last %}mb-0{% else %}mb-4 pb-4{% endif %}">
                     <div class="d-flex justify-content-between align-items-start mb-2">
-                        <h4 class="h6 mb-0" style="color: var(--gray-800); font-weight: 600;">{{ item.role }}</h4>
-                        <span class="small px-2 py-1 rounded" style="background-color: {% if item.current %}var(--gray-200){% else %}var(--gray-300){% endif %}; color: var(--gray-700);">{{ item.period }}</span>
+                        <h4 class="service-role h6 mb-0">{{ item.role }}</h4>
+                        <span class="service-date-badge {% if item.current %}service-date-badge-current{% else %}service-date-badge-completed{% endif %} small px-2 py-1 rounded">{{ item.period }}</span>
                     </div>
-                    <p class="mb-1" style="color: var(--gray-700); font-weight: 500;">{{ item.organization }}</p>
-                    <p class="mb-0 small" style="color: var(--gray-600);">{{ item.description }}</p>
+                    <p class="service-organization mb-1">{{ item.organization }}</p>
+                    <p class="service-description mb-0 small">{{ item.description }}</p>
                 </div>
                 {% endfor %}
             </div>
@@ -50,13 +50,13 @@ permalink: /service/
                 </h2>
                 
                 {% for item in site.data.service.conference_organization %}
-                <div class="{% if forloop.last %}mb-0{% else %}mb-4 pb-4{% endif %}" {% unless forloop.last %}style="border-bottom: 1px solid var(--gray-200);"{% endunless %}>
+                <div class="service-item-container {% if forloop.last %}mb-0{% else %}mb-4 pb-4{% endif %}">
                     <div class="d-flex justify-content-between align-items-start mb-2">
-                        <h4 class="h6 mb-0" style="color: var(--gray-800); font-weight: 600;">{{ item.role }}</h4>
-                        <span class="small px-2 py-1 rounded" style="background-color: {% if item.current %}var(--gray-200){% else %}var(--gray-300){% endif %}; color: var(--gray-700);">{{ item.period }}</span>
+                        <h4 class="service-role h6 mb-0">{{ item.role }}</h4>
+                        <span class="service-date-badge {% if item.current %}service-date-badge-current{% else %}service-date-badge-completed{% endif %} small px-2 py-1 rounded">{{ item.period }}</span>
                     </div>
-                    <p class="mb-1" style="color: var(--gray-700); font-weight: 500;">{{ item.organization }}</p>
-                    <p class="mb-0 small" style="color: var(--gray-600);">{{ item.description }}</p>
+                    <p class="service-organization mb-1">{{ item.organization }}</p>
+                    <p class="service-description mb-0 small">{{ item.description }}</p>
                 </div>
                 {% endfor %}
             </div>
@@ -74,13 +74,13 @@ permalink: /service/
                 </h2>
                 
                 {% for item in site.data.service.professional_organizations %}
-                <div class="{% if forloop.last %}mb-0{% else %}mb-4 pb-4{% endif %}" {% unless forloop.last %}style="border-bottom: 1px solid var(--gray-200);"{% endunless %}>
+                <div class="service-item-container {% if forloop.last %}mb-0{% else %}mb-4 pb-4{% endif %}">
                     <div class="d-flex justify-content-between align-items-start mb-2">
-                        <h4 class="h6 mb-0" style="color: var(--gray-800); font-weight: 600;">{{ item.role }}</h4>
-                        <span class="small px-2 py-1 rounded" style="background-color: {% if item.current %}var(--gray-200){% else %}var(--gray-300){% endif %}; color: var(--gray-700);">{{ item.period }}</span>
+                        <h4 class="service-role h6 mb-0">{{ item.role }}</h4>
+                        <span class="service-date-badge {% if item.current %}service-date-badge-current{% else %}service-date-badge-completed{% endif %} small px-2 py-1 rounded">{{ item.period }}</span>
                     </div>
-                    <p class="mb-1" style="color: var(--gray-700); font-weight: 500;">{{ item.organization }}</p>
-                    <p class="mb-0 small" style="color: var(--gray-600);">{{ item.description }}</p>
+                    <p class="service-organization mb-1">{{ item.organization }}</p>
+                    <p class="service-description mb-0 small">{{ item.description }}</p>
                 </div>
                 {% endfor %}
             </div>
@@ -98,13 +98,13 @@ permalink: /service/
                 </h2>
                 
                 {% for item in site.data.service.university_service %}
-                <div class="{% if forloop.last %}mb-0{% else %}mb-4 pb-4{% endif %}" {% unless forloop.last %}style="border-bottom: 1px solid var(--gray-200);"{% endunless %}>
+                <div class="service-item-container {% if forloop.last %}mb-0{% else %}mb-4 pb-4{% endif %}">
                     <div class="d-flex justify-content-between align-items-start mb-2">
-                        <h4 class="h6 mb-0" style="color: var(--gray-800); font-weight: 600;">{{ item.role }}</h4>
-                        <span class="small px-2 py-1 rounded" style="background-color: {% if item.current %}var(--gray-200){% else %}var(--gray-300){% endif %}; color: var(--gray-700);">{{ item.period }}</span>
+                        <h4 class="service-role h6 mb-0">{{ item.role }}</h4>
+                        <span class="service-date-badge {% if item.current %}service-date-badge-current{% else %}service-date-badge-completed{% endif %} small px-2 py-1 rounded">{{ item.period }}</span>
                     </div>
-                    <p class="mb-1" style="color: var(--gray-700); font-weight: 500;">{{ item.organization }}</p>
-                    <p class="mb-0 small" style="color: var(--gray-600);">{{ item.description }}</p>
+                    <p class="service-organization mb-1">{{ item.organization }}</p>
+                    <p class="service-description mb-0 small">{{ item.description }}</p>
                 </div>
                 {% endfor %}
             </div>
