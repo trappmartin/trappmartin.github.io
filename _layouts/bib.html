@@ -78,37 +78,37 @@
         <div class="col-md-3 text-md-end">
             <div class="d-flex flex-wrap gap-1 justify-content-md-end">
                 {% if entry.doi %}
-                <a href="{{ entry.doi }}" class="btn btn-sm" target="_blank" title="DOI" style="background-color: var(--gray-600); color: white; border: none; font-size: 0.7rem; padding: 0.25rem 0.5rem;">
+                <a href="{{ entry.doi }}" class="btn btn-sm" target="_blank" title="DOI" style="background-color: var(--gray-200); border: none; padding: 0.25rem 0.5rem;">
                     <i class="fas fa-external-link-alt"></i>
                 </a>
                 {% endif %}
                 
                 {% if entry.url and entry.doi != entry.url %}
-                <a href="{{ entry.url }}" class="btn btn-sm" target="_blank" title="URL" style="background-color: var(--gray-500); color: white; border: none; font-size: 0.7rem; padding: 0.25rem 0.5rem;">
+                <a href="{{ entry.url }}" class="btn btn-sm" target="_blank" title="URL" style="background-color: var(--gray-200); border: none; padding: 0.25rem 0.5rem;">
                     <i class="fas fa-globe"></i>
                 </a>
                 {% endif %}
                 
                 {% if entry.pdf %}
-                <a href="{{ entry.pdf }}" class="btn btn-sm" target="_blank" title="PDF" style="background-color: var(--gray-700); color: white; border: none; font-size: 0.7rem; padding: 0.25rem 0.5rem;">
+                <a href="{{ entry.pdf }}" class="btn btn-sm" target="_blank" title="PDF" style="background-color: var(--gray-200); border: none; padding: 0.25rem 0.5rem;">
                     <i class="fas fa-file-pdf"></i>
                 </a>
                 {% endif %}
                 
                 {% if entry.code %}
-                <a href="{{ entry.code }}" class="btn btn-sm" target="_blank" title="Code" style="background-color: var(--gray-600); color: white; border: none; font-size: 0.7rem; padding: 0.25rem 0.5rem;">
+                <a href="{{ entry.code }}" class="btn btn-sm" target="_blank" title="Code" style="background-color: var(--gray-200); border: none; padding: 0.25rem 0.5rem;">
                     <i class="fas fa-code"></i>
                 </a>
                 {% endif %}
                 
                 {% if entry.slides %}
-                <a href="{{ entry.slides }}" class="btn btn-sm" target="_blank" title="Slides" style="background-color: var(--gray-500); color: white; border: none; font-size: 0.7rem; padding: 0.25rem 0.5rem;">
+                <a href="{{ entry.slides }}" class="btn btn-sm" target="_blank" title="Slides" style="background-color: var(--gray-200); border: none; padding: 0.25rem 0.5rem;">
                     <i class="fas fa-presentation"></i>
                 </a>
                 {% endif %}
                 
                 <!-- BibTeX Citation -->
-                <button class="btn btn-sm" onclick="showBibtex('{{ entry.key }}')" title="BibTeX" style="background-color: var(--gray-400); color: white; border: none; font-size: 0.7rem; padding: 0.25rem 0.5rem;">
+                <button class="btn btn-sm" onclick="showBibtex('{{ entry.key }}')" title="BibTeX" style="background-color: var(--gray-200); border: none; padding: 0.25rem 0.5rem;">
                     <i class="fas fa-quote-left"></i>
                 </button>
             </div>

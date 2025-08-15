@@ -1,0 +1,10 @@
+{
+  "short": [
+    "Dr. Martin Trapp is an Academy of Finland-funded independent postdoctoral researcher at the Department of Computer Science at Aalto University and a member of the ELLIS society working on probabilistic machine learning. His research interests are in scalable and principled methods in probabilistic machine learning with a focus on tractable models and Bayesian statistics."
+    ],
+  "long": [
+    "Dr. Martin Trapp is an Academy of Finland-funded independent postdoctoral researcher at the Department of Computer Science at Aalto University, working on probabilistic machine learning. In addition, Martin is a member of the ELLIS society and has been a core developer of the probabilistic programming language Turing.jl.",
+    "Martin's research is centred around representing, quantifying, and reducing uncertainties in machine learning for more reliable and safe application of AI. Most of his research is at the interface of tractable models, Bayesian statistics, and deep learning to develop principled and scalable techniques that have practical real-world impact.",
+    "Previously, Martin was a researcher at Graz University of Technology (2015-2020), worked at the Austrian Research Institute for AI (2015-2019), and was a junior researcher at the VRVis research centre (2009-2015). He also held visiting researcher positions at the Statistics Department at the University of British Columbia (2023) and the Computational and Biological Learning lab at the University of Cambridge (2018)."
+  ]
+}

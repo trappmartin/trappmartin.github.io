@@ -521,8 +521,18 @@ html {
 }
 
 /* Selected publications section */
-.selected-publication-item {
-    /* Border removed for cleaner look */
+.selected-publication-item a, 
+.selected-publication-item a:visited, 
+.selected-publication-item a:link {
+    color: var(--gray-800) !important;
+    text-decoration: underline;
+}
+
+.selected-publication-item a:hover, 
+.selected-publication-item a:focus, 
+.selected-publication-item a:active {
+    color: var(--gray-900) !important;
+    text-decoration: underline;
 }
 
 .selected-publication-title {
@@ -572,6 +582,20 @@ html {
     color: var(--gray-700);
 }
 
+.contact-info-text a, 
+.contact-info-text a:visited, 
+.contact-info-text a:link {
+    color: var(--gray-800) !important;
+    text-decoration: underline;
+}
+
+.contact-info-text a:hover, 
+.contact-info-text a:focus, 
+.contact-info-text a:active {
+    color: var(--gray-900) !important;
+    text-decoration: underline;
+}
+
 .contact-link {
     color: var(--gray-700);
     text-decoration: none;
@@ -610,10 +634,6 @@ html {
 }
 
 /* Service page specific */
-.service-item-container {
-    /* Border removed for cleaner look */
-}
-
 .service-role {
     color: var(--gray-800);
     font-weight: 600;
@@ -706,6 +726,42 @@ html {
 
 .category-count {
     color: var(--gray-600);
+}
+
+/* Biography page specific */
+.biography-section {
+    margin-bottom: 2rem;
+}
+
+.biography-content {
+    max-width: none;
+}
+
+.biography-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.biography-text a, 
+.biography-text a:visited, 
+.biography-text a:link {
+    color: var(--gray-200) !important;
+    text-decoration: underline;
+}
+
+
+.biography-text a:hover, 
+.biography-text a:focus, 
+.biography-text a:active {
+    color: var(--gray-200) !important;
+    text-decoration: underline;
+}
+
+.biography-section h2 {
+    border-bottom: 2px solid var(--gray-300);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
 }
 
 /* LaTeX/MathJax styling */

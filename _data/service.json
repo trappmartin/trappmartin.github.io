@@ -1,79 +1,67 @@
 {
   "sections": [
     {
-      "id": "conference_organization",
-      "title": "Workshop Organization",
+      "id": "organisation",
+      "title": "Scientific Event Organization",
       "description": "Organizing of academic workshops in machine learning.",
       "items": [
         {
-          "role": "Co-Organizer",
-          "organization": "Workshop on Uncertainty Quantification for Computer Vision (UNCV)",
-          "period": "2025",
-          "description": "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
-          "current": false
-        },
-        {
-          "role": "Co-Organizer",
-          "organization": "Workshop on Uncertainty Quantification for Computer Vision (UNCV)",
-          "period": "2024",
-          "description": "European Conference on Computer Vision (ECCV).",
-          "current": false
-        },
-        {
-          "role": "Co-Organizer",
-          "organization": "Workshop on Tractable Probabilistic Modeling (TPM)",
-          "period": "2024",
-          "description": "Conference on Uncertainty in Artificial Intelligence (UAI)",
-          "current": false
-        },
-        {
-          "role": "Co-Organizer",
-          "organization": "Workshop on Uncertainty Quantification for Computer Vision (UNCV)",
-          "period": "2023",
-          "description": "International Conference on Computer Vision (ICCV).",
-          "current": false
-        },
-        {
-          "role": "Co-Organizer",
-          "organization": "Workshop on Tractable Probabilistic Modeling (TPM)",
-          "period": "2023",
-          "description": "Conference on Uncertainty in Artificial Intelligence (UAI)",
-          "current": false
-        },
-        {
-          "role": "Co-Organizer",
-          "organization": "Workshop on Uncertainty Quantification for Computer Vision (UNCV)",
-          "period": "2022",
-          "description": "European Conference on Computer Vision (ECCV).",
-          "current": false
-        },
-        {
-          "role": "Co-Organizer",
-          "organization": "Workshop on Tractable Probabilistic Modeling (TPM)",
-          "period": "2022",
-          "description": "Conference on Uncertainty in Artificial Intelligence (UAI)",
-          "current": false
+          "role": "Workshop Co-Organizer",
+          "entries": [
+            {
+              "organization": "Workshop on Uncertainty Quantification for Computer Vision at CVPR 2025",
+              "period": "2025"
+            },
+            {
+              "organization": "Workshop on Uncertainty Quantification for Computer Vision at ECCV 2024",
+              "period": "2024"
+            },
+            {
+              "organization": "Workshop on Tractable Probabilistic Modeling at UAI 2024",
+              "period": "2024"
+            },
+            {
+              "organization": "Workshop on Uncertainty Quantification for Computer Vision at ICCV 2023",
+              "period": "2023"
+            },
+            {
+              "organization": "Workshop on Tractable Probabilistic Modeling at UAI 2023",
+              "period": "2023"
+            },
+            {
+              "organization": "Workshop on Uncertainty Quantification for Computer Vision at ECCV 2022",
+              "period": "2022"
+            },
+            {
+              "organization": "Workshop on Tractable Probabilistic Modeling at UAI 2022",
+              "period": "2022"
+            }
+          ]
         }
       ]
     },
     {
-      "id": "editorial_service",
-      "title": "Academic Service",
+      "id": "review",
+      "title": "Peer Review Activities",
       "description": "Contributing to the academic community through editorial responsibilities and peer review.",
       "items": [
         {
           "role": "Area Chair",
-          "organization": "AISTATS",
-          "period": "2024",
-          "description": "Area chair for the Bayesian Deep Learning session",
-          "current": false
+          "entries": [
+            {
+              "organization": "Conference on Artificial Intelligence and Statistics (AISTATS)",
+              "period": "2024"
+            }
+          ]
         },
         {
           "role": "Reviewer",
-          "organization": "Multiple Top-Tier Journals and Conferences",
-          "period": "2018 - Present",
-          "description": "Regular reviewer for NeurIPS, ICML, ICLR, UAI, AISTATS, and others",
-          "current": true
+          "entries": [
+            {
+              "organization": "Multiple Top-Tier Journals and Conferences (NeurIPS, ICML, ICLR, UAI, AISTATS, etc.)",
+              "period": "2018 - Present"
+            }
+          ]
         }
       ]
     },
@@ -84,10 +72,12 @@
       "items": [
         {
           "role": "Guest Editor",
-          "organization": "Special Issue on Advances in Probabilistic Machine Learning",
-          "period": "2024 - 2025",
-          "description": "Entropy Journal",
-          "current": false
+          "entries": [
+            {
+              "organization": "Special Issue on Advances in Probabilistic Machine Learning",
+              "period": "2024 - 2025"
+            }
+          ]
         }
       ]
     }

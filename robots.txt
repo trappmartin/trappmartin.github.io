@@ -1,0 +1,21 @@
+---
+layout: null
+---
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: {{ site.url }}/sitemap.xml
+Sitemap: {{ site.url }}/feed.xml
+
+# Disallow crawling of admin/development files
+Disallow: /assets/css/*.map
+Disallow: /.jekyll-cache/
+Disallow: /_site/
+
+# Allow all academic content
+Allow: /publications/
+Allow: /notes/
+Allow: /biography/
+Allow: /service/
+Allow: /contact/

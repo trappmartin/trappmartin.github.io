@@ -10,6 +10,16 @@
 
 .contact-info-text {
     color: var(--gray-700);
+
+    a, a:visited, a:link {
+        color: var(--gray-800) !important;
+        text-decoration: underline;
+        
+        &:hover, &:focus, &:active {
+            color: var(--gray-900) !important;
+            text-decoration: underline;
+        }
+    }
 }
 
 .contact-link {

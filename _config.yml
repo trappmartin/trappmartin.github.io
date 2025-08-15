@@ -2,9 +2,10 @@
 title: Martin Trapp
 email: martin.trapp@aalto.fi
 description: >- # this means to ignore newlines until "baseurl:"
-  Academic website for Martin Trapp.
+  Martin Trapp - Academy of Finland postdoctoral researcher at Aalto University. 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://trappmartin.github.io" # the base hostname & protocol for your site
+lang: en_GB
 
 # Build settings
 markdown: kramdown
@@ -51,7 +52,7 @@ author:
   title: AoF Postdoctoral Researcher
   affiliation: Aalto University, Finland
   email: firstname.lastname@aalto.fi
-  office: "Computer Science Building"
+  office: "[Computer Science Building](https://www.aalto.fi/en/locations/computer-science-building)"
   bio: >-
     Martin is an Academy of Finland postdoctoral researcher at Aalto University and a member of the ELLIS society. 
     My research is centred around representing, quantifying, and reducing uncertainties to make machine learning more reliable. 
@@ -60,10 +61,27 @@ author:
 # Social links
 social:
   google_scholar: "https://scholar.google.com/citations?user=GwCrZP4AAAAJ"
-  orcid: "https://orcid.org/0000-0000-0000-0000"
+  orcid: "https://orcid.org/0000-0003-1725-3381"
   linkedin: "https://linkedin.com/in/martintrapp"
   bluesky: "https://bsky.app/profile/martintrapp.bsky.social"
-  github: "https://github.com/janesmith"
+  github: "https://github.com/trappmartin"
+
+# SEO settings
+seo:
+  type: Person
+  name: Martin Trapp
+  links:
+    - "https://scholar.google.com/citations?user=GwCrZP4AAAAJ"
+    - "https://orcid.org/0000-0003-1725-3381"
+    - "https://linkedin.com/in/martintrapp"
+    - "https://github.com/trappmartin"
+    - "https://bsky.app/profile/martintrapp.bsky.social"
+
+# Google Analytics (add your tracking ID when ready)
+# google_analytics: GA_TRACKING_ID
+
+# Additional SEO optimization
+timezone: Europe/Helsinki
 
 # Jekyll Scholar configuration
 scholar:
@@ -82,6 +100,11 @@ scholar:
   details_dir: ""
   details_layout: ""
   details_link: ""
+
+# Sitemap configuration
+sitemap:
+  exclude:
+    - "/assets/css/main.css.backup"
 
 # Exclude from processing
 exclude:

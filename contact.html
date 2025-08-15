@@ -23,14 +23,11 @@ permalink: /contact/
             <div class="col-10">
                 <div class="row">
                     <div class="col-md-6">
+
                         <div class="mb-4">
-                            <div class="d-flex align-items-center mb-2">
-                                <i class="section-icon fas fa-envelope me-3"></i>
-                                <h4 class="contact-section-header h6 mb-0">Email</h4>
-                            </div>
-                            <p class="mb-0 contact-info-text">
-                                <a href="mailto:{{ site.author.email }}" class="contact-link">{{ site.author.email }}</a>
-                            </p>
+                            <a href="mailto:{{ site.author.email }}" class="contact-link">
+                                <i class="fas fa-envelope me-2" style="color: var(--gray-600);"></i>Email
+                            </a>
                         </div>
 
                         {% if site.social.linkedin %}
@@ -40,10 +37,10 @@ permalink: /contact/
                             </a>
                         </div>
                         {% endif %}
-                        {% if site.social.github %}
+                        {% if site.social.bluesky %}
                         <div class="mb-4">
-                            <a href="{{ site.social.github }}" target="_blank" style="color: var(--gray-700); text-decoration: none; border-bottom: 1px solid var(--gray-400);">
-                                <i class="fab fa-github me-2" style="color: var(--gray-600);"></i>GitHub
+                            <a href="{{ site.social.bluesky }}" target="_blank" style="color: var(--gray-700); text-decoration: none; border-bottom: 1px solid var(--gray-400);">
+                                <i class="fab fa-brands fa-bluesky me-2" style="color: var(--gray-600);"></i>Bluesky
                             </a>
                         </div>
                         {% endif %}
@@ -56,10 +53,10 @@ permalink: /contact/
                                 <i class="section-icon fas fa-map-marker-alt me-3"></i>
                                 <h4 class="contact-section-header h6 mb-0">Office</h4>
                             </div>
-                            <p class="mb-0 contact-info-text">
-                                {{ site.author.office }}<br>
+                            <div class="mb-0 contact-info-text">
+                                {{ site.author.office | markdownify }}
                                 {{ site.author.affiliation }}
-                            </p>
+                            </div>
                         </div>
 
                        

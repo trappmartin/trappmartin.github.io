@@ -1,0 +1,49 @@
+---
+layout: default
+title: Biography
+description: Biography and background information about Martin Trapp, Academy of Finland postdoctoral researcher at Aalto University.
+permalink: /biography/
+---
+
+<!-- Short Biography Section - White Background -->
+<section style="background-color: white; padding: 4rem 0;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <h1 class="h2 mb-4" style="color: var(--gray-800);">Biography</h1>
+                
+                <!-- Short Bio (50 - 100 words) -->
+                <div class="biography-section mb-5">
+                    <h2 class="h4 mb-3" style="color: var(--gray-800); font-weight: 600;">Short Biography</h2>
+                    <div class="biography-content" style="line-height: 1.8;">
+                        {% for paragraph in site.data.bio.short %}
+                        <p class="biography-text {% if forloop.last %}mb-0{% else %}mb-4{% endif %}" style="color: var(--gray-700);">
+                            {{ paragraph | markdownify }}
+                        </p>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Long Biography Section - Gray Background -->
+<section style="background-color: var(--gray-50); padding: 4rem 0;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <div class="biography-section">
+                    <h2 class="h4 mb-4" style="color: var(--gray-800); font-weight: 600;">Extended Biography</h2>
+                    <div class="biography-content" style="line-height: 1.8;">
+                        {% for paragraph in site.data.bio.long %}
+                        <p class="biography-text {% if forloop.last %}mb-0{% else %}mb-4{% endif %}" style="color: var(--gray-700);">
+                            {{ paragraph | markdownify }}
+                        </p>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

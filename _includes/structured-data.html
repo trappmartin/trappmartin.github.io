@@ -1,0 +1,64 @@
+<!-- Structured Data for Academic Website -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ site.author.name }}",
+  "url": "{{ site.url }}",
+  "email": "{{ site.email }}",
+  "jobTitle": "{{ site.author.title }}",
+  "affiliation": {
+    "@type": "Organization",
+    "name": "{{ site.author.affiliation }}"
+  },
+  "description": "{{ site.author.bio | strip_html | strip_newlines | truncate: 160 }}",
+  "image": "{{ site.url }}/assets/images/profile.jpg",
+  "sameAs": [
+    {% if site.social.google_scholar %}"{{ site.social.google_scholar }}",{% endif %}
+    {% if site.social.orcid %}"{{ site.social.orcid }}",{% endif %}
+    {% if site.social.linkedin %}"{{ site.social.linkedin }}",{% endif %}
+    {% if site.social.github %}"{{ site.social.github }}",{% endif %}
+    {% if site.social.bluesky %}"{{ site.social.bluesky }}"{% endif %}
+  ],
+  "knowsAbout": [
+    "Machine Learning",
+    "Bayesian Deep Learning", 
+    "Uncertainty Quantification",
+    "Probabilistic Machine Learning",
+    "Computer Vision",
+    "Natural Language Processing",
+    "Artificial Intelligence"
+  ],
+  "alumniOf": {
+    "@type": "Organization",
+    "name": "Technical University of Graz"
+  },
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Aalto University",
+    "url": "https://www.aalto.fi"
+  }
+}
+</script>
+
+<!-- Academic Website Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Website",
+  "name": "{{ site.title }}",
+  "url": "{{ site.url }}",
+  "description": "{{ site.description | strip_html | strip_newlines }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.author.name }}"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "{{ site.author.name }}"
+  },
+  "inLanguage": "en-US",
+  "copyrightYear": "{{ 'now' | date: '%Y' }}",
+  "genre": "Academic Website"
+}
+</script>

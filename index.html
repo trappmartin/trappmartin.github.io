@@ -31,7 +31,7 @@ title: Home
                             {% endif %}
                             {% if site.social.bluesky %}
                             <a href="{{ site.social.bluesky }}" title="Bluesky" target="_blank">
-                                <i class="fas fa-cloud fa-xl"></i>
+                                <i class="fab fa-brands fa-bluesky fa-xl"></i>
                             </a>
                             {% endif %}
                             {% if site.social.github %}
@@ -50,10 +50,17 @@ title: Home
                     <div class="col-md-7">
                         <!-- Biography content moved to right column -->
                         <div class="biography-text">
-                            <p class="biography-lead mb-4">{{ site.author.bio }}</p>
+                            <p class="biography-lead">
+                                Martin is an Academy of Finland postdoctoral researcher at Aalto University and a member of the ELLIS society, working on probabilistic machine learning. 
+                                His research is centred around representing, quantifying, and reducing uncertainties to make machine learning more reliable. 
+                                He is particularly interested in efficient and principled approaches for large-scale systems with applications in language and vision.
+                            </p>
+                            <p class="biography-lead">
+                                See my <a href="{{ '/biography/' | relative_url }}">biography</a> for more details.
+                            </p>
                             
                             <!-- Research Interests Subsection -->
-                            <h3 class="research-interests-subsection h5 mb-3 mt-4">
+                            <h3 class="research-interests-subsection h5 mb-2 mt-4">
                                 Research Interests
                             </h3>
                             <ul class="research-interests-list mb-0">
