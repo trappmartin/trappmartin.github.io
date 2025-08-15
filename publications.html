@@ -1,0 +1,43 @@
+---
+layout: default
+title: Publications
+description: A comprehensive list of academic publications including journal articles, conference papers, and book chapters.
+permalink: /publications/
+---
+
+<!-- Introduction Section - White Background -->
+<section style="background-color: white; padding: 4rem 0;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-9">
+                <h1 class="h2 mb-4" style="color: var(--gray-800);">Publications</h1>
+                <div style="line-height: 1.8;">
+                    <p class="lead mb-4" style="color: var(--gray-700);">Below is a comprehensive list of my academic publications, automatically generated from my BibTeX bibliography. Publications are organized by year and type. For more details including citation metrics, please visit my 
+                    {% if site.social.google_scholar %}
+                    <a href="{{ site.social.google_scholar }}" target="_blank" style="color: var(--gray-700); text-decoration: none; border-bottom: 1px solid var(--gray-400);">Google Scholar profile</a>
+                    {% endif %}
+                    {% if site.social.google_scholar and site.social.orcid %} and {% endif %}
+                    {% if site.social.orcid %}
+                    <a href="{{ site.social.orcid }}" target="_blank" style="color: var(--gray-700); text-decoration: none; border-bottom: 1px solid var(--gray-400);">ORCID profile</a>
+                    {% endif %}.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Publications List Section - Gray Background -->
+<section style="background-color: var(--gray-50); padding: 4rem 0;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-9">
+                <h2 class="h3 mb-5" style="color: var(--gray-800);">
+                    <i class="fas fa-file-alt me-3" style="color: var(--gray-600);"></i>Research Publications
+                </h2>
+                <div id="publications-list">
+                    {% bibliography --group_by year --group_order descending %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

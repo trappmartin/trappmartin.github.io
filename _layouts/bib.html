@@ -1,0 +1,165 @@
+---
+---
+
+<div class="publication-item mb-4 p-4 border rounded-3 bg-white shadow-sm" data-type="{{ entry.type | downcase }}" style="border-color: var(--gray-200) !important;">
+    <div class="row">
+        <div class="col-md-10">
+            <!-- Title -->
+            <h4 class="publication-title mb-2" style="color: var(--gray-800);">
+                {{ entry.title }}
+            </h4>
+            
+            <!-- Authors -->
+            {% if entry.author %}
+            <p class="publication-authors mb-2" style="color: var(--gray-600); font-size: 0.95rem;">{{ entry.author }}</p>
+            {% endif %}
+            
+            <!-- Venue and Year -->
+            <div class="d-flex align-items-center mb-2">
+                <p class="publication-venue mb-0 me-2" style="color: var(--gray-700);">
+                    {% if entry.venue %}
+                    <strong>{{ entry.venue }}</strong>
+                    {% elsif entry.journal %}
+                    <strong>{{ entry.journal }}</strong>
+                    {% if entry.volume %}, Vol. {{ entry.volume }}{% endif %}
+                    {% if entry.number %}, No. {{ entry.number }}{% endif %}
+                    {% elsif entry.booktitle %}
+                    <strong>{{ entry.booktitle }}</strong>
+                    {% elsif entry.publisher %}
+                    <strong>{{ entry.publisher }}</strong>
+                    {% endif %}
+                    {% if entry.year %}, {{ entry.year }}{% endif %}
+                </p>
+                
+                <!-- Publication Type Badge -->
+                {% if entry.type %}
+                <span class="badge" style="background-color: var(--gray-500); color: white; font-size: 0.7rem;">{{ entry.type }}</span>
+                {% endif %}
+            </div>
+            
+            <!-- Abstract (truncated) -->
+            {% if entry.abstract %}
+            <div class="abstract-container mt-2">
+                <p class="abstract-text mb-1" style="color: var(--gray-600); font-size: 0.9rem;" data-full-abstract="{{ entry.abstract }}">
+                    {{ entry.abstract | truncate: 180 }}
+                </p>
+                {% if entry.abstract.size > 180 %}
+                <button class="btn btn-link btn-sm p-0 toggle-abstract" onclick="toggleAbstract(this)" style="color: var(--gray-500); font-size: 0.8rem;">
+                    <small>Show more</small>
+                </button>
+                {% endif %}
+            </div>
+            {% endif %}
+            
+            <!-- Keywords -->
+            {% if entry.keywords %}
+            <div class="mt-2">
+                {% assign keyword_list = entry.keywords | split: ', ' %}
+                {% for keyword in keyword_list %}
+                <span class="badge me-1 mb-1" style="background-color: var(--gray-100); color: var(--gray-700); font-size: 0.65rem; font-weight: normal;">{{ keyword | strip }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+        
+        <!-- Action Buttons -->
+        <div class="col-md-2 text-md-end">
+            <div class="d-flex flex-column gap-1">
+                {% if entry.doi %}
+                <a href="{{ entry.doi }}" class="btn btn-sm" target="_blank" title="DOI" style="background-color: var(--gray-600); color: white; border: none; font-size: 0.75rem;">
+                    <i class="fas fa-external-link-alt me-1"></i>DOI
+                </a>
+                {% endif %}
+                
+                {% if entry.url and entry.doi != entry.url %}
+                <a href="{{ entry.url }}" class="btn btn-sm" target="_blank" title="URL" style="background-color: var(--gray-500); color: white; border: none; font-size: 0.75rem;">
+                    <i class="fas fa-globe me-1"></i>URL
+                </a>
+                {% endif %}
+                
+                {% if entry.pdf %}
+                <a href="{{ entry.pdf }}" class="btn btn-sm" target="_blank" title="PDF" style="background-color: var(--gray-700); color: white; border: none; font-size: 0.75rem;">
+                    <i class="fas fa-file-pdf me-1"></i>PDF
+                </a>
+                {% endif %}
+                
+                {% if entry.code %}
+                <a href="{{ entry.code }}" class="btn btn-sm" target="_blank" title="Code" style="background-color: var(--gray-600); color: white; border: none; font-size: 0.75rem;">
+                    <i class="fas fa-code me-1"></i>Code
+                </a>
+                {% endif %}
+                
+                {% if entry.slides %}
+                <a href="{{ entry.slides }}" class="btn btn-sm" target="_blank" title="Slides" style="background-color: var(--gray-500); color: white; border: none; font-size: 0.75rem;">
+                    <i class="fas fa-presentation me-1"></i>Slides
+                </a>
+                {% endif %}
+                
+                <!-- BibTeX Citation -->
+                <button class="btn btn-sm" onclick="showBibtex('{{ entry.key }}')" title="BibTeX" style="background-color: var(--gray-400); color: white; border: none; font-size: 0.75rem;">
+                    <i class="fas fa-quote-left me-1"></i>Cite
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Hidden BibTeX -->
+    <div class="bibtex-container mt-3" id="bibtex-{{ entry.key }}" style="display: none;">
+        <div class="card" style="border: 1px solid var(--gray-200);">
+            <div class="card-header d-flex justify-content-between align-items-center" style="background-color: var(--gray-100); border-bottom: 1px solid var(--gray-200);">
+                <small style="color: var(--gray-700); font-weight: 500;">BibTeX Citation</small>
+                <button class="btn btn-sm" onclick="copyBibtex('{{ entry.key }}')" style="background-color: var(--gray-500); color: white; border: none; font-size: 0.75rem;">
+                    <i class="fas fa-copy me-1"></i>Copy
+                </button>
+            </div>
+            <div class="card-body" style="background-color: var(--gray-50);">
+                <pre class="bibtex-code mb-0" style="background-color: var(--gray-50); border: none; color: var(--gray-800);"><code>{{ entry.bibtex }}</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function toggleAbstract(button) {
+    const abstractText = button.parentElement.querySelector('.abstract-text');
+    const fullAbstract = abstractText.getAttribute('data-full-abstract');
+    const currentText = abstractText.textContent.trim();
+    
+    if (currentText.endsWith('...')) {
+        abstractText.textContent = fullAbstract;
+        button.innerHTML = '<small>Show less</small>';
+    } else {
+        abstractText.textContent = fullAbstract.substring(0, 197) + '...';
+        button.innerHTML = '<small>Show more</small>';
+    }
+}
+
+function showBibtex(key) {
+    const bibtexContainer = document.getElementById('bibtex-' + key);
+    if (bibtexContainer.style.display === 'none') {
+        bibtexContainer.style.display = 'block';
+    } else {
+        bibtexContainer.style.display = 'none';
+    }
+}
+
+function copyBibtex(key) {
+    const bibtexCode = document.querySelector('#bibtex-' + key + ' .bibtex-code code');
+    const text = bibtexCode.textContent;
+    
+    navigator.clipboard.writeText(text).then(function() {
+        // Show success feedback
+        const button = document.querySelector('#bibtex-' + key + ' .btn-outline-secondary');
+        const originalText = button.innerHTML;
+        button.innerHTML = '<i class="bi bi-check"></i> Copied!';
+        button.classList.remove('btn-outline-secondary');
+        button.classList.add('btn-success');
+        
+        setTimeout(function() {
+            button.innerHTML = originalText;
+            button.classList.remove('btn-success');
+            button.classList.add('btn-outline-secondary');
+        }, 2000);
+    });
+}
+</script>

@@ -1,0 +1,163 @@
+---
+layout: default
+title: Contact
+description: Get in touch with me for research collaborations, speaking engagements, or academic inquiries.
+permalink: /contact/
+---
+
+<!-- Introduction Section - White Background -->
+<section style="background-color: white; padding: 4rem 0;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-9">
+                <h1 class="h2 mb-4" style="color: var(--gray-800);">Contact</h1>
+                <div style="line-height: 1.8;">
+                    <p class="lead mb-4" style="color: var(--gray-700);">I welcome inquiries about research collaborations, speaking opportunities, and academic partnerships. Please feel free to reach out using the contact information below.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Information Section - Gray Background -->
+<section style="background-color: var(--gray-50); padding: 4rem 0;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-9">
+                <h2 class="h3 mb-5" style="color: var(--gray-800);">
+                    <i class="fas fa-user-circle me-3" style="color: var(--gray-600);"></i>Contact Information
+                </h2>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-envelope me-3" style="color: var(--gray-600);"></i>
+                                <h4 class="h6 mb-0" style="color: var(--gray-800); font-weight: 600;">Email</h4>
+                            </div>
+                            <p class="mb-0" style="color: var(--gray-700);">
+                                <a href="mailto:{{ site.author.email }}" style="color: var(--gray-700); text-decoration: none; border-bottom: 1px solid var(--gray-400);">{{ site.author.email }}</a>
+                            </p>
+                        </div>
+
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-phone me-3" style="color: var(--gray-600);"></i>
+                                <h4 class="h6 mb-0" style="color: var(--gray-800); font-weight: 600;">Phone</h4>
+                            </div>
+                            <p class="mb-0" style="color: var(--gray-700);">{{ site.author.phone }}</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-map-marker-alt me-3" style="color: var(--gray-600);"></i>
+                                <h4 class="h6 mb-0" style="color: var(--gray-800); font-weight: 600;">Office</h4>
+                            </div>
+                            <p class="mb-0" style="color: var(--gray-700);">
+                                {{ site.author.office }}<br>
+                                {{ site.author.affiliation }}
+                            </p>
+                        </div>
+
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-clock me-3" style="color: var(--gray-600);"></i>
+                                <h4 class="h6 mb-0" style="color: var(--gray-800); font-weight: 600;">Office Hours</h4>
+                            </div>
+                            <p class="mb-1" style="color: var(--gray-700);">Fall 2024:</p>
+                            <p class="mb-0 small" style="color: var(--gray-600);">
+                                Tuesdays: 2:00 PM - 4:00 PM<br>
+                                Thursdays: 10:00 AM - 12:00 PM<br>
+                                Or by appointment
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Online Presence Section - White Background -->
+<section style="background-color: white; padding: 4rem 0;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-9">
+                <h2 class="h3 mb-5" style="color: var(--gray-800);">
+                    <i class="fas fa-share-alt me-3" style="color: var(--gray-600);"></i>Connect Online
+                </h2>
+                
+                <div class="row">
+                    {% if site.social.google_scholar %}
+                    <div class="col-md-6 mb-3">
+                        <a href="{{ site.social.google_scholar }}" target="_blank" style="color: var(--gray-700); text-decoration: none; border-bottom: 1px solid var(--gray-400);">
+                            <i class="fas fa-graduation-cap me-2" style="color: var(--gray-600);"></i>Google Scholar Profile
+                        </a>
+                    </div>
+                    {% endif %}
+                    {% if site.social.orcid %}
+                    <div class="col-md-6 mb-3">
+                        <a href="{{ site.social.orcid }}" target="_blank" style="color: var(--gray-700); text-decoration: none; border-bottom: 1px solid var(--gray-400);">
+                            <i class="fab fa-orcid me-2" style="color: var(--gray-600);"></i>ORCID Profile
+                        </a>
+                    </div>
+                    {% endif %}
+                    {% if site.social.linkedin %}
+                    <div class="col-md-6 mb-3">
+                        <a href="{{ site.social.linkedin }}" target="_blank" style="color: var(--gray-700); text-decoration: none; border-bottom: 1px solid var(--gray-400);">
+                            <i class="fab fa-linkedin me-2" style="color: var(--gray-600);"></i>LinkedIn
+                        </a>
+                    </div>
+                    {% endif %}
+                    {% if site.social.github %}
+                    <div class="col-md-6 mb-3">
+                        <a href="{{ site.social.github }}" target="_blank" style="color: var(--gray-700); text-decoration: none; border-bottom: 1px solid var(--gray-400);">
+                            <i class="fab fa-github me-2" style="color: var(--gray-600);"></i>GitHub
+                        </a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Response Times Section - Gray Background -->
+<section style="background-color: var(--gray-50); padding: 4rem 0;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-9">
+                <h2 class="h3 mb-5" style="color: var(--gray-800);">
+                    <i class="fas fa-stopwatch me-3" style="color: var(--gray-600);"></i>Response Times
+                </h2>
+                
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="d-flex align-items-center">
+                            <span class="px-2 py-1 rounded me-3" style="background-color: var(--gray-200); color: var(--gray-700); font-size: 0.8rem;">Email</span>
+                            <span style="color: var(--gray-600); font-size: 0.9rem;">24-48 hours</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="d-flex align-items-center">
+                            <span class="px-2 py-1 rounded me-3" style="background-color: var(--gray-300); color: var(--gray-700); font-size: 0.8rem;">Academic</span>
+                            <span style="color: var(--gray-600); font-size: 0.9rem;">2-3 days</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="d-flex align-items-center">
+                            <span class="px-2 py-1 rounded me-3" style="background-color: var(--gray-400); color: white; font-size: 0.8rem;">Students</span>
+                            <span style="color: var(--gray-600); font-size: 0.9rem;">Same day</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="mt-4 small" style="color: var(--gray-500);">Response times may be longer during conferences, travel, or sabbatical periods.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+

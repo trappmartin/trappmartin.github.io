@@ -1,0 +1,55 @@
+---
+layout: default
+---
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <h1 class="display-6 fw-bold mb-3">{{ page.title }}</h1>
+            
+            {% if page.authors %}
+            <p class="text-muted mb-2">
+                <strong>Authors:</strong> {{ page.authors }}
+            </p>
+            {% endif %}
+            
+            {% if page.venue %}
+            <p class="text-muted mb-2">
+                <strong>Published in:</strong> {{ page.venue }}{% if page.year %}, {{ page.year }}{% endif %}
+            </p>
+            {% endif %}
+            
+            {% if page.doi or page.pdf or page.code %}
+            <div class="mb-4">
+                {% if page.doi %}
+                <a href="{{ page.doi }}" class="btn btn-outline-primary btn-sm me-2" target="_blank">
+                    <i class="bi bi-link-45deg"></i> DOI
+                </a>
+                {% endif %}
+                {% if page.pdf %}
+                <a href="{{ page.pdf }}" class="btn btn-outline-secondary btn-sm me-2" target="_blank">
+                    <i class="bi bi-file-earmark-pdf"></i> PDF
+                </a>
+                {% endif %}
+                {% if page.code %}
+                <a href="{{ page.code }}" class="btn btn-outline-success btn-sm" target="_blank">
+                    <i class="bi bi-code-slash"></i> Code
+                </a>
+                {% endif %}
+            </div>
+            {% endif %}
+            
+            <hr class="my-4">
+            
+            <div class="content">
+                {{ content }}
+            </div>
+            
+            <div class="mt-4">
+                <a href="{{ '/publications/' | relative_url }}" class="btn btn-primary">
+                    <i class="bi bi-arrow-left"></i> Back to Publications
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

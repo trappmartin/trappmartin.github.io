@@ -1,0 +1,170 @@
+---
+layout: default
+---
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-lg-10 mx-auto">
+            <!-- Publication Title -->
+            <h1 class="display-6 fw-bold mb-3">{{ entry.title }}</h1>
+            
+            <!-- Authors -->
+            {% if entry.author %}
+            <p class="text-muted mb-2">
+                <strong>Authors:</strong> {{ entry.author }}
+            </p>
+            {% endif %}
+            
+            <!-- Publication Details -->
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    {% if entry.venue %}
+                    <p class="text-muted mb-1">
+                        <strong>Published in:</strong> {{ entry.venue }}
+                    </p>
+                    {% elsif entry.journal %}
+                    <p class="text-muted mb-1">
+                        <strong>Journal:</strong> {{ entry.journal }}
+                        {% if entry.volume %}, Vol. {{ entry.volume }}{% endif %}
+                        {% if entry.number %}, No. {{ entry.number }}{% endif %}
+                    </p>
+                    {% elsif entry.booktitle %}
+                    <p class="text-muted mb-1">
+                        <strong>Conference:</strong> {{ entry.booktitle }}
+                    </p>
+                    {% endif %}
+                    
+                    {% if entry.year %}
+                    <p class="text-muted mb-1">
+                        <strong>Year:</strong> {{ entry.year }}
+                    </p>
+                    {% endif %}
+                    
+                    {% if entry.pages %}
+                    <p class="text-muted mb-1">
+                        <strong>Pages:</strong> {{ entry.pages }}
+                    </p>
+                    {% endif %}
+                </div>
+                
+                <div class="col-md-6">
+                    {% if entry.publisher %}
+                    <p class="text-muted mb-1">
+                        <strong>Publisher:</strong> {{ entry.publisher }}
+                    </p>
+                    {% endif %}
+                    
+                    {% if entry.isbn %}
+                    <p class="text-muted mb-1">
+                        <strong>ISBN:</strong> {{ entry.isbn }}
+                    </p>
+                    {% endif %}
+                    
+                    {% if entry.type %}
+                    <p class="text-muted mb-1">
+                        <strong>Type:</strong> 
+                        <span class="badge bg-secondary">{{ entry.type }}</span>
+                    </p>
+                    {% endif %}
+                </div>
+            </div>
+            
+            <!-- Action Buttons -->
+            <div class="mb-4">
+                {% if entry.doi %}
+                <a href="{{ entry.doi }}" class="btn btn-primary me-2" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> View DOI
+                </a>
+                {% endif %}
+                {% if entry.url and entry.doi != entry.url %}
+                <a href="{{ entry.url }}" class="btn btn-outline-primary me-2" target="_blank">
+                    <i class="fas fa-globe"></i> View Online
+                </a>
+                {% endif %}
+                {% if entry.pdf %}
+                <a href="{{ entry.pdf }}" class="btn btn-outline-secondary me-2" target="_blank">
+                    <i class="fas fa-file-pdf"></i> Download PDF
+                </a>
+                {% endif %}
+                {% if entry.code %}
+                <a href="{{ entry.code }}" class="btn btn-outline-success me-2" target="_blank">
+                    <i class="fas fa-code"></i> View Code
+                </a>
+                {% endif %}
+                {% if entry.slides %}
+                <a href="{{ entry.slides }}" class="btn btn-outline-warning me-2" target="_blank">
+                    <i class="fas fa-presentation"></i> View Slides
+                </a>
+                {% endif %}
+            </div>
+            
+            <hr class="my-4">
+            
+            <!-- Abstract -->
+            {% if entry.abstract %}
+            <div class="mb-4">
+                <h3>Abstract</h3>
+                <p class="lead">{{ entry.abstract }}</p>
+            </div>
+            {% endif %}
+            
+            <!-- Keywords -->
+            {% if entry.keywords %}
+            <div class="mb-4">
+                <h4>Keywords</h4>
+                <p>
+                    {% assign keyword_list = entry.keywords | split: ', ' %}
+                    {% for keyword in keyword_list %}
+                    <span class="badge bg-light text-dark me-1">{{ keyword | strip }}</span>
+                    {% endfor %}
+                </p>
+            </div>
+            {% endif %}
+            
+            <!-- BibTeX Citation -->
+            <div class="mb-4">
+                <h4>Citation</h4>
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <span>BibTeX</span>
+                        <button class="btn btn-sm btn-outline-secondary" onclick="copyBibtex()">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <pre class="mb-0"><code id="bibtex-code">{{ entry.bibtex }}</code></pre>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation -->
+            <div class="mt-5">
+                <a href="{{ '/publications/' | relative_url }}" class="btn btn-outline-primary">
+                    <i class="fas fa-arrow-left"></i> Back to Publications
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function copyBibtex() {
+    const bibtexCode = document.getElementById('bibtex-code');
+    const text = bibtexCode.textContent;
+    
+    navigator.clipboard.writeText(text).then(function() {
+        // Show success feedback
+        const button = document.querySelector('.btn-outline-secondary');
+        const originalText = button.innerHTML;
+        button.innerHTML = '<i class="bi bi-check"></i> Copied!';
+        button.classList.remove('btn-outline-secondary');
+        button.classList.add('btn-success');
+        
+        setTimeout(function() {
+            button.innerHTML = originalText;
+            button.classList.remove('btn-success');
+            button.classList.add('btn-outline-secondary');
+        }, 2000);
+    });
+}
+</script>

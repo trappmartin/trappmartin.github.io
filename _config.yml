@@ -1,0 +1,96 @@
+# Site settings
+title: Martin Trapp
+email: martin.trapp@aalto.fi
+description: >- # this means to ignore newlines until "baseurl:"
+  Academic website for Dr. Jane Smith, Professor of Computer Science
+  specializing in Machine Learning and Artificial Intelligence.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-scholar
+
+# Collections
+collections:
+  news:
+    output: false
+    sort_by: date
+  research:
+    output: false
+  technical_notes:
+    output: true
+    sort_by: date
+    permalink: /notes/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "technical_notes"
+    values:
+      layout: "note"
+
+# Academic info
+author:
+  name: Martin Trapp
+  title: Assistant Professor in Machine Learning
+  affiliation: Aalto University
+  email: martin.trapp@aalto.fi
+  phone: "+358 50 330 3001"
+  office: "Room 301, Computer Science Building"
+  bio: >-
+    Martin Trapp is an Assistant Professor in Machine Learning at Aalto University,
+    where she leads research in machine learning and artificial intelligence. She has
+    published over 50 papers in top-tier conferences and journals.
+
+# Social links
+social:
+  google_scholar: "https://scholar.google.com/citations?user=example"
+  orcid: "https://orcid.org/0000-0000-0000-0000"
+  linkedin: "https://linkedin.com/in/janesmith"
+  twitter: "https://twitter.com/drjanesmith"
+  github: "https://github.com/janesmith"
+
+# Jekyll Scholar configuration
+scholar:
+  style: apa
+  locale: en
+  source: _bibliography
+  bibliography: publications.bib
+  bibliography_template: bib
+  replace_strings: true
+  join_strings: true
+  query: "@*"
+  group_by: year
+  group_order: descending
+  sort_by: year
+  order: descending
+  details_dir: ""
+  details_layout: ""
+  details_link: ""
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

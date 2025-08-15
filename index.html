@@ -1,0 +1,180 @@
+---
+layout: default
+title: Home
+---
+
+<!-- Hero Section -->
+<section style="background-color: var(--gray-800); padding: 3rem 0;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-9">
+                <div class="row align-items-center">
+                    <div class="col-md-4 text-center mb-3 mb-md-0">
+                        <img src="{{ '/assets/images/picture.jpg' | relative_url }}" alt="{{ site.author.name }}" class="rounded-circle img-fluid mb-3" style="width: 180px; height: 180px; object-fit: cover;">
+                        
+                                        <!-- Social Media Icons -->
+                <div class="d-flex justify-content-center gap-3">
+                    {% if site.social.google_scholar %}
+                    <a href="{{ site.social.google_scholar }}" title="Google Scholar" target="_blank" style="color: rgba(255, 255, 255, 0.8); transition: color 0.2s;">
+                        <i class="fas fa-graduation-cap fa-xl"></i>
+                    </a>
+                    {% endif %}
+                    {% if site.social.orcid %}
+                    <a href="{{ site.social.orcid }}" title="ORCID" target="_blank" style="color: rgba(255, 255, 255, 0.8); transition: color 0.2s;">
+                        <i class="fab fa-orcid fa-xl"></i>
+                    </a>
+                    {% endif %}
+                    {% if site.social.linkedin %}
+                    <a href="{{ site.social.linkedin }}" title="LinkedIn" target="_blank" style="color: rgba(255, 255, 255, 0.8); transition: color 0.2s;">
+                        <i class="fab fa-linkedin fa-xl"></i>
+                    </a>
+                    {% endif %}
+                    {% if site.social.twitter %}
+                    <a href="{{ site.social.twitter }}" title="Twitter" target="_blank" style="color: rgba(255, 255, 255, 0.8); transition: color 0.2s;">
+                        <i class="fab fa-twitter fa-xl"></i>
+                    </a>
+                    {% endif %}
+                    {% if site.social.github %}
+                    <a href="{{ site.social.github }}" title="GitHub" target="_blank" style="color: rgba(255, 255, 255, 0.8); transition: color 0.2s;">
+                        <i class="fab fa-github fa-xl"></i>
+                    </a>
+                    {% endif %}
+                </div>
+                    </div>
+                    <div class="col-md-8">
+                        <h1 class="h2 mb-2" style="color: white; font-weight: 600;">{{ site.author.name }}</h1>
+                        <p class="h5 mb-3" style="color: rgba(255, 255, 255, 0.9); font-style: italic; font-weight: 300; letter-spacing: 1px;">Almost surely</p>
+                        <p class="h6 mb-1" style="color: rgba(255, 255, 255, 0.8); font-weight: 500;">{{ site.author.title }}</p>
+                        <p class="mb-0" style="color: rgba(255, 255, 255, 0.7); font-size: 1.1rem;">{{ site.author.affiliation }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Biography Section - White Background -->
+<section style="background-color: white; padding: 4rem 0;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-9">
+                <h2 class="h3 mb-4" style="color: var(--gray-800);">
+                    <i class="fas fa-user-circle me-3" style="color: var(--gray-600);"></i>Biography
+                </h2>
+                <div style="line-height: 1.8; text-align: left;">
+                    <p class="lead mb-4" style="color: var(--gray-700);">{{ site.author.bio }}</p>
+                    
+                    <!-- Research Interests Subsection -->
+                    <h3 class="h5 mb-3 mt-4" style="color: var(--gray-800); font-weight: 600;">
+                        <i class="fas fa-lightbulb me-2" style="color: var(--gray-600); font-size: 0.9rem;"></i>Research Interests
+                    </h3>
+                    <ul class="mb-0" style="color: var(--gray-600); line-height: 1.7;">
+                        <li class="mb-2"><strong style="color: var(--gray-700);">Bayesian Machine Learning:</strong> Developing probabilistic models and uncertainty quantification methods for robust AI systems.</li>
+                        <li class="mb-2"><strong style="color: var(--gray-700);">Deep Learning Theory:</strong> Understanding the theoretical foundations of neural networks and optimization landscapes.</li>
+                        <li class="mb-0"><strong style="color: var(--gray-700);">AI Safety & Robustness:</strong> Research on reliable and safe artificial intelligence systems for real-world applications.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Recent News Section - Gray Background -->
+<section style="background-color: var(--gray-50); padding: 4rem 0;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-9">
+                <h2 class="h3 mb-5" style="color: var(--gray-800);">
+                    <i class="fas fa-newspaper me-3" style="color: var(--gray-600);"></i>News & Updates
+                </h2>
+                
+                {% assign sorted_news = site.news | sort: 'date' | reverse %}
+                
+                <!-- Initial 3 news items -->
+                <div id="initial-news">
+                    {% for item in sorted_news limit: 3 %}
+                    <div class="mb-4 pb-4" style="border-bottom: 1px solid var(--gray-200);">
+                        <div class="d-flex align-items-center mb-2">
+                            <h4 class="h6 mb-0 me-3" style="color: var(--gray-800); font-weight: 600;">{{ item.content | markdownify | strip_html | truncate: 60 | split: '.' | first }}.</h4>
+                            <span class="small" style="color: var(--gray-500);">{{ item.date | date: "%B %Y" }}</span>
+                        </div>
+                        <p class="mb-0" style="color: var(--gray-600); font-size: 0.95rem;">{{ item.content | markdownify | strip_html | truncate: 150 }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+                
+                <!-- Additional news items (hidden initially) -->
+                {% if sorted_news.size > 3 %}
+                <div id="additional-news" style="display: none;">
+                    {% for item in sorted_news offset: 3 %}
+                    <div class="mb-4 pb-4" style="border-bottom: 1px solid var(--gray-200);">
+                        <div class="d-flex align-items-center mb-2">
+                            <h4 class="h6 mb-0 me-3" style="color: var(--gray-800); font-weight: 600;">{{ item.content | markdownify | strip_html | truncate: 60 | split: '.' | first }}.</h4>
+                            <span class="small" style="color: var(--gray-500);">{{ item.date | date: "%B %Y" }}</span>
+                        </div>
+                        <p class="mb-0" style="color: var(--gray-600); font-size: 0.95rem;">{{ item.content | markdownify | strip_html | truncate: 150 }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+                
+                <!-- More/Less button -->
+                <div class="text-center mt-4">
+                    <button id="toggle-news-btn" class="btn" onclick="toggleNews()" style="background-color: var(--gray-200); color: var(--gray-700); border: none; font-size: 0.9rem; padding: 0.5rem 1.5rem;">
+                        <i class="fas fa-chevron-down me-2"></i>Show More News
+                    </button>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Selected Publications Section - White Background -->
+<section style="background-color: white; padding: 4rem 0;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-9">
+                <h2 class="h3 mb-5" style="color: var(--gray-800);">
+                    <i class="fas fa-file-alt me-3" style="color: var(--gray-600);"></i>Selected Publications
+                </h2>
+                
+                {% comment %}
+                Display selected publications from BibTeX file
+                Publications marked with selected = {true} will be shown
+                {% endcomment %}
+                {% bibliography --template selected_bib --max 10 --group_by none %}
+                
+                <div class="text-center mt-4">
+                    <a href="{{ '/publications/' | relative_url }}" class="btn" style="background-color: var(--gray-200); color: var(--gray-700); border: none; font-size: 0.9rem; padding: 0.5rem 1.5rem;">
+                        <i class="fas fa-arrow-right me-2"></i>View All Publications
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+function toggleNews() {
+    const additionalNews = document.getElementById('additional-news');
+    const toggleBtn = document.getElementById('toggle-news-btn');
+    
+    if (additionalNews.style.display === 'none') {
+        // Show additional news
+        additionalNews.style.display = 'block';
+        toggleBtn.innerHTML = '<i class="fas fa-chevron-up me-2"></i>Show Less News';
+        
+        // Smooth scroll to keep the user's view in context
+        setTimeout(() => {
+            additionalNews.scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'nearest' 
+            });
+        }, 100);
+    } else {
+        // Hide additional news
+        additionalNews.style.display = 'none';
+        toggleBtn.innerHTML = '<i class="fas fa-chevron-down me-2"></i>Show More News';
+    }
+}
+</script>

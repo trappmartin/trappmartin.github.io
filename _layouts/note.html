@@ -1,0 +1,196 @@
+---
+layout: default
+---
+
+<!-- Note Header Section - White Background -->
+<section style="background-color: white; padding: 4rem 0;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-9">
+                <nav aria-label="breadcrumb" class="mb-4">
+                    <ol class="breadcrumb" style="background: none; padding: 0; margin: 0;">
+                        <li class="breadcrumb-item">
+                            <a href="{{ '/' | relative_url }}" style="color: var(--gray-600); text-decoration: none;">Home</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="{{ '/notes/' | relative_url }}" style="color: var(--gray-600); text-decoration: none;">Technical Notes</a>
+                        </li>
+                        <li class="breadcrumb-item active" style="color: var(--gray-800);">{{ page.title }}</li>
+                    </ol>
+                </nav>
+                
+                <h1 class="h2 mb-3" style="color: var(--gray-800);">{{ page.title }}</h1>
+                
+                <div class="d-flex flex-wrap align-items-center mb-4">
+                    <span class="small me-3" style="color: var(--gray-600);">
+                        <i class="fas fa-calendar me-1"></i>{{ page.date | date: "%B %d, %Y" }}
+                    </span>
+                    
+                    <span class="small px-2 py-1 rounded me-3" style="background-color: var(--gray-200); color: var(--gray-700); text-transform: capitalize;">
+                        {{ page.category }}
+                    </span>
+                    
+                    {% for tag in page.tags %}
+                    <span class="small px-2 py-1 rounded me-1 mb-1" style="background-color: var(--gray-100); color: var(--gray-600);">
+                        {{ tag }}
+                    </span>
+                    {% endfor %}
+                </div>
+                
+                {% if page.summary %}
+                <div class="alert" style="background-color: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 0.5rem; padding: 1rem;">
+                    <p class="mb-0" style="color: var(--gray-700); font-style: italic;">{{ page.summary }}</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Note Content Section - Gray Background -->
+<section style="background-color: var(--gray-50); padding: 4rem 0;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-9">
+                <div class="note-content" style="background-color: white; padding: 3rem; border-radius: 0.5rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                    {{ content }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Navigation Section - White Background -->
+<section style="background-color: white; padding: 4rem 0;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-9">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        {% assign sorted_notes = site.technical_notes | sort: 'date' %}
+                        {% assign current_index = sorted_notes | map: 'url' | find_index: page.url %}
+                        {% if current_index > 0 %}
+                        {% assign prev_index = current_index | minus: 1 %}
+                        {% assign prev_note = sorted_notes[prev_index] %}
+                        <a href="{{ prev_note.url | relative_url }}" class="btn btn-outline-secondary">
+                            <i class="fas fa-chevron-left me-2"></i>{{ prev_note.title | truncate: 30 }}
+                        </a>
+                        {% endif %}
+                    </div>
+                    
+                    <div>
+                        <a href="{{ '/notes/' | relative_url }}" class="btn" style="background-color: var(--gray-200); color: var(--gray-700); border: none;">
+                            <i class="fas fa-list me-2"></i>All Notes
+                        </a>
+                    </div>
+                    
+                    <div>
+                        {% assign max_index = sorted_notes.size | minus: 1 %}
+                        {% if current_index < max_index %}
+                        {% assign next_index = current_index | plus: 1 %}
+                        {% assign next_note = sorted_notes[next_index] %}
+                        <a href="{{ next_note.url | relative_url }}" class="btn btn-outline-secondary">
+                            {{ next_note.title | truncate: 30 }}<i class="fas fa-chevron-right ms-2"></i>
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.note-content h1, .note-content h2, .note-content h3, .note-content h4, .note-content h5, .note-content h6 {
+    color: var(--gray-800);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.note-content h1 {
+    font-size: 2rem;
+    border-bottom: 2px solid var(--gray-200);
+    padding-bottom: 0.5rem;
+}
+
+.note-content h2 {
+    font-size: 1.5rem;
+    border-bottom: 1px solid var(--gray-200);
+    padding-bottom: 0.3rem;
+}
+
+.note-content p {
+    color: var(--gray-700);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.note-content ul, .note-content ol {
+    color: var(--gray-700);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.note-content li {
+    margin-bottom: 0.5rem;
+}
+
+.note-content code {
+    background-color: var(--gray-100);
+    color: var(--gray-800);
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    font-size: 0.9em;
+}
+
+.note-content pre {
+    background-color: var(--gray-100);
+    border: 1px solid var(--gray-200);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+}
+
+.note-content pre code {
+    background: none;
+    padding: 0;
+    color: var(--gray-800);
+}
+
+.note-content blockquote {
+    border-left: 4px solid var(--gray-300);
+    background-color: var(--gray-50);
+    padding: 1rem;
+    margin: 1rem 0;
+    color: var(--gray-700);
+    font-style: italic;
+}
+
+.note-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+.note-content th, .note-content td {
+    border: 1px solid var(--gray-300);
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.note-content th {
+    background-color: var(--gray-100);
+    color: var(--gray-800);
+    font-weight: 600;
+}
+
+.note-content td {
+    color: var(--gray-700);
+}
+
+/* Math display */
+.note-content .MathJax {
+    color: var(--gray-800) !important;
+}
+</style>
