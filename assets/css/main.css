@@ -1,4 +1,23 @@
-/* Custom styles for academic website */
+/**
+ * Academic Website Styles
+ * 
+ * Table of Contents:
+ * 1. Fonts & Typography
+ * 2. CSS Variables
+ * 3. Base Styles
+ * 4. Layout Components
+ * 5. Navigation
+ * 6. Hero Section
+ * 7. Content Sections
+ * 8. Publications
+ * 9. Forms & Interactions
+ * 10. Utility Classes
+ * 11. External Libraries
+ */
+
+/* ==========================================================================
+   1. FONTS & TYPOGRAPHY
+   ========================================================================== */
 
 /* Questa Grande Font from Font Squirrel */
 @font-face {
@@ -9,6 +28,10 @@
     font-style: normal;
     font-display: swap;
 }
+
+/* ==========================================================================
+   2. CSS VARIABLES
+   ========================================================================== */
 
 :root {
     --bs-primary: #4a4a4a;
@@ -24,6 +47,10 @@
     --gray-800: #1f2937;
     --gray-900: #111827;
 }
+
+/* ==========================================================================
+   3. BASE STYLES
+   ========================================================================== */
 
 body {
     font-family: 'Source Sans Pro', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -729,4 +756,22 @@ mjx-container[jax="CHTML"] mjx-math {
 
 .border-gray-200 {
     border-color: var(--gray-200) !important;
+}
+
+/* Additional utility classes for cleanup */
+.section-intro {
+    line-height: 1.8;
+}
+
+.response-time-text {
+    color: var(--gray-600);
+    font-size: 0.9rem;
+}
+
+.response-time-badge {
+    font-size: 0.8rem;
+}
+
+.response-note {
+    color: var(--gray-500);
 }

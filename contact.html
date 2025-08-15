@@ -6,13 +6,13 @@ permalink: /contact/
 ---
 
 <!-- Introduction Section - White Background -->
-<section style="background-color: white; padding: 4rem 0;">
+<section class="content-section content-section-white">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-10">
-                <h1 class="h2 mb-4" style="color: var(--gray-800);">Contact</h1>
-                <div style="line-height: 1.8;">
-                    <p class="lead mb-4" style="color: var(--gray-700);">{{ site.data.contact.introduction.description }}</p>
+                <h1 class="section-header h2 mb-4">Contact</h1>
+                <div class="section-intro">
+                    <p class="biography-lead lead mb-4">{{ site.data.contact.introduction.description }}</p>
                 </div>
             </div>
         </div>
@@ -20,23 +20,23 @@ permalink: /contact/
 </section>
 
 <!-- Contact Information Section - Gray Background -->
-<section style="background-color: var(--gray-50); padding: 4rem 0;">
+<section class="content-section content-section-gray">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-10">
-                <h2 class="h3 mb-5" style="color: var(--gray-800);">
-                    <i class="fas fa-user-circle me-3" style="color: var(--gray-600);"></i>Contact Information
+                <h2 class="section-header h3 mb-5">
+                    <i class="section-icon fas fa-user-circle me-3"></i>Contact Information
                 </h2>
                 
                 <div class="row">
                     <div class="col-md-6">
                         <div class="mb-4">
                             <div class="d-flex align-items-center mb-2">
-                                <i class="fas fa-envelope me-3" style="color: var(--gray-600);"></i>
-                                <h4 class="h6 mb-0" style="color: var(--gray-800); font-weight: 600;">Email</h4>
+                                <i class="section-icon fas fa-envelope me-3"></i>
+                                <h4 class="contact-section-header h6 mb-0">Email</h4>
                             </div>
-                            <p class="mb-0" style="color: var(--gray-700);">
-                                <a href="mailto:{{ site.author.email }}" style="color: var(--gray-700); text-decoration: none; border-bottom: 1px solid var(--gray-400);">{{ site.author.email }}</a>
+                            <p class="mb-0 contact-info-text">
+                                <a href="mailto:{{ site.author.email }}" class="contact-link">{{ site.author.email }}</a>
                             </p>
                         </div>
 
@@ -45,8 +45,8 @@ permalink: /contact/
                     <div class="col-md-6">
                         <div class="mb-4">
                             <div class="d-flex align-items-center mb-2">
-                                <i class="fas fa-map-marker-alt me-3" style="color: var(--gray-600);"></i>
-                                <h4 class="h6 mb-0" style="color: var(--gray-800); font-weight: 600;">Office</h4>
+                                <i class="section-icon fas fa-map-marker-alt me-3"></i>
+                                <h4 class="contact-section-header h6 mb-0">Office</h4>
                             </div>
                             <p class="mb-0" style="color: var(--gray-700);">
                                 {{ site.author.office }}<br>

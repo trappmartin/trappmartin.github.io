@@ -144,27 +144,4 @@ title: Home
     </div>
 </section>
 
-<script>
-function toggleNews() {
-    const additionalNews = document.getElementById('additional-news');
-    const toggleBtn = document.getElementById('toggle-news-btn');
-    
-    if (additionalNews.style.display === 'none') {
-        // Show additional news
-        additionalNews.style.display = 'block';
-        toggleBtn.innerHTML = '<i class="fas fa-chevron-up me-2"></i>Show Less News';
-        
-        // Smooth scroll to keep the user's view in context
-        setTimeout(() => {
-            additionalNews.scrollIntoView({ 
-                behavior: 'smooth', 
-                block: 'nearest' 
-            });
-        }, 100);
-    } else {
-        // Hide additional news
-        additionalNews.style.display = 'none';
-        toggleBtn.innerHTML = '<i class="fas fa-chevron-down me-2"></i>Show More News';
-    }
-}
-</script>
+
