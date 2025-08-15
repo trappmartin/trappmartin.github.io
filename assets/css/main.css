@@ -68,8 +68,8 @@ main {
 /* Navigation */
 .navbar-brand {
     font-size: 1.65rem;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 600;
+    font-family: 'QuestaGrande', 'Georgia', 'Times New Roman', serif;
+    font-weight: 400; /* Questa Grande has its own weight, use normal */
 }
 
 /* Headings */
