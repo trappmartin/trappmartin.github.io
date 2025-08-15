@@ -15,6 +15,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-scholar
+  - jekyll-scholar
 
 # Collections
 collections:
