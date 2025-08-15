@@ -132,28 +132,6 @@
 </div>
 
 <script>
-function toggleAbstract(button) {
-    const abstractText = button.parentElement.querySelector('.abstract-text');
-    const fullAbstract = abstractText.getAttribute('data-full-abstract');
-    const isExpanded = abstractText.style.whiteSpace === 'normal';
-    
-    if (isExpanded) {
-        // Collapse to single line
-        abstractText.style.whiteSpace = 'nowrap';
-        abstractText.style.overflow = 'hidden';
-        abstractText.style.textOverflow = 'ellipsis';
-        abstractText.style.lineHeight = '1.4';
-        button.innerHTML = '<small>more</small>';
-    } else {
-        // Expand to full text
-        abstractText.style.whiteSpace = 'normal';
-        abstractText.style.overflow = 'visible';
-        abstractText.style.textOverflow = 'initial';
-        abstractText.style.lineHeight = '1.6';
-        button.innerHTML = '<small>less</small>';
-    }
-}
-
 function cleanBibtex(rawBibtex) {
     // Split into lines and filter out internal fields
     const lines = rawBibtex.split('\n');

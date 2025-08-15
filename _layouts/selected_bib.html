@@ -2,7 +2,7 @@
 ---
 
 {% if entry.selected %}
-<div class="selected-publication-item mb-3 pb-3 {% if entry.presentation == 'oral' %}border-start border-warning border-3 ps-3{% elsif entry.presentation == 'spotlight' %}border-start border-info border-3 ps-3{% endif %}">
+<div class="selected-publication-item mb-3 p-3 border rounded-2 {% if entry.presentation == 'oral' %}bg-warning bg-opacity-10 border-warning{% elsif entry.presentation == 'spotlight' %}bg-info bg-opacity-10 border-info{% else %}bg-white border-gray-200{% endif %}" style="{% unless entry.presentation == 'oral' or entry.presentation == 'spotlight' %}border-color: var(--gray-200) !important;{% endunless %}">
     <h5 class="selected-publication-title h6 mb-1" style="line-height: 1.3;">{{ entry.title }}</h5>
     <p class="selected-publication-authors mb-1 small">{{ entry.author }}</p>
     <div class="d-flex align-items-baseline gap-2 mb-1">

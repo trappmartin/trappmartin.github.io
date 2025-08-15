@@ -678,3 +678,37 @@ mjx-container[jax="CHTML"] mjx-math {
     margin: 1em 0; 
     text-align: center; 
 }
+
+/* Bootstrap color overrides for presentation highlighting */
+.border-warning {
+    border-color: #ffc107 !important;
+}
+
+.border-info {
+    border-color: #0dcaf0 !important;
+}
+
+.bg-warning {
+    background-color: #fff3cd !important;
+}
+
+.bg-info {
+    background-color: #d1ecf1 !important;
+}
+
+.bg-opacity-10 {
+    --bs-bg-opacity: 0.1;
+    background-color: rgba(var(--bs-bg-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.text-dark {
+    color: #212529 !important;
+}
+
+.border-3 {
+    border-width: 3px !important;
+}
+
+.border-gray-200 {
+    border-color: var(--gray-200) !important;
+}
