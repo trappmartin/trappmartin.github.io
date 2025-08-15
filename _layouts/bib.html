@@ -1,7 +1,7 @@
 ---
 ---
 
-<div class="publication-item mb-3 p-3 border rounded-2 bg-white" data-type="{{ entry.type | downcase }}" style="border-color: var(--gray-200) !important;">
+<div class="publication-item mb-3 p-3 border rounded-2 {% if entry.presentation == 'oral' %}bg-warning bg-opacity-10 border-warning{% elsif entry.presentation == 'spotlight' %}bg-info bg-opacity-10 border-info{% else %}bg-white{% endif %}" data-type="{{ entry.type | downcase }}" style="{% unless entry.presentation == 'oral' or entry.presentation == 'spotlight' %}border-color: var(--gray-200) !important;{% endunless %}">
     <div class="row align-items-start">
         <div class="col-md-9">
             <!-- Title -->
@@ -15,7 +15,7 @@
             {% endif %}
             
             <!-- Venue, Year and Type in single line -->
-            <div class="d-flex align-items-center flex-wrap mb-2 gap-2">
+            <div class="d-flex align-items-baseline flex-wrap mb-2 gap-2">
                 <span class="publication-venue" style="color: var(--gray-700); font-size: 0.9rem;">
                     {% if entry.venue %}
                     <strong>{{ entry.venue }}</strong>
@@ -28,12 +28,24 @@
                     {% elsif entry.publisher %}
                     <strong>{{ entry.publisher }}</strong>
                     {% endif %}
-                    {% if entry.year %}, {{ entry.year }}{% endif %}
                 </span>
                 
                 <!-- Publication Type Badge -->
                 {% if entry.type %}
                 <span class="badge" style="background-color: var(--gray-500); color: white; font-size: 0.65rem;">{{ entry.type }}</span>
+                {% endif %}
+                
+                <!-- Presentation Badge -->
+                {% if entry.presentation == 'oral' %}
+                <span class="badge bg-warning text-dark" style="font-size: 0.65rem; font-weight: 600;">
+                    <i class="fas fa-microphone me-1"></i>Oral
+                    {% if entry.acceptance_rate %} ({{ entry.acceptance_rate }}%){% endif %}
+                </span>
+                {% elsif entry.presentation == 'spotlight' %}
+                <span class="badge bg-info text-white" style="font-size: 0.65rem; font-weight: 600;">
+                    <i class="fas fa-star me-1"></i>Spotlight
+                    {% if entry.acceptance_rate %} ({{ entry.acceptance_rate }}%){% endif %}
+                </span>
                 {% endif %}
             </div>
             
