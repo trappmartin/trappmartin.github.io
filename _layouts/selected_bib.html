@@ -21,7 +21,12 @@
         {% endif %}
     </div>
     {% if entry.abstract %}
-    <p class="selected-publication-abstract mb-0 small" style="font-size: 0.85rem; line-height: 1.4;">{{ entry.abstract | truncate: 100 }}</p>
+    <div class="d-flex align-items-start">
+        <p class="selected-publication-abstract mb-0 small flex-grow-1" style="font-size: 0.85rem; line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" data-full-abstract="{{ entry.abstract | escape }}">{{ entry.abstract }}</p>
+        <button class="btn btn-link btn-sm p-0 ms-2 toggle-abstract" onclick="toggleAbstract(this)" style="color: var(--gray-500); font-size: 0.7rem; white-space: nowrap; text-decoration: none;">
+            <small>more</small>
+        </button>
+    </div>
     {% endif %}
 </div>
 {% endif %}

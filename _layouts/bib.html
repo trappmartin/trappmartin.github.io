@@ -49,17 +49,17 @@
                 {% endif %}
             </div>
             
-            <!-- Abstract (compact) -->
+            <!-- Abstract (single line with expand option) -->
             {% if entry.abstract %}
             <div class="abstract-container">
-                <p class="abstract-text mb-1" style="color: var(--gray-600); font-size: 0.85rem; line-height: 1.4;" data-full-abstract="{{ entry.abstract }}">
-                    {{ entry.abstract | truncate: 120 }}
-                </p>
-                {% if entry.abstract.size > 120 %}
-                <button class="btn btn-link btn-sm p-0 toggle-abstract" onclick="toggleAbstract(this)" style="color: var(--gray-500); font-size: 0.75rem;">
-                    <small>Show more</small>
-                </button>
-                {% endif %}
+                <div class="d-flex align-items-start">
+                    <p class="abstract-text mb-1 flex-grow-1" style="color: var(--gray-600); font-size: 0.85rem; line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" data-full-abstract="{{ entry.abstract | escape }}">
+                        {{ entry.abstract }}
+                    </p>
+                    <button class="btn btn-link btn-sm p-0 ms-2 toggle-abstract" onclick="toggleAbstract(this)" style="color: var(--gray-500); font-size: 0.75rem; white-space: nowrap; text-decoration: none;">
+                        <small>more</small>
+                    </button>
+                </div>
             </div>
             {% endif %}
             
@@ -125,7 +125,7 @@
                 </button>
             </div>
             <div class="card-body" style="background-color: var(--gray-50);">
-                <pre class="bibtex-code mb-0" style="background-color: var(--gray-50); border: none; color: var(--gray-800);"><code>{{ entry.bibtex }}</code></pre>
+                <pre class="bibtex-code mb-0" style="background-color: var(--gray-50); border: none; color: var(--gray-800);"><code id="bibtex-raw-{{ entry.key }}" style="display: none;">{{ entry.bibtex }}</code><code id="bibtex-clean-{{ entry.key }}"></code></pre>
             </div>
         </div>
     </div>
@@ -135,20 +135,47 @@
 function toggleAbstract(button) {
     const abstractText = button.parentElement.querySelector('.abstract-text');
     const fullAbstract = abstractText.getAttribute('data-full-abstract');
-    const currentText = abstractText.textContent.trim();
+    const isExpanded = abstractText.style.whiteSpace === 'normal';
     
-    if (currentText.endsWith('...')) {
-        abstractText.textContent = fullAbstract;
-        button.innerHTML = '<small>Show less</small>';
+    if (isExpanded) {
+        // Collapse to single line
+        abstractText.style.whiteSpace = 'nowrap';
+        abstractText.style.overflow = 'hidden';
+        abstractText.style.textOverflow = 'ellipsis';
+        abstractText.style.lineHeight = '1.4';
+        button.innerHTML = '<small>more</small>';
     } else {
-        abstractText.textContent = fullAbstract.substring(0, 117) + '...';
-        button.innerHTML = '<small>Show more</small>';
+        // Expand to full text
+        abstractText.style.whiteSpace = 'normal';
+        abstractText.style.overflow = 'visible';
+        abstractText.style.textOverflow = 'initial';
+        abstractText.style.lineHeight = '1.6';
+        button.innerHTML = '<small>less</small>';
     }
+}
+
+function cleanBibtex(rawBibtex) {
+    // Split into lines and filter out internal fields
+    const lines = rawBibtex.split('\n');
+    const filteredLines = lines.filter(line => {
+        const trimmedLine = line.trim();
+        return !(
+            trimmedLine.includes('selected =') ||
+            trimmedLine.includes('type =') ||
+            trimmedLine.includes('presentation =') ||
+            trimmedLine.includes('acceptance_rate =')
+        );
+    });
+    return filteredLines.join('\n');
 }
 
 function showBibtex(key) {
     const bibtexContainer = document.getElementById('bibtex-' + key);
     if (bibtexContainer.style.display === 'none') {
+        // Clean and display the BibTeX when first shown
+        const rawBibtex = document.getElementById('bibtex-raw-' + key).textContent;
+        const cleanedBibtex = cleanBibtex(rawBibtex);
+        document.getElementById('bibtex-clean-' + key).textContent = cleanedBibtex;
         bibtexContainer.style.display = 'block';
     } else {
         bibtexContainer.style.display = 'none';
@@ -156,21 +183,19 @@ function showBibtex(key) {
 }
 
 function copyBibtex(key) {
-    const bibtexCode = document.querySelector('#bibtex-' + key + ' .bibtex-code code');
-    const text = bibtexCode.textContent;
+    const cleanBibtexElement = document.getElementById('bibtex-clean-' + key);
+    const text = cleanBibtexElement.textContent;
     
     navigator.clipboard.writeText(text).then(function() {
         // Show success feedback
-        const button = document.querySelector('#bibtex-' + key + ' .btn-outline-secondary');
+        const button = document.querySelector('#bibtex-' + key + ' .btn');
         const originalText = button.innerHTML;
-        button.innerHTML = '<i class="bi bi-check"></i> Copied!';
-        button.classList.remove('btn-outline-secondary');
-        button.classList.add('btn-success');
+        button.innerHTML = '<i class="fas fa-check me-1"></i>Copied!';
+        button.style.backgroundColor = 'var(--gray-700)';
         
         setTimeout(function() {
             button.innerHTML = originalText;
-            button.classList.remove('btn-success');
-            button.classList.add('btn-outline-secondary');
+            button.style.backgroundColor = 'var(--gray-500)';
         }, 2000);
     });
 }
