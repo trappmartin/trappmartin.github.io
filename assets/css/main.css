@@ -484,7 +484,7 @@ html {
 
 /* News section */
 .news-item-container {
-    border-bottom: 1px solid var(--gray-200);
+    /* Border removed for cleaner look */
 }
 
 .news-title {
@@ -511,7 +511,7 @@ html {
 
 /* Selected publications section */
 .selected-publication-item {
-    border-bottom: 1px solid var(--gray-200);
+    /* Border removed for cleaner look */
 }
 
 .selected-publication-title {
@@ -600,7 +600,7 @@ html {
 
 /* Service page specific */
 .service-item-container {
-    border-bottom: 1px solid var(--gray-200);
+    /* Border removed for cleaner look */
 }
 
 .service-role {
@@ -642,7 +642,7 @@ html {
 }
 
 .note-item-container {
-    border-bottom: 1px solid var(--gray-200);
+    /* Border removed for cleaner look */
 }
 
 .note-title {
@@ -774,4 +774,16 @@ mjx-container[jax="CHTML"] mjx-math {
 
 .response-note {
     color: var(--gray-500);
+}
+
+/* Section styling */
+.section-description {
+    color: var(--gray-600);
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.service-divider {
+    border-color: var(--gray-200);
+    opacity: 0.5;
 }

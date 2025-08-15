@@ -1,113 +1,49 @@
 ---
 layout: default
 title: Academic Service
-description: My contributions to the academic community through editorial work, conference organization, and professional service.
+description: My contributions to the academic community through editorial work, conference organization, professional societies, and university service.
 permalink: /service/
 ---
 
 <!-- Introduction Section - White Background -->
-<section style="background-color: white; padding: 4rem 0;">
+<section class="content-section content-section-white">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-10">
-                <h1 class="h2 mb-4" style="color: var(--gray-800);">Academic Service</h1>
+                <h1 class="section-header h2 mb-4">Academic Service</h1>
+                <div class="section-intro">
+                    <p class="biography-lead lead mb-4">I am committed to advancing the academic community through various service roles, from editorial responsibilities to conference organization and institutional governance.</p>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Editorial Service Section - Gray Background -->
-<section style="background-color: var(--gray-50); padding: 4rem 0;">
+<!-- Dynamic Service Sections -->
+{% for section in site.data.service.sections %}
+<section class="content-section {% cycle 'content-section-gray', 'content-section-white' %}">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-10">
-                <h2 class="h3 mb-5" style="color: var(--gray-800);">
-                    <i class="fas fa-edit me-3" style="color: var(--gray-600);"></i>Editorial Service
-                </h2>
+                <h2 class="section-header h3 mb-4">{{ section.title }}</h2>
+                {% if section.description %}
+                <p class="section-description text-muted mb-4">{{ section.description }}</p>
+                {% endif %}
                 
-                {% for item in site.data.service.editorial_service %}
-                <div class="service-item-container {% if forloop.last %}mb-0{% else %}mb-4 pb-4{% endif %}">
-                    <div class="d-flex justify-content-between align-items-start mb-2">
-                        <h4 class="service-role h6 mb-0">{{ item.role }}</h4>
-                        <span class="service-date-badge {% if item.current %}service-date-badge-current{% else %}service-date-badge-completed{% endif %} small px-2 py-1 rounded">{{ item.period }}</span>
+                <div class="service-items">
+                    {% for item in section.items %}
+                    <div class="service-item-container {% if forloop.last %}mb-0{% else %}mb-4 pb-4{% endif %}">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h4 class="service-role h6 mb-0">{{ item.role }}</h4>
+                            <span class="service-date-badge {% if item.current %}service-date-badge-current{% else %}service-date-badge-completed{% endif %} small px-2 py-1 rounded">{{ item.period }}</span>
+                        </div>
+                        <p class="service-organization mb-1">{{ item.organization }}</p>
+                        <p class="service-description mb-0 small">{{ item.description }}</p>
                     </div>
-                    <p class="service-organization mb-1">{{ item.organization }}</p>
-                    <p class="service-description mb-0 small">{{ item.description }}</p>
+                    {% endfor %}
                 </div>
-                {% endfor %}
             </div>
         </div>
     </div>
 </section>
-
-<!-- Conference Organization Section - White Background -->
-<section style="background-color: white; padding: 4rem 0;">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-10">
-                <h2 class="h3 mb-5" style="color: var(--gray-800);">
-                    <i class="fas fa-users me-3" style="color: var(--gray-600);"></i>Conference Organization
-                </h2>
-                
-                {% for item in site.data.service.conference_organization %}
-                <div class="service-item-container {% if forloop.last %}mb-0{% else %}mb-4 pb-4{% endif %}">
-                    <div class="d-flex justify-content-between align-items-start mb-2">
-                        <h4 class="service-role h6 mb-0">{{ item.role }}</h4>
-                        <span class="service-date-badge {% if item.current %}service-date-badge-current{% else %}service-date-badge-completed{% endif %} small px-2 py-1 rounded">{{ item.period }}</span>
-                    </div>
-                    <p class="service-organization mb-1">{{ item.organization }}</p>
-                    <p class="service-description mb-0 small">{{ item.description }}</p>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Professional Organizations Section - Gray Background -->
-<section style="background-color: var(--gray-50); padding: 4rem 0;">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-10">
-                <h2 class="h3 mb-5" style="color: var(--gray-800);">
-                    <i class="fas fa-building me-3" style="color: var(--gray-600);"></i>Professional Organizations
-                </h2>
-                
-                {% for item in site.data.service.professional_organizations %}
-                <div class="service-item-container {% if forloop.last %}mb-0{% else %}mb-4 pb-4{% endif %}">
-                    <div class="d-flex justify-content-between align-items-start mb-2">
-                        <h4 class="service-role h6 mb-0">{{ item.role }}</h4>
-                        <span class="service-date-badge {% if item.current %}service-date-badge-current{% else %}service-date-badge-completed{% endif %} small px-2 py-1 rounded">{{ item.period }}</span>
-                    </div>
-                    <p class="service-organization mb-1">{{ item.organization }}</p>
-                    <p class="service-description mb-0 small">{{ item.description }}</p>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- University Service Section - White Background -->
-<section style="background-color: white; padding: 4rem 0;">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-10">
-                <h2 class="h3 mb-5" style="color: var(--gray-800);">
-                    <i class="fas fa-university me-3" style="color: var(--gray-600);"></i>University Service
-                </h2>
-                
-                {% for item in site.data.service.university_service %}
-                <div class="service-item-container {% if forloop.last %}mb-0{% else %}mb-4 pb-4{% endif %}">
-                    <div class="d-flex justify-content-between align-items-start mb-2">
-                        <h4 class="service-role h6 mb-0">{{ item.role }}</h4>
-                        <span class="service-date-badge {% if item.current %}service-date-badge-current{% else %}service-date-badge-completed{% endif %} small px-2 py-1 rounded">{{ item.period }}</span>
-                    </div>
-                    <p class="service-organization mb-1">{{ item.organization }}</p>
-                    <p class="service-description mb-0 small">{{ item.description }}</p>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-</section>
+{% endfor %}
