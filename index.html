@@ -8,12 +8,12 @@ title: Home
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-9">
-                <div class="row align-items-center">
+                <div class="row align-items-start">
                     <div class="col-md-4 text-center mb-3 mb-md-0">
                         <img src="{{ '/assets/images/picture.jpg' | relative_url }}" alt="{{ site.author.name }}" class="hero-profile-img rounded-circle img-fluid mb-3">
                         
                         <!-- Social Media Icons -->
-                        <div class="hero-social-icons d-flex justify-content-center gap-3">
+                        <div class="hero-social-icons d-flex justify-content-center gap-3 mb-4">
                             {% if site.social.google_scholar %}
                             <a href="{{ site.social.google_scholar }}" title="Google Scholar" target="_blank">
                                 <i class="fas fa-graduation-cap fa-xl"></i>
@@ -40,39 +40,29 @@ title: Home
                             </a>
                             {% endif %}
                         </div>
-                    </div>
-                    <div class="col-md-8">
+                        
+                        <!-- Name and titles moved under social icons -->
                         <h1 class="hero-name h2 mb-2">{{ site.author.name }}</h1>
                         <p class="hero-tagline h5 mb-3">Almost surely</p>
                         <p class="hero-title h6 mb-1">{{ site.author.title }}</p>
                         <p class="hero-affiliation mb-0">{{ site.author.affiliation }}</p>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Biography Section -->
-<section class="content-section content-section-white">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-9">
-                <h2 class="section-header h3 mb-4">
-                    <i class="section-icon fas fa-user-circle me-3"></i>Biography
-                </h2>
-                <div class="biography-text">
-                    <p class="biography-lead lead mb-4">{{ site.author.bio }}</p>
-                    
-                    <!-- Research Interests Subsection -->
-                    <h3 class="research-interests-subsection h5 mb-3 mt-4">
-                        <i class="research-interests-icon fas fa-lightbulb me-2"></i>Research Interests
-                    </h3>
-                    <ul class="research-interests-list mb-0">
-                        <li class="mb-2"><strong class="research-interest-topic">Bayesian Machine Learning:</strong> Developing probabilistic models and uncertainty quantification methods for robust AI systems.</li>
-                        <li class="mb-2"><strong class="research-interest-topic">Deep Learning Theory:</strong> Understanding the theoretical foundations of neural networks and optimization landscapes.</li>
-                        <li class="mb-0"><strong class="research-interest-topic">AI Safety & Robustness:</strong> Research on reliable and safe artificial intelligence systems for real-world applications.</li>
-                    </ul>
+                    <div class="col-md-8">
+                        <!-- Biography content moved to right column -->
+                        <div class="biography-text">
+                            <p class="biography-lead lead mb-4">{{ site.author.bio }}</p>
+                            
+                            <!-- Research Interests Subsection -->
+                            <h3 class="research-interests-subsection h5 mb-3 mt-4">
+                                <i class="research-interests-icon fas fa-lightbulb me-2"></i>Research Interests
+                            </h3>
+                            <ul class="research-interests-list mb-0">
+                                <li class="mb-2"><strong class="research-interest-topic">Bayesian Machine Learning:</strong> Developing probabilistic models and uncertainty quantification methods for robust AI systems.</li>
+                                <li class="mb-2"><strong class="research-interest-topic">Deep Learning Theory:</strong> Understanding the theoretical foundations of neural networks and optimization landscapes.</li>
+                                <li class="mb-0"><strong class="research-interest-topic">AI Safety & Robustness:</strong> Research on reliable and safe artificial intelligence systems for real-world applications.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

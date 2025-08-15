@@ -414,6 +414,34 @@ html {
     color: var(--gray-700);
 }
 
+/* Biography in hero section (dark background) */
+.hero-section .biography-text {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-section .biography-lead {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-section .research-interests-subsection {
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 600;
+}
+
+.hero-section .research-interests-icon {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
+
+.hero-section .research-interests-list {
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.7;
+}
+
+.hero-section .research-interest-topic {
+    color: rgba(255, 255, 255, 0.95);
+}
+
 /* News section */
 .news-item-container {
     border-bottom: 1px solid var(--gray-200);
