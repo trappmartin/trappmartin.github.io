@@ -202,7 +202,6 @@
   author = {Loconte, Lorenzo and Sladek, Aleksanteri M. and Mengel, Stefan and Trapp, Martin and Solin, Arno and Gillis, Nicolas and Vergari, Antonio},
   title = {Subtractive Mixture Models via Squaring: Representation and Learning},
   booktitle = {The 12th International Conference on Learning Representations (ICLR)},
-  publisher = {OpenReview.net},
   year = {2024},
   pdf = {https://arxiv.org/abs/2310.00724},
   abstract = {Mixture models are traditionally represented and learned by adding several distributions as components. Allowing mixtures to subtract probability mass or density can drastically reduce the number of components needed to model complex distributions. However, learning such subtractive mixtures while ensuring they still encode a non-negative function is challenging. We investigate how to learn and perform inference on deep subtractive mixtures by squaring them. We do this in the framework of probabilistic circuits, which enable us to represent tensorized mixtures and generalize several other subtractive models. We theoretically prove that the class of squared circuits allowing subtractions can be exponentially more expressive than traditional additive mixtures; and, we empirically show this increased expressiveness on a series of real-world distribution estimation tasks.},
@@ -222,7 +221,6 @@
                   Martin Trapp},
   title        = {Streamlining Prediction in Bayesian Deep Learning},
   booktitle    = {The 13th International Conference on Learning Representations (ICLR)},
-  publisher    = {OpenReview.net},
   year         = {2025},
   pdf          = {https://arxiv.org/abs/2411.18425},
   abstract = {The rising interest in Bayesian deep learning (BDL) has led to a plethora of methods for estimating the posterior distribution. However, efficient computation of inferences, such as predictions, has been largely overlooked with Monte Carlo integration remaining the standard. In this work we examine streamlining prediction in BDL through a single forward pass without sampling. For this we use local linearisation on activation functions and local Gaussian approximations at linear layers. Thus allowing us to analytically compute an approximation to the posterior predictive distribution. We showcase our approach for both MLP and transformers, such as ViT and GPT-2, and assess its performance on regression and classification tasks.},
@@ -270,7 +268,8 @@
   abstract = {Deployment of deep neural networks in real-world settings typically requires adaptation to new tasks with few examples. Few-shot classification (FSC) provides a solution to this problem by leveraging pre-trained backbones for fast adaptation to new classes. However, approaches for multi-domain FSC typically result in complex pipelines aimed at information fusion and task-specific adaptation without consideration of the importance of backbone training. In this work, we introduce an effective strategy for backbone training and selection in multi-domain FSC by utilizing flatness-aware training and fine-tuning. Our work is theoretically grounded and empirically performs on par or better than state-of-the-art methods despite being simpler. Further, our results indicate that backbone training is crucial for good generalisation in FSC across different adaptation methods.},
   keywords = {few-shot classification, flatness, deep neural networks},
   venue = {IEEE/CVF Winter Conference on Applications of Computer Vision},
-  type = {WACV}
+  type = {WACV},
+  presentation={oral}
 }
 
 @inproceedings{meronen2024fixing,
