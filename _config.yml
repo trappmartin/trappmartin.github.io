@@ -63,7 +63,7 @@ social:
   google_scholar: "https://scholar.google.com/citations?user=GwCrZP4AAAAJ"
   orcid: "https://orcid.org/0000-0003-1725-3381"
   linkedin: "https://linkedin.com/in/martintrapp"
-  bluesky: "https://bsky.app/profile/martintrapp.bsky.social"
+  bluesky: "https://bsky.app/profile/trappmartin.bsky.social"
   github: "https://github.com/trappmartin"
 
 # SEO settings
@@ -75,7 +75,7 @@ seo:
     - "https://orcid.org/0000-0003-1725-3381"
     - "https://linkedin.com/in/martintrapp"
     - "https://github.com/trappmartin"
-    - "https://bsky.app/profile/martintrapp.bsky.social"
+    - "https://bsky.app/profile/trappmartin.bsky.social"
 
 # Google Analytics (add your tracking ID when ready)
 # google_analytics: GA_TRACKING_ID
