@@ -274,7 +274,7 @@
 
 @inproceedings{meronen2024fixing,
   author={Meronen, Lassi and Trapp, Martin and Pilzer, Andrea and Yang, Le and Solin, Arno},
-  booktitle={IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)}, 
+  booktitle={IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
   title={Fixing Overconfidence in Dynamic Neural Networks}, 
   year={2024},
   pages={2668-2678},
@@ -287,3 +287,53 @@
   type = {WACV}
 }
 
+% ----
+% SIGIR
+% ----
+
+@inproceedings{schabus2017one,
+  author = {Schabus, Dietmar and Skowron, Marcin and Trapp, Martin},
+  title = {One Million Posts: A Data Set of German Online Discussions},
+  year = {2017},
+  publisher = {Association for Computing Machinery},
+  doi = {10.1145/3077136.3080711},
+  pdf={https://dl.acm.org/doi/10.1145/3077136.3080711},
+  url={https://ofai.github.io/million-post-corpus/},
+  abstract = {In this paper we introduce a new data set consisting of user comments posted to the website of a German-language Austrian newspaper. Professional forum moderators have annotated 11,773 posts according to seven categories they considered crucial for the efficient moderation of online discussions in the context of news articles. In addition to this taxonomy and annotated posts, the data set contains one million unlabeled posts. Our experimental results using six methods establish a first baseline for predicting these categories. The data and our code are available for research purposes from https://ofai.github.io/million-post-corpus.},
+  booktitle = {Proceedings of the 40th International ACM SIGIR Conference on Research and Development in Information Retrieval},
+  pages = {1241–1244},
+  venue={40th International ACM SIGIR Conference on Research and Development in Information Retrieval},
+  type={SIGIR}
+}
+
+% ----
+% Journals
+% ____
+
+@article{tamir2023transport,
+  title={Transport with support: Data-conditional diffusion bridges},
+  author={Tamir, Ella and Trapp, Martin and Solin, Arno},
+  journal={Transactions on Machine Learning Research},
+  issn={2835-8856},
+  year={2023},
+  url={https://openreview.net/forum?id=Mbc58EzF5q},
+  pdf={https://arxiv.org/abs/2301.13636},
+  code={https://github.com/AaltoML/iterative-smoothing-bridge},
+  abstract={The dynamic Schrödinger bridge problem provides an appealing setting for solving constrained time-series data generation tasks posed as optimal transport problems. It consists of learning non-linear diffusion processes using efficient iterative solvers. Recent works have demonstrated state-of-the-art results (eg. in modelling single-cell embryo RNA sequences or sampling from complex posteriors) but are limited to learning bridges with only initial and terminal constraints. Our work extends this paradigm by proposing the Iterative Smoothing Bridge (ISB). We integrate Bayesian filtering and optimal control into learning the diffusion process, enabling the generation of constrained stochastic processes governed by sparse observations at intermediate stages and terminal constraints. We assess the effectiveness of our method on synthetic and real-world data generation tasks and we show that the ISB generalises well to high-dimensional data, is computationally efficient, and provides accurate estimates of the marginals at intermediate and terminal times.},
+  venue={Transactions in Machine Learning Research},
+  type={TMLR}
+}
+
+@article{fjelde2025turing,
+  author = {Fjelde, Tor Erlend and Xu, Kai and Widmann, David and Tarek, Mohamed and Pfiffer, Cameron and Trapp, Martin and Axen, Seth D. and Sun, Xianda and Hauru, Markus and Yong, Penelope and Tebbutt, Will and Ghahramani, Zoubin and Ge, Hong},
+  title = {Turing.jl: a general-purpose probabilistic programming language},
+  year = {2025},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  pdf = {https://doi.org/10.1145/3711897},
+  doi = {10.1145/3711897},
+  abstract = {Probabilistic programming languages (PPLs) are becoming increasingly important in many scientific disciplines, such as economics, epidemiology, and biology, to extract meaning from sources of data while accounting for one's uncertainty. The key idea of probabilistic programming is to decouple inference and model specification, thus allowing the practitioner to approach their task at hand using Bayesian inference, without requiring extensive knowledge in programming or computational statistics. At the same time, the complexity of problem settings in which PPLs are employed is steadily increasing, both in terms of project size and model complexity, calling for more flexible and efficient systems.In this work, we describe Turing.jl, a general-purpose PPL, which is designed to be flexible, efficient, and easy to use. Turing.jl is built on top of the Julia programming language, which is known for its high performance and ease-of-use. We describe the design of Turing.jl, contextualizing it within different types of users and use cases, its key features, and how it can be used to solve a wide range of problems. We also provide a brief overview of the ecosystem around Turing.jl, including the different libraries and tools that can be used in conjunction with it. Finally, we provide a few examples of how Turing.jl can be used in practice.},
+  journal = {ACM Transactions on Probabilistic Machine Learning},
+  venue = {ACM Transactions on Probabilistic Machine Learning},
+  type = {TOPML}
+}
