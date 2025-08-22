@@ -9,32 +9,12 @@
           "role": "Workshop Co-Organizer",
           "entries": [
             {
-              "organization": "Workshop on Uncertainty Quantification for Computer Vision at CVPR 2025",
-              "period": "2025"
+              "organization": "Workshop on Tractable Probabilistic Modeling",
+              "period": "UAI 2022, UAI 2023, UAI 2024"
             },
             {
-              "organization": "Workshop on Uncertainty Quantification for Computer Vision at ECCV 2024",
-              "period": "2024"
-            },
-            {
-              "organization": "Workshop on Tractable Probabilistic Modeling at UAI 2024",
-              "period": "2024"
-            },
-            {
-              "organization": "Workshop on Uncertainty Quantification for Computer Vision at ICCV 2023",
-              "period": "2023"
-            },
-            {
-              "organization": "Workshop on Tractable Probabilistic Modeling at UAI 2023",
-              "period": "2023"
-            },
-            {
-              "organization": "Workshop on Uncertainty Quantification for Computer Vision at ECCV 2022",
-              "period": "2022"
-            },
-            {
-              "organization": "Workshop on Tractable Probabilistic Modeling at UAI 2022",
-              "period": "2022"
+              "organization": "Workshop on Uncertainty Quantification for Computer Vision",
+              "period": "ECCV 2022, ICCV 2023, ECCV 2024, CVPR 2025"
             }
           ]
         }
@@ -51,6 +31,10 @@
             {
               "organization": "Conference on Artificial Intelligence and Statistics (AISTATS)",
               "period": "2025, 2026"
+            },
+            {
+              "organization": "International Conference on Learning Representations (ICLR)",
+              "period": "2026"
             }
           ]
         },
