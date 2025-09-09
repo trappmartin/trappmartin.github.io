@@ -1,8 +1,8 @@
 # Site settings
 title: Martin Trapp
-email: martin.trapp@aalto.fi
+email: mtrapp@kth.se
 description: >- # this means to ignore newlines until "baseurl:"
-  Martin Trapp - Academy of Finland postdoctoral researcher at Aalto University. 
+  Martin Trapp - Assistant Professor in Machine Learning at KTH Royal Institute of Technology.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://trappmartin.github.io" # the base hostname & protocol for your site
 lang: en_GB
@@ -49,14 +49,10 @@ defaults:
 # Academic info
 author:
   name: Martin Trapp
-  title: AoF Postdoctoral Researcher
-  affiliation: Aalto University, Finland
-  email: firstname.lastname@aalto.fi
-  office: "[Computer Science Building](https://www.aalto.fi/en/locations/computer-science-building)"
-  bio: >-
-    Martin is an Academy of Finland postdoctoral researcher at Aalto University and a member of the ELLIS society. 
-    My research is centred around representing, quantifying, and reducing uncertainties to make machine learning more reliable. 
-    I am particularly interested in efficient and principled approaches for large-scale systems with applications in language and vision.
+  title: Assistant Professor in Machine Learning
+  affiliation: KTH Royal Institute of Technology
+  email: mtrapp@kth.se
+  office: "Deptarment of Computer Science"
 
 # Social links
 social:
@@ -81,7 +77,7 @@ seo:
 # google_analytics: GA_TRACKING_ID
 
 # Additional SEO optimization
-timezone: Europe/Helsinki
+timezone: Europe/Stockholm
 
 # Jekyll Scholar configuration
 scholar:

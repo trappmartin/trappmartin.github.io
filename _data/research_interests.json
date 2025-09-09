@@ -1,7 +1,7 @@
 [
   {
-    "title": "Tracable Models",
-    "description": "Probabilistic circuits, limits of tractability, and exact & approximate Bayesian inference."
+    "title": "Tractable Models",
+    "description": "Probabilistic circuits, neurosymbolics, and exact & approximate Bayesian inference."
   },
   {
     "title": "Bayesian Learning",
@@ -9,6 +9,6 @@
   },
   {
     "title": "Probabilistic Numerics",
-    "description": "Probabilistic programming, uncertainty quantification, and uncertainty reduction."
+    "description": "Probabilistic programming, numerical imprecision, error and uncertainty quantification."
   }
 ]
