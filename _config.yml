@@ -49,10 +49,10 @@ defaults:
 # Academic info
 author:
   name: Martin Trapp
-  title: Assistant Professor in Machine Learning
+  title: Assistant Professor in Machine Learning & WASP Fellow
   affiliation: KTH Royal Institute of Technology
   email: mtrapp@kth.se
-  office: "Deptarment of Computer Science"
+  office: "Department of Computer Science"
 
 # Social links
 social:
