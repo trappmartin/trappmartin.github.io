@@ -9,9 +9,10 @@
   year={2025},
   publisher={IEEE},
   pages={1--12},
-  venue={IEEE TCAS I},
+  venue={IEEE Transactions on Circuits and Systems I},
   abstract={Probabilistic models (PMs) have become an alternative to complement or replace deep learning in applications where transparency and trustworthiness are crucial. As PMs compute explicit high-resolution probabilities, ensuring numerical stability legitimates the need for logarithmic (log) computing. As exact log computation on hardware is typically costly, existing hardware accelerators stick to high-resolution linear computation with, e.g., floating point (FP). From the perspective of efficient execution on edge devices, using such generic linear hardware for log operations is prone to underflow and ill-suited for operations such as log addition. Hence, the log-domain computing of PMs requires new hardware solutions, combining numerical stability and energy-efficient execution. Inspired by the Log-Sum-Exp (LSE) function used in existing PM software tools transferring data between log and linear domains to compute log additions, this work proposes an LSE Processing Element (LSE-PE). LSE-PE allows for efficient log computation, through an innovative double approximation for log addition, while ensuring numerical stability with an error compensation method using a compact error correction Look-Up Table (CLUT). Hardware synthesis results using a 16nm technology show that the proposed 24-bit LSE-PE hardware consumes 46% area and 32% power of 32-bit floating point, using only 16 LUT entries with 10 bits in each entry. Moreover, our experiments on various PM benchmarks show that LSE-PE prevents underflow even for large models, which exist in all other 32-bit number systems, with less than 0.2% accuracy loss. We also demonstrate an outlier detection task for uncertainty estimation of image classification models using the LSE-PE, for a fraction of the main model’s computing cost (0.06 to 20% of representative DNN architectures for MNIST).},
   pdf={https://ieeexplore.ieee.org/abstract/document/11185227},
+  type = {IEEE TCAS I},
   keywords={probabilistic circuits, hardware acceleration}
 }
 
