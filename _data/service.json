@@ -6,8 +6,12 @@
       "description": "Organizing of academic workshops in machine learning.",
       "items": [
         {
-          "role": "Workshop Co-Organizer",
+          "role": "Organizing Committee",
           "entries": [
+            {
+              "organization": "Symposium on Advances of Approximate Bayesian Inference",
+              "period": "AABI 2026"
+            },
             {
               "organization": "Workshop on Tractable Probabilistic Modeling",
               "period": "UAI 2022, UAI 2023, UAI 2024"
@@ -34,6 +38,10 @@
             },
             {
               "organization": "International Conference on Learning Representations (ICLR)",
+              "period": "2026"
+            },
+            {
+              "organization": "International Conference on Machine Learning (ICML)",
               "period": "2026"
             }
           ]
