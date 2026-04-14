@@ -1,5 +1,10 @@
 [
     {
+        "date": "2026-04-12",
+        "title": "ECCV Workshop proposal accepted!",
+        "content": "Exciting news, we will organised a new version of our successfull workshop series on Uncertainty Quantification for Computer Vision at ECCV!"
+    },
+    {
         "date": "2026-01-30",
         "title": "ICLR Paper accepted!",
         "content": "Our paper on Post-hoc Probabilistic Vision-Language Models (BayesVLM) has been accepted to ICLR 2026. Check out the [paper](https://openreview.net/forum?id=XLiUcvHfzS)"
