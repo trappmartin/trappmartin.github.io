@@ -6,12 +6,26 @@
       "description": "Organizing of academic workshops in machine learning.",
       "items": [
         {
-          "role": "Organizing Committee",
+          "role": "Publication Chair",
           "entries": [
             {
-              "organization": "Symposium on Advances of Approximate Bayesian Inference",
-              "period": "AABI 2026"
-            },
+              "organization": "Annual Conference on Artificial Intelligence and Statistics",
+              "period": "AISTATS 2026"
+            }
+          ]
+        },
+        {
+          "role": "Communication Chair",
+          "entries": [
+            {
+              "organization": "Symposium on Probabilistic Machine Learning (former AABI)",
+              "period": "ProbML 2026"
+            }
+          ]
+        },
+        {
+          "role": "Organizing Committee",
+          "entries": [
             {
               "organization": "Workshop on Tractable Probabilistic Modeling",
               "period": "UAI 2022, UAI 2023, UAI 2024"
@@ -42,6 +56,10 @@
             },
             {
               "organization": "International Conference on Machine Learning (ICML)",
+              "period": "2026"
+            },
+            {
+              "organization": "Conference on Uncertainty in Artificial Intelligence (UAI)",
               "period": "2026"
             }
           ]
