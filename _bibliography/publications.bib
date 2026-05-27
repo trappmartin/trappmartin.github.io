@@ -130,6 +130,19 @@
     type = {ICML}
 }
 
+@InProceedings{papamarkou2026position,
+    title = {Position: Agentic AI orchestration should be Bayes-consistent},
+    author = {Papamarkou, Theodore and Alquier, Pierre and Bauer, Matthias and Buntine, Wray and Davison, Andrew and Dziugaite, Gintare Karolina and Filippone, Maurizio and Foong, Andrew Y. K. and Fortuin, Vincent and Fouskakis, Dimitris and Frellsen, Jes and H\"{u}llermeier, Eyke and Karaletsos, Theofanis and Khan, Mohammad Emtiyaz and Kotelevskii, Nikita and Lahlou, Salem and Li, Yingzhen and Liu, Fang and Lyle, Clare and M\"ollenhoff, Thomas and Palla, Konstantina and Panov, Maxim and Sale, Yusuf and Schweighofer, Kajetan and Shelmanov, Artem and Swaroop, Siddharth and Trapp, Martin and Waegeman, Willem and Wilson, Andrew Gordon and Zaytsev, Alexey},
+    booktitle = {Proceedings of the 43rd International Conference on Machine Learning (ICML)},
+    year = {2026},
+    series = {Proceedings of Machine Learning Research},
+    publisher = {PMLR},
+    abstract = {LLMs excel at predictive tasks and complex reasoning tasks, but many high-value deployments rely on decisions under uncertainty, for example, which tool to call, which expert to consult, or how many resources to invest. While the usefulness and feasibility of Bayesian approaches remain unclear for LLM inference, this position paper argues that the control layer of an agentic AI system (that orchestrates LLMs and tools) is a clear case where Bayesian principles should shine. Bayesian decision theory provides a framework for agentic systems that can help to maintain beliefs over task-relevant latent quantities, to update these beliefs from observed agentic and human-AI interactions, and to choose actions. Making LLMs themselves explicitly Bayesian belief-updating engines remains computationally intensive and conceptually nontrivial as a general modeling target. In contrast, this paper argues that coherent decision-making requires Bayesian principles at the \theo{orchestration} level of the agentic system, not necessarily the LLM agent parameters. This paper articulates practical properties for Bayesian control that fit modern agentic AI systems and human-AI collaboration, and provides concrete examples and design patterns to illustrate how calibrated beliefs and utility-aware policies can improve agentic AI orchestration.},
+    keywords = {Bayesian deep learning, agentic AI},
+    venue = {43rd International Conference on Machine Learning},
+    type = {ICML}
+}
+
 % ---- 
 % AISTATS Publications
 % ---- 
@@ -294,7 +307,7 @@
   pages={1072-1089},
   doi={10.1109/WACV61041.2025.00113},
   code = {https://github.com/AaltoML/Flatness},
-  pdf = {https://arxiv.org/abs/2409.13000},
+  pdf = {https://arxiv.org/abs/2404.07696},
   abstract = {Deployment of deep neural networks in real-world settings typically requires adaptation to new tasks with few examples. Few-shot classification (FSC) provides a solution to this problem by leveraging pre-trained backbones for fast adaptation to new classes. However, approaches for multi-domain FSC typically result in complex pipelines aimed at information fusion and task-specific adaptation without consideration of the importance of backbone training. In this work, we introduce an effective strategy for backbone training and selection in multi-domain FSC by utilizing flatness-aware training and fine-tuning. Our work is theoretically grounded and empirically performs on par or better than state-of-the-art methods despite being simpler. Further, our results indicate that backbone training is crucial for good generalisation in FSC across different adaptation methods.},
   keywords = {few-shot classification, flatness, deep neural networks},
   venue = {IEEE/CVF Winter Conference on Applications of Computer Vision},
@@ -310,7 +323,7 @@
   pages={2668-2678},
   doi={10.1109/WACV57701.2024.00266},
   code = {https://github.com/AaltoML/FlatFSL},
-  pdf = {https://arxiv.org/abs/2404.07696},
+  pdf = {https://arxiv.org/abs/2302.06359},
   abstract = {Dynamic neural networks are a recent technique that promises a remedy for the increasing size of modern deep learning models by dynamically adapting their computational cost to the difficulty of the inputs. In this way, the model can adjust to a limited computational budget. However, the poor quality of uncertainty estimates in deep learning models makes it difficult to distinguish between hard and easy samples. To address this challenge, we present a computationally efficient approach for post-hoc uncertainty quantification in dynamic neural networks. We show that adequately quantifying and accounting for both aleatoric and epistemic uncertainty through a probabilistic treatment of the last layers improves the predictive performance and aids decision-making when determining the computational budget. In the experiments, we show improvements on CIFAR100, ImageNet, and Caltech-256 in terms of accuracy, capturing uncertainty, and calibration error.},
   keywords = {Bayesian deep learning, uncertainty quantification, dynamic neural networks},
   venue = {IEEE/CVF Winter Conference on Applications of Computer Vision},
