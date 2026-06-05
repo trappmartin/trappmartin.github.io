@@ -1,0 +1,59 @@
+---
+layout: default
+title: Group
+description: Research group led by Martin Trapp at KTH Royal Institute of Technology.
+permalink: /group/
+---
+
+<section style="background-color: white; padding: 4rem 0;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <h1 class="h2 mb-4" style="color: var(--gray-800);">About the Group</h1>
+                <div style="line-height: 1.8;">
+                    <p>
+                        We study probabilistic methods to develop robust, reliable, and computationally efficient machine learning.
+                        Our group is based at the School of Electrical Engineering and Computer Science at KTH Royal Institute of Technology in Sweden.
+                    </p>
+                    <p>
+                        Our research spans tractable probabilistic models, Bayesian learning, and probabilistic numerics,
+                        with a focus on representing, quantifying, and reducing uncertainties to make machine learning more trustworthy &mdash;
+                        including efficient and principled approaches for large-scale models such as LLMs and VLMs.
+                    </p>
+                    <p>
+                        Interested in joining? See <a href="{{ '/join/' | relative_url }}">information for prospective PhD students and postdocs</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section content-section-gray">
+    <div class="container">
+        <div class="row justify-content-center text-center people-widget">
+
+            {% for item in site.data.group %}
+
+            <div class="col-md-12">
+                <h2 class="mb-4">{{ item.title }}</h2>
+            </div>
+
+                {% for member in item.members %}
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                    <div class="team-member">
+                        <img src="{{ member.image | default: '/assets/images/team/default.svg' | relative_url }}" class="img-responsive avatar" alt="{{ member.name }}">
+                        <h4>{% if member.website %}<a href="{{ member.website }}" target="_blank">{{ member.name }}</a>{% else %}{{ member.name }}{% endif %}</h4>
+                        <h6>{{ member.position }}</h6>
+                        <p class="text-muted">{{ member.note | markdownify }}</p>
+                    </div>
+                </div>
+
+                {% endfor %}
+
+            {% endfor %}
+
+        </div>
+    </div>
+</section>

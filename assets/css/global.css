@@ -959,3 +959,49 @@ mjx-container[jax="CHTML"] mjx-math {
     text-decoration: none;
     border-bottom: 1px solid var(--gray-400);
 }
+
+/* Team / people widget */
+.people-widget {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.people-widget .avatar {
+    width: 150px;
+    max-width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+
+.team-member p {
+    margin-bottom: 0;
+}
+
+.team-member h4 {
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.team-member h6 {
+    margin-bottom: 0;
+}
+
+.team-member a {
+    margin-bottom: 0;
+    color: var(--gray-500);
+    font-size: 1.2rem;
+    transition: color 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+.team-member a:hover {
+    color: var(--gray-800);
+    text-decoration: none;
+}

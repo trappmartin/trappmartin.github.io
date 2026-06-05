@@ -1,0 +1,25 @@
+[
+    {
+        "title": "Current Members",
+        "members": [
+            {
+                "name": "Martin Trapp",
+                "position": "PI",
+                "website": "https://trappmartin.github.io",
+                "image": "/assets/images/team/martin-trapp.jpg"
+            },
+            {
+                "name": "Tingyun Yin",
+                "position": "Incoming PhD Student",
+                "note": "with Henrik Boström (KTH)"
+            },
+            {
+                "name": "Ginevra Cepparulo",
+                "position": "Research Engineer",
+                "website": "https://uk.linkedin.com/in/ginevra-cepparulo-391592230",
+                "note": "with Hossein Azizpour (KTH)",
+		"image": "/assets/images/team/ginevra-cepparulo.jpg"
+            }
+        ]
+    }
+]
