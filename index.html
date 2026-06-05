@@ -53,8 +53,8 @@ title: Home
                             <p class="biography-lead">
                                 I am an Assistant Professor in Machine Learning at KTH Royal Institute of Technology, WASP fellow, and a member of the ELLIS society.
                                 Before joining KTH, I was an Academy of Finland postdoctoral researcher at Aalto University working with Arno Solin.
-                                My research is centred around representing, quantifying, and reducing uncertainties to make machine learning more trustworthy.
-                                I am particularly interested in efficient and principled approaches for large-scale models such as LLMs & VLMs.
+                                My research is centred on making machine learning more <span class="hashtag">#reliable</span> by representing, quantifying, and reducing <span class="hashtag">#uncertainty</span>.
+                                I am particularly interested in <span class="hashtag">#efficient</span> and <span class="hashtag">#principled</span> approaches for large-scale machine learning models and AI agents.
                             </p>
                             <p class="biography-lead">
                                 See <a href="{{ '/biography/' | relative_url }}">biography</a> for more details.
@@ -84,7 +84,7 @@ title: Home
             <div class="col-10 announcement-section">
                 </br>
                 <p class="announcement-text mb-0">
-                    If you want to join our <a href="{{ '/group/' | relative_url }}">group</a>, check the information for prospective <a href="{{ '/join/' | relative_url }}">PhD students and Postdocs</a>.
+                    If you want to join my <a href="{{ '/group/' | relative_url }}">group</a>, check the information for prospective <a href="{{ '/join/' | relative_url }}">PhD students and Postdocs</a>.
                 </p>
                 </br>
                 <!-- </br><p>
@@ -112,7 +112,7 @@ title: Home
                     <div class="news-item-container mb-4">
                         <div class="d-flex align-items-center mb-2">
                             <h4 class="news-title h6 mb-0 me-3">{{ item.title }}</h4>
-                            <span class="news-date small">{{ item.date | date: "%B %Y" }}</span>
+                            <span class="news-date small">[{{ item.date | date: "%B %Y" }}]</span>
                         </div>
                         <div class="news-description mb-0">{{ item.content | markdownify }}</div>
                     </div>
@@ -126,7 +126,7 @@ title: Home
                     <div class="news-item-container mb-4">
                         <div class="d-flex align-items-center mb-2">
                             <h4 class="news-title h6 mb-0 me-3">{{ item.title }}</h4>
-                            <span class="news-date small">{{ item.date | date: "%B %Y" }}</span>
+                            <span class="news-date small">[{{ item.date | date: "%B %Y" }}]</span>
                         </div>
                         <div class="news-description mb-0">{{ item.content | markdownify }}</div>
                     </div>

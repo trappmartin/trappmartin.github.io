@@ -5,67 +5,28 @@ description: Get in touch with me for research collaborations, speaking engageme
 permalink: /contact/
 ---
 
-<!-- Introduction Section - White Background -->
 <section class="content-section content-section-white">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-10">
                 <h1 class="section-header h2 mb-4">Contact</h1>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- Contact Information Section - Gray Background -->
-<section class="content-section content-section-gray">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-10">
-                <div class="row">
-                    <div class="col-md-6">
-
-                        <div class="mb-4">
-                            <a href="mailto:{{ site.author.email }}" class="contact-link">
-                                <i class="fas fa-envelope me-2" style="color: var(--gray-600);"></i>Email
-                            </a>
-                        </div>
-
-                        {% if site.social.linkedin %}
-                        <div class="mb-4">
-                            <a href="{{ site.social.linkedin }}" target="_blank" style="color: var(--gray-700); text-decoration: none; border-bottom: 1px solid var(--gray-400);">
-                                <i class="fab fa-linkedin me-2" style="color: var(--gray-600);"></i>LinkedIn
-                            </a>
-                        </div>
-                        {% endif %}
-                        {% if site.social.bluesky %}
-                        <div class="mb-4">
-                            <a href="{{ site.social.bluesky }}" target="_blank" style="color: var(--gray-700); text-decoration: none; border-bottom: 1px solid var(--gray-400);">
-                                <i class="fab fa-brands fa-bluesky me-2" style="color: var(--gray-600);"></i>Bluesky
-                            </a>
-                        </div>
-                        {% endif %}
-
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="mb-4">
-                            <div class="d-flex align-items-center mb-2">
-                                <i class="section-icon fas fa-map-marker-alt me-3"></i>
-                                <h4 class="contact-section-header h6 mb-0">Office</h4>
-                            </div>
-                            <div class="mb-0 contact-info-text">
-                                {{ site.author.office | markdownify }}
-                                {{ site.author.affiliation }}
-                            </div>
-                        </div>
-
-                       
-                    </div>
+                <div class="d-flex flex-wrap" style="gap: 1.75rem;">
+                    <a href="mailto:{{ site.author.email }}" class="contact-link">
+                        <i class="fas fa-envelope me-2" style="color: var(--gray-600);"></i>Email
+                    </a>
+                    {% if site.social.linkedin %}
+                    <a href="{{ site.social.linkedin }}" target="_blank" class="contact-link">
+                        <i class="fab fa-linkedin me-2" style="color: var(--gray-600);"></i>LinkedIn
+                    </a>
+                    {% endif %}
+                    {% if site.social.bluesky %}
+                    <a href="{{ site.social.bluesky }}" target="_blank" class="contact-link">
+                        <i class="fab fa-brands fa-bluesky me-2" style="color: var(--gray-600);"></i>Bluesky
+                    </a>
+                    {% endif %}
                 </div>
             </div>
         </div>
     </div>
 </section>
-
-
-

@@ -5,32 +5,16 @@ description: Publications list.
 permalink: /publications/
 ---
 
-<!-- Introduction Section - White Background -->
-<section style="background-color: white; padding: 4rem 0;">
+<section class="content-section content-section-white">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-10">
-                <h1 class="h2 mb-4" style="color: var(--gray-800);">Publications</h1>
-                <div style="line-height: 1.8;">
-                    <p class="lead mb-4" style="color: var(--gray-700);">Below is a list of selected publications. For a complete list please visit my 
-                    {% if site.social.google_scholar %}
-                    <a href="{{ site.social.google_scholar }}" target="_blank" style="color: var(--gray-700); text-decoration: none; border-bottom: 1px solid var(--gray-400);">Google Scholar profile</a>
-                    {% endif %}
-                    {% if site.social.google_scholar and site.social.orcid %} and {% endif %}
-                    {% if site.social.orcid %}
-                    <a href="{{ site.social.orcid }}" target="_blank" style="color: var(--gray-700); text-decoration: none; border-bottom: 1px solid var(--gray-400);">ORCID profile</a>
-                    {% endif %}.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+                <h1 class="section-header h2 mb-3">Publications</h1>
+                <p class="mb-5" style="color: var(--gray-700);">
+                    Selected publications below. For a complete list see my
+                    {% if site.social.google_scholar %}<a href="{{ site.social.google_scholar }}" target="_blank" class="contact-link">Google Scholar</a>{% endif %}{% if site.social.google_scholar and site.social.orcid %} or {% endif %}{% if site.social.orcid %}<a href="{{ site.social.orcid }}" target="_blank" class="contact-link">ORCID</a>{% endif %} profile.
+                </p>
 
-<!-- Publications List Section - Gray Background -->
-<section style="background-color: var(--gray-50); padding: 4rem 0;">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-10">
                 <div id="publications-list">
                     {% bibliography --group_by year --group_order descending %}
                 </div>

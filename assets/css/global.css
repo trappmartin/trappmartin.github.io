@@ -46,6 +46,8 @@
     --gray-700: #374151;
     --gray-800: #1f2937;
     --gray-900: #111827;
+    --accent: #c43b89;
+    --accent-rgb: 196, 59, 137;
 }
 
 /* ==========================================================================
@@ -77,14 +79,37 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+.navbar-nav .nav-link {
+    position: relative;
+    text-transform: lowercase;
+}
+
 .nav-link.active {
     font-weight: 600;
 }
 
+.nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    bottom: 0.35rem;
+    height: 2px;
+    background-color: var(--accent);
+}
+
+@media (max-width: 991.98px) {
+    .nav-link.active::after {
+        left: 0;
+        right: auto;
+        width: 1.5rem;
+        bottom: 0.25rem;
+    }
+}
+
 /* Hero section */
 .hero-section {
-    background: linear-gradient(135deg, var(--gray-500) 0%, var(--gray-600) 100%);
-    color: white;
+    background-color: var(--gray-50);
     padding: 4rem 0;
 }
 
@@ -96,26 +121,37 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .announcement-section {
-    background: linear-gradient(135deg, var(--gray-400) 0%, var(--gray-400) 80%);
-    color: white;
-    border-radius: 0.375rem;
+    background-color: var(--gray-50);
+    color: var(--gray-800);
+    border: 1px solid var(--accent);
+    border-radius: 0.25rem;
+    padding: 1.25rem 1.5rem;
 }
 
-.announcement-section a {
-    color: white;
+.announcement-section .announcement-text {
+    color: var(--gray-800);
+}
+
+.announcement-section a,
+.announcement-section a:visited,
+.announcement-section a:link {
+    color: var(--gray-800);
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
     transition: color 0.2s ease-in-out;
+}
+
+.announcement-section a:hover,
+.announcement-section a:focus {
+    color: var(--accent);
 }
 
 /* Cards */
 .card {
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    border: none;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--gray-200);
+    box-shadow: none;
 }
 
 .card-header {
@@ -139,13 +175,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Publications */
 .publication-item {
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     background: #fff;
-}
-
-.publication-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .publication-title {
@@ -156,7 +186,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .publication-title:hover {
-    color: var(--gray-600);
+    color: var(--accent);
 }
 
 .publication-authors {
@@ -214,7 +244,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .toggle-abstract:hover {
-    color: var(--gray-600);
+    color: var(--accent);
     text-decoration: underline;
 }
 
@@ -286,7 +316,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .social-links a:hover {
-    color: var(--gray-800);
+    color: var(--accent);
 }
 
 /* Social links under profile picture */
@@ -303,8 +333,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .social-links-profile a:hover {
     color: white;
-    transform: translateY(-2px);
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Responsive adjustments */
@@ -356,15 +384,6 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: none;
 }
 
-.service-role {
-    font-weight: 600;
-    color: var(--bs-primary);
-}
-
-.service-organization {
-    color: #6c757d;
-}
-
 /* Animation for smooth scrolling */
 html {
     scroll-behavior: smooth;
@@ -384,34 +403,39 @@ html {
 }
 
 .hero-name {
-    color: white;
+    color: var(--gray-800);
     font-family: 'QuestaGrande', 'Georgia', 'Times New Roman', serif;
     font-weight: 900;
 }
 
 .hero-tagline {
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--gray-600);
     font-family: 'QuestaGrande', 'Georgia', 'Times New Roman', serif;
     font-weight: 300;
 }
 
 .hero-title {
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--gray-700);
     font-weight: 500;
 }
 
 .hero-affiliation {
-    color: rgba(255, 255, 255, 0.8);
-    /* font-size: 1.1rem; */
+    color: var(--gray-700);
 }
 
 .hero-social-icons a {
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--gray-500);
     transition: color 0.2s;
 }
 
 .hero-social-icons a:hover {
-    color: white;
+    color: var(--accent);
+}
+
+.hashtag {
+    color: var(--accent);
+    font-weight: 500;
+    white-space: nowrap;
 }
 
 /* Main content sections */
@@ -446,6 +470,11 @@ html {
     color: var(--gray-700);
 }
 
+.biography-lead.lead,
+p.lead.biography-lead {
+    font-weight: 400;
+}
+
 .research-interests-subsection {
     color: var(--gray-800);
     font-weight: 600;
@@ -463,34 +492,6 @@ html {
 
 .research-interest-topic {
     color: var(--gray-700);
-}
-
-/* Biography in hero section (dark background) */
-.hero-section .biography-text {
-    color: rgba(255, 255, 255, 0.9);
-}
-
-.hero-section .biography-lead {
-    color: rgba(255, 255, 255, 0.9);
-}
-
-.hero-section .research-interests-subsection {
-    color: rgba(255, 255, 255, 0.95);
-    font-weight: 600;
-}
-
-.hero-section .research-interests-icon {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.9rem;
-}
-
-.hero-section .research-interests-list {
-    color: rgba(255, 255, 255, 0.85);
-    line-height: 1.7;
-}
-
-.hero-section .research-interest-topic {
-    color: rgba(255, 255, 255, 0.95);
 }
 
 /* News section */
@@ -516,10 +517,10 @@ html {
     text-decoration: underline;
 }
 
-.news-description a:hover, 
-.news-description a:focus, 
+.news-description a:hover,
+.news-description a:focus,
 .news-description a:active {
-    color: var(--gray-900) !important;
+    color: var(--accent) !important;
     text-decoration: underline;
 }
 
@@ -539,10 +540,10 @@ html {
     text-decoration: underline;
 }
 
-.selected-publication-item a:hover, 
-.selected-publication-item a:focus, 
+.selected-publication-item a:hover,
+.selected-publication-item a:focus,
 .selected-publication-item a:active {
-    color: var(--gray-900) !important;
+    color: var(--accent) !important;
     text-decoration: underline;
 }
 
@@ -600,10 +601,10 @@ html {
     text-decoration: underline;
 }
 
-.contact-info-text a:hover, 
-.contact-info-text a:focus, 
+.contact-info-text a:hover,
+.contact-info-text a:focus,
 .contact-info-text a:active {
-    color: var(--gray-900) !important;
+    color: var(--accent) !important;
     text-decoration: underline;
 }
 
@@ -614,7 +615,8 @@ html {
 }
 
 .contact-link:hover {
-    color: var(--gray-800);
+    color: var(--accent);
+    border-bottom-color: var(--accent);
 }
 
 .contact-response-badge {
@@ -644,29 +646,53 @@ html {
     color: var(--gray-500);
 }
 
-/* Service page specific */
-.service-role {
+/* Service page list */
+.service-list {
+    font-size: 0.95rem;
+    line-height: 1.45;
+}
+
+.service-group {
+    margin-bottom: 1.5rem;
+}
+
+.service-group:last-child {
+    margin-bottom: 0;
+}
+
+.service-group-title {
     color: var(--gray-800);
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.service-block {
+    margin-bottom: 0.6rem;
+}
+
+.service-block:last-child {
+    margin-bottom: 0;
+}
+
+.service-role {
+    color: var(--gray-700);
     font-weight: 600;
 }
 
-.service-organization {
-    color: var(--gray-700);
-    font-weight: 500;
-}
-
-.service-description {
+.service-entry {
     color: var(--gray-600);
+    padding-left: 0.9rem;
 }
 
-.service-date-badge {
-    background-color: var(--gray-200);
-    color: var(--gray-700);
+.service-organization {
+    flex: 1;
+    padding-right: 1rem;
 }
 
-.service-date-badge-completed {
-    background-color: var(--gray-300);
-    color: var(--gray-700);
+.service-period {
+    color: var(--gray-500);
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
 }
 
 /* Notes page specific */
@@ -694,7 +720,7 @@ html {
 }
 
 .note-title:hover {
-    color: var(--gray-600);
+    color: var(--accent);
 }
 
 .note-date-badge {
@@ -725,7 +751,8 @@ html {
 }
 
 .note-read-more:hover {
-    color: var(--gray-800);
+    color: var(--accent);
+    border-bottom-color: var(--accent);
 }
 
 .category-item-badge {
@@ -754,25 +781,24 @@ html {
     margin-bottom: 1.5rem;
 }
 
-.biography-text a, 
-.biography-text a:visited, 
+.biography-text a,
+.biography-text a:visited,
 .biography-text a:link {
-    color: var(--gray-200) !important;
+    color: var(--gray-800);
     text-decoration: underline;
+    text-decoration-color: var(--gray-400);
 }
 
-
-.biography-text a:hover, 
-.biography-text a:focus, 
+.biography-text a:hover,
+.biography-text a:focus,
 .biography-text a:active {
-    color: var(--gray-200) !important;
-    text-decoration: underline;
+    color: var(--accent);
+    text-decoration-color: var(--accent);
 }
 
 .biography-section h2 {
-    border-bottom: 2px solid var(--gray-300);
-    padding-bottom: 0.5rem;
-    margin-bottom: 1.5rem;
+    color: var(--gray-800);
+    font-weight: 600;
 }
 
 /* LaTeX/MathJax styling */
@@ -896,8 +922,8 @@ mjx-container[jax="CHTML"] mjx-math {
 }
 
 .contact-link:hover {
-    color: var(--gray-800);
-    border-bottom-color: var(--gray-600);
+    color: var(--accent);
+    border-bottom-color: var(--accent);
 }
 
 .section-icon {
@@ -1002,6 +1028,6 @@ mjx-container[jax="CHTML"] mjx-math {
 }
 
 .team-member a:hover {
-    color: var(--gray-800);
+    color: var(--accent);
     text-decoration: none;
 }

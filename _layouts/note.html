@@ -3,7 +3,7 @@ layout: default
 ---
 
 <!-- Note Header Section - White Background -->
-<section style="background-color: white; padding: 4rem 0;">
+<section class="content-section content-section-white">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-10">
@@ -18,8 +18,8 @@ layout: default
                         <li class="breadcrumb-item active" style="color: var(--gray-800);">{{ page.title }}</li>
                     </ol>
                 </nav>
-                
-                <h1 class="h2 mb-3" style="color: var(--gray-800);">{{ page.title }}</h1>
+
+                <h1 class="section-header h2 mb-3">{{ page.title }}</h1>
                 
                 <div class="d-flex flex-wrap align-items-center mb-4">
                     <span class="small me-3" style="color: var(--gray-600);">
@@ -48,11 +48,11 @@ layout: default
 </section>
 
 <!-- Note Content Section - Gray Background -->
-<section style="background-color: var(--gray-50); padding: 4rem 0;">
+<section class="content-section content-section-gray">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-10">
-                <div class="note-content" style="background-color: white; padding: 3rem; border-radius: 0.5rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                <div class="note-content">
                     {{ content }}
                 </div>
             </div>
@@ -61,7 +61,7 @@ layout: default
 </section>
 
 <!-- Navigation Section - White Background -->
-<section style="background-color: white; padding: 4rem 0;">
+<section class="content-section content-section-white">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-10">
@@ -79,7 +79,7 @@ layout: default
                     </div>
                     
                     <div>
-                        <a href="{{ '/notes/' | relative_url }}" class="btn" style="background-color: var(--gray-200); color: var(--gray-700); border: none;">
+                        <a href="{{ '/notes/' | relative_url }}" class="btn btn-gray">
                             <i class="fas fa-list me-2"></i>All Notes
                         </a>
                     </div>
