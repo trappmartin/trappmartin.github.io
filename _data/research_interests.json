@@ -1,14 +1,14 @@
 [
   {
     "title": "Tractable Models",
-    "description": "Probabilistic circuits, neurosymbolics, and exact & approximate Bayesian inference."
+    "description": "Probabilistic circuits, neurosymbolics, and probabilistic inference."
   },
   {
     "title": "Bayesian Learning",
-    "description": "Uncertainty quantification & reduction in deep learning, inductive biases, and non-parametric & function-space methods."
+    "description": "Uncertainty in deep learning, approximate inference, and nonparametrics."
   },
   {
     "title": "Probabilistic Numerics",
-    "description": "Probabilistic programming, numerical imprecision, error and uncertainty quantification."
+    "description": "Low-precision regimes, surrogate uncertainty, and uncertainty propagation."
   }
 ]
