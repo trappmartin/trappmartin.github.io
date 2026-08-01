@@ -1,5 +1,10 @@
 [
     {
+        "date": "2026-07-17",
+        "title": "LOGML Project!",
+        "content": "Together with Jiayi and six amazing students, we concluded our LOGML 2026 project on [variational approximations for singular learning theory](https://www.logml.ai/projects/Jiayi-Li-and-Martin-Trapp.html)! Stay tuned for more."
+    },
+    {
         "date": "2026-04-12",
         "title": "ECCV Workshop proposal accepted!",
         "content": "Exciting news, we will organised a new version of our successfull workshop series on Uncertainty Quantification for Computer Vision at ECCV!"
