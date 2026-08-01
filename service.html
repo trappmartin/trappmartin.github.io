@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Academic Service
-description: Academic service roles I am involved in.
+title: Service & Talks
+description: Invited talks and academic service roles I am involved in.
 permalink: /service/
 ---
 
@@ -9,9 +9,24 @@ permalink: /service/
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-10">
-                <h1 class="section-header h2 mb-4">Academic Service</h1>
+                <h1 class="section-header h2 mb-4">Service &amp; Talks</h1>
 
                 <div class="service-list">
+                    {% if site.data.service.talks %}
+                    <div class="service-group">
+                        <div class="service-group-title">Recent Invited Talks</div>
+                        {% assign recent_talks = site.data.service.talks | sort: "date" | reverse %}
+                        {% for talk in recent_talks limit: 10 %}
+                        <div class="service-block d-flex justify-content-between align-items-baseline">
+                            <span class="service-organization">
+                                <span class="talk-title">{{ talk.title }}</span>
+                                <span class="talk-venue">{{ talk.venue }}</span>
+                            </span>
+                            <span class="service-period">{{ talk.date }}</span>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
                     {% for section in site.data.service.sections %}
                     <div class="service-group">
                         <div class="service-group-title">{{ section.title }}</div>

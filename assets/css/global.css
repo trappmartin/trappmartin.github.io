@@ -653,7 +653,7 @@ p.lead.biography-lead {
 }
 
 .service-group {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.75rem;
 }
 
 .service-group:last-child {
@@ -661,9 +661,12 @@ p.lead.biography-lead {
 }
 
 .service-group-title {
+    font-size: 1.25rem;
     color: var(--gray-800);
     font-weight: 600;
-    margin-bottom: 0.4rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--gray-200);
 }
 
 .service-block {
@@ -693,6 +696,17 @@ p.lead.biography-lead {
     color: var(--gray-500);
     white-space: nowrap;
     font-variant-numeric: tabular-nums;
+}
+
+.talk-title {
+    display: block;
+    color: var(--gray-700);
+    font-weight: 600;
+}
+
+.talk-venue {
+    display: block;
+    color: var(--gray-500);
 }
 
 /* Notes page specific */

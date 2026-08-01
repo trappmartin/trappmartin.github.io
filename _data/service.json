@@ -1,4 +1,31 @@
 {
+  "talks": [
+    {
+      "date": "2026-08",
+      "title": "TBA",
+      "venue": "Invited talk, Uppsala University"
+    },
+    {
+      "date": "2026-06",
+      "title": "Uncertainties in Deep Learning",
+      "venue": "Invited talk, SEA seminar, Uppsala University"
+    },
+    {
+      "date": "2026-06",
+      "title": "Uncertainties in Deep Learning",
+      "venue": "Invited talk, ML seminar, Linköping University"
+    },
+    {
+      "date": "2025-05",
+      "title": "Machine Learning & Bayes",
+      "venue": "Invited talk, Learn Bayes Spring School, Karolinska Institutet"
+    },
+    {
+      "date": "2025-03",
+      "title": "Practical Bayesian Deep Learning",
+      "venue": "Invited talk, Meta"
+    }
+  ],
   "sections": [
     {
       "id": "organisation",
