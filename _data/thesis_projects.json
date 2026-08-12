@@ -1,0 +1,84 @@
+{
+  "projects": [
+    {
+      "id": "MTP-2026-01",
+      "title": "Does Quantisation Introduce Epistemic Uncertainty?",
+      "active": true,
+      "posted": "2026-08",
+      "description": "Quantising the weights of a neural network discards information that could, in principle, have been kept. Such information loss should therefore surface as *epistemic* uncertainty, i.e., uncertainty that is reducible by spending more bits. Whether it actually does, and how it can be measured, is an open question.\n\nIn this project, you will investigate this question using local posterior approximations projected onto the quantisation lattice using our recent work on Bayesian inference over bitstring representations (BitVI).\n\n**You should have:** a solid background in deep learning, familiarity with Bayesian inference, and coding experience with PyTorch/JAX.",
+      "links": [
+        {
+          "title": "Approximate Bayesian Inference via Bitstring Representations (UAI 2025)",
+          "url": "https://proceedings.mlr.press/v286/sladek25a.html"
+        },
+        {
+          "title": "BitVI — reference implementation",
+          "url": "https://github.com/AaltoML/bitvi"
+        }
+      ]
+    },
+    {
+      "id": "MTP-2026-02",
+      "title": "Variational Families with Dependencies for Bitstring Posteriors",
+      "active": true,
+      "posted": "2026-08",
+      "description": "Performing variational inference in a quantised parameter space requires a variational family over bitstrings. Our current approach uses probabilistic circuits for this purpose but requires a mean-field (independence) assumption between weights.\n\nIn this project, you will investigate whether recent discrete generative models — discrete diffusion, discrete flow matching, autoregressive models over bits, or latent-variable constructions — can serve this role instead while keeping dependencies between weights.\n\n**You should have:** strong mathematical skills, a good grasp of variational inference, and experience with deep generative models.",
+      "links": [
+        {
+          "title": "Approximate Bayesian Inference via Bitstring Representations (UAI 2025)",
+          "url": "https://proceedings.mlr.press/v286/sladek25a.html"
+        },
+        {
+          "title": "BitVI — reference implementation",
+          "url": "https://github.com/AaltoML/bitvi"
+        },
+        {
+          "title": "Structured Denoising Diffusion Models in Discrete State-Spaces (NeurIPS 2021)",
+          "url": "https://arxiv.org/abs/2107.03006"
+        }
+      ]
+    },
+    {
+      "id": "MTP-2026-03",
+      "title": "Estimating the Local Learning Coefficient with Tractable Posteriors",
+      "active": true,
+      "posted": "2026-08",
+      "description": "Singular learning theory characterises the effective complexity of a model through its learning coefficient. The local learning coefficient (LLC) makes this measurable in practice, but current estimators rely on stochastic gradient Langevin dynamics and are notoriously sensitive to their hyperparameters.\n\nIn this project, you will investigate whether a tractable variational posterior over a quantised parameter space yields more reliable LLC estimates, validated against models with analytically known learning coefficients.\n\n**You should have:** a strong mathematical background, an interest in the theory of machine learning, and good coding skills.",
+      "links": [
+        {
+          "title": "The Local Learning Coefficient: A Singularity-Aware Complexity Measure",
+          "url": "https://arxiv.org/abs/2308.12108"
+        },
+        {
+          "title": "Distilling Singular Learning Theory — an accessible introduction",
+          "url": "https://timaeus.co/blog/dslt/2023-06-16-dslt-0/"
+        },
+        {
+          "title": "Approximate Bayesian Inference via Bitstring Representations (UAI 2025)",
+          "url": "https://proceedings.mlr.press/v286/sladek25a.html"
+        }
+      ]
+    },
+    {
+      "id": "MTP-2026-04",
+      "title": "Uncertainty in KV Cache Eviction for Vision-Language Models",
+      "active": true,
+      "posted": "2026-08",
+      "description": "The KV cache of a large language model grows with context length and becomes a memory bottleneck in agentic settings. Eviction methods discard 'unnecessary' tokens, but deciding what is unnecessary requires knowing the future, so eviction introduces uncertainty into later decisions. In ongoing work, we find that this induced uncertainty correlates with task degradation in language models.\n\nIn this project, you will transfer this analysis to vision-language models, where a single image occupies a large contiguous part of the cache and its position in the context determines whether it is protected or discarded first.\n\n**You should have:** experience with large language or vision-language models, familiarity with transformers, and good coding skills.",
+      "links": [
+        {
+          "title": "Efficient Streaming Language Models with Attention Sinks (ICLR 2024)",
+          "url": "https://arxiv.org/abs/2309.17453"
+        },
+        {
+          "title": "Post-hoc Probabilistic Vision-Language Models (ICLR 2026)",
+          "url": "https://arxiv.org/abs/2412.06014"
+        },
+        {
+          "title": "Wearable AI Challenge (ECCV 2026) — long-form egocentric video and streaming dialog",
+          "url": "https://wearable-ai-workshop.github.io/"
+        }
+      ]
+    }
+  ]
+}
