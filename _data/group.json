@@ -21,6 +21,13 @@
                 "website": "https://uk.linkedin.com/in/ginevra-cepparulo-391592230",
                 "note": "w/ Hossein Azizpour (KTH)",
 		"image": "/assets/images/team/ginevra-cepparulo.jpg"
+            },
+            {
+              "name": "Aleksanteri Sladek",
+              "position": "PhD Student (Aalto University)",
+              "note": "w/ Arno Solin",
+              "website": "https://www.aleatoric.io",
+    "image": "/assets/images/team/aleksanteri-sladek.jpg"
             }
         ]
     }
