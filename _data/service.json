@@ -2,7 +2,7 @@
   "talks": [
     {
       "date": "2026-09",
-      "title": "TBA",
+      "title": "Towards Uncertainty-aware Model Reduction",
       "venue": "Invited talk, Helsinki University"
     },
     {
@@ -42,7 +42,7 @@
           "entries": [
             {
               "organization": "Annual Conference on Artificial Intelligence and Statistics",
-              "period": "AISTATS 2026"
+              "period": "AISTATS 2026, 2027"
             }
           ]
         },
@@ -84,11 +84,11 @@
             },
             {
               "organization": "International Conference on Learning Representations (ICLR)",
-              "period": "2026"
+              "period": "2026, 2027"
             },
             {
               "organization": "International Conference on Machine Learning (ICML)",
-              "period": "2026"
+              "period": "2026, 2027"
             },
             {
               "organization": "Conference on Uncertainty in Artificial Intelligence (UAI)",
